@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 계정관리</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../../common/css/common.css">
+	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    
+	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../../common/plugins/moment/moment.min.js"></script>
+    <script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+</head>
+
+<body>
+
+	<div id="wrapper-header">
+		<div class="container">
+			<h1 class="logo"><a href="javascript:;">솜씨당 ADMIN</a></h1>
+			<div class="navbar-header">
+				<ul>
+					<li class="notification notification-list">
+					<div class="dropdown">
+						<a href="javascript:;" id="notification-center" class="header-icon" data-toggle="dropdown"><i class="fa-bell-o fa"></i></a>
+						<span class="count">1</span>
+						<!-- Notification Dropdown -->
+						<div class="dropdown-menu notification-toggle" role="menu" aria-labelledby="notification-center" >
+							<div class="notification-panel">
+								<div class="notification-body scrollable">
+									<div class="notification-item unread clearfix">
+										<div class="heading open">
+											<a href="#" class="pull-left">												
+												<span class="bold">알림입니다.</span>
+												<span class="fs-12 m-l-10">서브제목</span>
+											</a>
+											<div class="pull-right">
+												<div class="thumbnail-wrapper d16 circular inline m-t-15 m-r-10 toggle-more-details">
+													<div><i class="fa fa-angle-left"></i>
+													</div>
+												</div>
+												<span class=" time">1분전</span>
+											</div>
+											<div class="more-details">
+												<div class="more-details-inner">
+													<h5 class="semi-bold fs-16">서브제목Title</h5>
+													<p class="small hint-text">
+														내용입니다.<br>
+														내용입니다.<br>
+														내용입니다.<br>
+														내용입니다.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="option" data-toggle="tooltip" data-placement="left" title="mark as read">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+									<div class="notification-item clearfix">
+										<div class="heading">
+											<a href="#" class="text-danger pull-left">
+													  <i class="fa fa-exclamation-triangle m-r-10"></i>
+													  <span class="bold">98% Server Load</span>
+													  <span class="fs-12 m-l-10">Take Action</span>
+													</a>
+											<span class="pull-right time">2 분전</span>
+										</div>
+										<div class="option">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+									<div class="notification-item clearfix">
+										<div class="heading">
+											<a href="#" class="text-warning-dark pull-left">
+													  <i class="fa fa-exclamation-triangle m-r-10"></i>
+													  <span class="bold">Warning Notification</span>
+													  <span class="fs-12 m-l-10">Buy Now</span>
+													</a>
+											<span class="pull-right time">어제</span>
+										</div>
+										<div class="option">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.Notification Dropdown -->
+                	
+                	</div>
+				</li>
+					<li class="profile">
+						<span class="img" style="background-image:url(https://placeimg.com/300/300/people)"></span>
+						<span class="name"><strong>관리자</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+			<div class="search-header">
+				<form>
+					<input type="text" class="form-control" placeholder="검색어를 입력해 주세요...">
+					<button href="javascript:;"><i class="pg-search"></i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper-nav-bar">
+		<div class="container">
+		
+		<div class="horizontal-app-menu">
+			<div class="menu-bar">
+				<a href="#" class="btn-link toggle-sidebar hidden-lg-up pg pg-close" data-toggle="horizontal-menu"></a>
+				<ul>
+					<li>
+						<a href="javascript:_gnbMove(1)"><span class="title">통계</span></a>
+					</li>
+					<li>
+						<a href="javascript:_gnbMove(2)"><span class="title">회원관리</span></a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">클래스 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(3,1)">클래스 승인 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(3,2)">클래스 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(3,3)">클래스 카테고리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">공방 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul class="">
+							<li class="">
+								<a href="javascript:_gnbMove(4,1)">리스트</a>
+							</li>
+							<li class="">
+								<a href="javascript:_gnbMove(4,2)">공방요청</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">게시글 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(5,1)">함께하기 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(5,2)">후기 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(5,3)">공지/이벤트 관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">추천 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(6,1)">배너 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(6,2)">추천 클래스</a>
+							</li>
+						</ul>
+					</li>
+					<li class="active">
+						<a href="javascript:;">
+							<span class="title">관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(7,1)">계정 관리</a>
+							</li>
+							<li class="active">
+								<a href="javascript:;">
+									<span class="title">혜택 관리</span>
+									<span class=" arrow"></span>
+								</a>
+								<ul class="sub-menu">
+									<li class="active"><a href="javascript:_gnbMove(7,2,1)">쿠폰관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(7,3)">포인트 설정</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(7,4)">포인트/추천인 관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">매출/정산 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(8,1)">입금대기(무통장)</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(8,2)">매출관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(8,3)">정산관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">스타일가이드</span>
+							<span class="arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(9,1)">기본</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,2)">Gallery</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,3)">Login</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,4)">Error page</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.GNB 메뉴 -->
+			
+			<div class="nav-folding">
+                <a href="javascript:;"><span class="pg-menu"></span></a>
+            </div>
+
+		</div>
+	</div>
+
+
+	<div id="wrapper-contents">
+		<div class="container">
+			<ol class="breadcrumb clearfix">
+				<li class="breadcrumb-item home"><a href="#">솜씨당관리자</a></li>
+				<li class="breadcrumb-item"><a href="#">관리</a></li>
+				<li class="breadcrumb-item"><a href="#">혜택관리</a></li>
+				<li class="breadcrumb-item active">쿠폰관리</li>
+			</ol>
+			<div class="h2-container">
+				<h2>쿠폰상세</h2>
+			</div>
+			<hr>
+			<div class="row-md m-t-30 m-b-10">
+				<div class="col-md-6">
+					<a href="%EC%BF%A0%ED%8F%B0%EA%B4%80%EB%A6%AC_%EB%A6%AC%EC%8A%A4%ED%8A%B8.html" class="btn btn-sm btn-danger"><i class="xi-long-arrow-left"></i> 목록으로 돌아가기</a>
+				</div>
+				<div class="col-md-6 text-right">
+					<span id="coupon_edit_wrap" style="display:none">
+						<a href="javascript:;" class="btn btn-sm btn-default" id="coupon_cancel"><i class="xi-close"></i> 취소</a>
+						<a href="javascript:;" class="btn btn-sm btn-danger" id="coupon_save"><i class="xi-save"></i> 저장</a>
+					</span>
+					<a href="javascript:;" class="btn btn-sm btn-default" id="coupon_edit"><i class="xi-cog"></i> 편집</a>
+				</div>
+			</div>
+			<table class="table table-row">
+				<colgroup>
+					<col style="width:15%">
+					<col style="width:30%">
+					<col style="width:15%">
+					<col>
+				</colgroup>
+				<tr>
+					<th>생성일자</th>
+					<td>2018-04-03 18:05:21</td>
+					<th>노출기간</th>
+					<td>2018-04-10 ~ 2018-04-30</td>
+				</tr>
+				<tr>
+					<th>분류</th>
+					<td>본사</td>
+					<th>쿠폰번호</th>
+					<td>A1234567</td>
+				</tr>
+			</table>
+			<div class="row-md m-t-20 m-b-10">
+				<div class="col-md-12 text-right">
+					<a href="#coupon_preview" class="btn btn-sm btn-primary modal-show"><i class="xi-search"></i> 쿠폰미리보기</a>
+				</div>
+			</div>
+			<div class="row-md">
+				<div class="col-md-6">
+					<table class="table table-row h-300">
+						<colgroup>
+							<col style="width:20%">
+							<col>
+						</colgroup>
+						<tr>
+							<th>쿠폰유형</th>
+							<td>비율할인</td>
+						</tr>
+						<tr>
+							<th>쿠폰명</th>
+							<td>선착순 100명 10%할인</td>
+						</tr>
+						<tr>
+							<th>쿠폰 사용</th>
+							<td>
+								<div class="form-inline">
+									<input type="text" class="form-control input-sm w-100"> % 할인
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th>노출 조건</th>
+							<td>코드발행 <a href="javascript:;" class="btn btn-xs btn-default">쿠폰 엑셀 다운로드</a></td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-6">
+					<table class="table table-row h-300">
+						<colgroup>
+							<col style="width:20%">
+							<col>
+						</colgroup>
+						<tr>
+							<th>쿠폰상태</th>
+							<td><span class="text-danger">진행중</span></td>
+						</tr>
+						<tr>
+							<th>발급수/사용량</th>
+							<td>5000/<strong>100</strong></td>
+						</tr>
+						<tr>
+							<th>
+								사용조건<br>
+								<span class="hint-text">(20자 이내)</span>
+							</th>
+							<td>
+								<div>1인당 1회 사용가능</div>
+								<div>솜씨당 쿠폰 중복할인 불가능</div>
+								<div>클래스 이용 취소/환불 시 재발급 불가</div>
+								<div>쿠폰당 1인 기준으로 혜택 적용</div>
+								<div>해당 클래스에만 적용 가능</div>
+							</td>
+						</tr>
+						<tr>
+							<th>발급량</th>
+							<td>100</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<table class="table table-row table-1border m-t-10">
+				<colgroup>
+					<col style="width:9.9%">
+					<col>
+				</colgroup>
+				<tr>
+					<th>관리자메모</th>
+					<td>
+						<textarea class="form-control h-100" placeholder="메모를 입력해주세요."></textarea>
+					</td>
+				</tr>
+			</table>
+
+			
+			<div class="text-center m-t-20 m-b-40">
+				<a href="javascript:;" class="btn btn-lg btn-primary"> 취소</a>
+				<a href="javascript:;" class="btn btn-lg btn-danger"> 중지</a>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper-footer">
+		<div class="container">
+			<div class="footer-info">Copyright © 솜씨당. All rights reserved.</div>
+			<div class="footer-btn"></div>
+		</div>
+	</div>
+
+<!-- Modal center-scale -->
+<div class="modal fade center-scale" id="coupon_preview" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:652px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>쿠폰 미리보기</h5>
+				</div>
+				<div class="modal-body">
+					
+					<div class="m-b-5">쿠폰정보</div>
+					<table class="table table-row">
+						<colgroup>
+							<col style="width:15%">
+							<col style="width:20%">
+							<col style="width:15%">
+							<col>
+						</colgroup>
+						<tr>
+							<th>상태</th>
+							<td>대기</td>
+							<th>쿠폰번호</th>
+							<td>A1234567</td>
+						</tr>
+						<tr>
+							<th>쿠폰명</th>
+							<td colspan="3">선착순 100명 10%할인</td>
+						</tr>
+					</table>
+					<div style="background-image:url(../../common/image/coupon_ex01.png);height:160px;" class="coupon-preview-wrap m-t-15 m-b-15" >
+						<div class="coupon-preview-text01">선착순 100명 10%할인</div>
+						<div class="coupon-preview-text02">[클래스명]</div>
+						<div class="coupon-preview-text03">사용기간 : 2018.04.15~2018.04.30</div>
+						<div class="coupon-preview-btn">
+							<a href="javascript:;">
+								<i class="xi-download"></i><br>
+								받기/사용
+							</a>
+						</div>
+					</div>
+					<div class="p-l-20 m-b-30 fs-13">
+						<div>- 1인당 1회 사용 가능</div>
+						<div>- 솜씨당 쿠폰 중복할인 불가능</div>
+						<div>- 클래스 이용 취소 / 환불 시 재발급 불가</div>
+						<div>- 쿠폰당 1인 기준으로 혜택 적용</div>
+					</div>
+					
+					
+					<h5 class="m-t-10 m-b-5">노출정보</h5>
+					<table class="table table-1border table-row">
+						<colgroup>
+							<col style="width:15%">
+							<col style="width:20%">
+							<col style="width:15%">
+							<col>
+						</colgroup>
+						<tr>
+							<th>노출시작일</th>
+							<td>2018-04-15</td>
+							<th>발급량</th>
+							<td>100장</td>
+						</tr>
+					</table>
+					
+					
+					<div class="text-center m-t-15">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal center-scale -->
+
+	<script src="../../common/js/common.js"></script>
+	<script src="../../common/js/form_elements.js"></script>
+</body>
+</html>

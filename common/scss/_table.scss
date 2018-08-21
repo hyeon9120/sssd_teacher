@@ -1,0 +1,165 @@
+$table-border-style01:1px solid #e7e6e5;
+%default-tbl {
+	width:100%;
+	th,td {
+		padding:8px 0;
+		border-right:$table-border-style01;
+		border-bottom:$table-border-style01;
+		text-align:center;
+		vertical-align:middle;
+		font-size:13px;
+	}
+	td:last-child,th:last-child {
+		border-right:0 none;
+	}
+}
+.table {
+	@extend %default-tbl;
+	border-top:2px solid #888;
+	tr.hover td,tr:hover td {
+		background:#f4faff;
+	}
+	th,td {
+		padding:8px 7px;	
+	}
+	th {
+		background:#f7f6f5 !important;
+		color:#333;
+		text-align:center;
+		font-weight:normal;
+	}
+	td {
+		background:#fff;
+		color:#777;
+		font-size:12px;
+	}
+	tfoot {
+		td {
+			background-color:#eff1f2;
+			font-weight:bold;
+		}
+	}
+}
+.table-center {
+	@extend .table;
+	th,td {
+		text-align:center;		
+	}
+}
+.table-row {
+	th,td {
+		padding:12px 7px;
+		text-align:left;
+	}
+}
+.table-1border {
+	border-top:$table-border-style01;
+}
+.table-border {
+	border-top:$table-border-style01;
+	border-left:$table-border-style01;
+	td:last-child,th:last-child {
+		border-right:$table-border-style01;
+	}
+}
+.search-table01 {
+	@extend %default-tbl;
+	border-top:1px solid #ccc;
+	width:100%;
+	th,td {
+		border-right:0 none;
+		padding-left:8px;
+		padding-right:8px;
+		padding-top:4px;
+		padding-bottom:4px;
+		text-align:left;
+	}
+	th {
+		background-color:#f7f6f5;
+	}
+	
+}
+.table-calendar {
+	@extend %default-tbl;
+	width:100%;
+	border-top:$table-border-style01;
+	th,td {
+		border-right:0 none;
+		height:50px;
+	}
+	td:last-child,th:last-child {
+	}
+	th {
+		background-color:#f7f6f5;
+	}
+	
+}
+tr.active {
+	th,td {
+		background:#e6f3ff !important;
+	}
+}
+tr.select {
+	th, td {
+		background:#f6ede1 !important;
+	}
+}
+tr.gray01 {
+	th, td {
+		background:#e5e6e7 !important;
+	}
+}
+.no-border-top {
+	border-top:0 none;
+}
+.th-discription {
+	font-size:9px;
+	font-weight:300;
+	color:#888;
+}
+.empty-box {
+	display: block;
+	padding: 80px 20px;
+	text-align: center;
+}
+.empty-box.img i::before {
+	display: block;
+	content: '\eb17';
+	font-family: 'xeicon';
+	color: #9B9B9B;
+	font-size: 50px;
+	margin-bottom: 15px;
+}
+.empty-box.img p::before {
+	content: '등록된 이미지가 없습니다.';
+	color: #9B9B9B;
+	font-size: 12px;
+	font-weight: 500;
+	
+}
+.empty-box.list i::before {
+	display: block;
+	content: '\eb14';
+	font-family: 'xeicon';
+	color: #9B9B9B;
+	font-size: 50px;
+	margin-bottom: 15px;
+}
+.empty-box.list p::before {
+	content: '검색된 항목이 없습니다.';
+	color: #9B9B9B;
+	font-size: 12px;
+	font-weight: 500;
+	
+}
+.nolast {
+	border-right:$table-border-style01 !important;
+}
+.data-table-scroll {
+	height:500px;
+	border-bottom:1px solid #dad9d8;
+}
+.table-scroll-body table {
+	border-top:0 none;
+	border-bottom:1px solid #dad9d8;
+}

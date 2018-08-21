@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+	<title>솜씨당 - 로그인</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../common/css/common.css">
+	<link rel="stylesheet" href="../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../common/plugins/font-awesome/css/font-awesome.css">
+	<link href="../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/switchery/css/switchery.css">
+    <link href="../common/plugins/jquery-scrollbar/jquery.scrollbar.css">
+    
+	<script src="../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../common/plugins/modernizr.custom.js" type="text/javascript"></script>
+	<script src="../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../common/plugins/moment/moment.min.js"></script>
+    <script src="../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+    <script src="../common/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
+    <script src="../common/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../common/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+    <script src="../common/plugins/codrops-dialogFx/dialogFx.js" type="text/javascript"></script>
+    <script src="../common/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="artist-sw-notice">
+	<div class="switch-content">
+		<div class="notice-txt01">작가 전환 시 유의사항</div>
+		<div class="notice-txt02">
+			- 작가 전환 시 클래스 등록과 정산관련 확인을 위해 본인인증 및 추가정보 입력이 필요합니다.<br>
+			- 클래스 등록 등과 같은 작가 활동은 작가 전환 완료 시점부터 바로 이용 가능합니다.
+		</div>
+	</div>	
+</div>
+<div class="artist-sw-step">
+	<div class="switch-content">
+		<ul>
+			<li class="active">
+				01. 본인인증
+			</li>
+			<li>02. 정보입력&amp;약관동의</li>
+			<li>03. 작가 전환 완료</li>
+		</ul>		
+	</div>
+</div>
+<div class="artist-step01-01">
+	<div class="switch-content">
+		<div class="step01-icon01"></div>
+		<div class="txt01">
+			작가님의 본인인증을 진행해주세요.
+		</div>
+		<div class="txt02 m-t-20">
+			작가님의 개인정보 보호 및 클래스 등록, 정산 서비스 이용을 위하여 본인인증이 필요합니다.<br>
+			아래 휴대폰 인증 버튼을 클릭하신 후 본인인증을 완료해주시기 바랍니다.
+		</div>
+		<div class="m-t-30 m-b-30">
+			<a href="javascript:;" class="step-btn step-btn-primary icon-mobile"> 휴대폰 본인 인증</a>
+		</div>
+	</div>
+</div>
+<div class="artist-step01-02">
+	<div class="switch-content">
+		- 쏨씨당 작가활동을 위해 최초 1회 휴대폰 본인인증 절차를 거쳐야 합니다.<br>
+		- 본인인증의 경우 작가님의 이름, 휴대폰, 생년월일, 성별을 입력하셔야 합니다.<br>
+		- 본인인증 시 입력받는 모든 정보는 본인확인 용도로만 사용됩니다.<br>
+		- 본인인증은 반드시 작가님 명의의 휴대폰을 소지하고 계셔야만 이용이 가능합니다.
+	</div>
+</div>
+<div class="artist-step-btn">
+	<div class="switch-content">
+		<a href="javascript:;" class="step-btn step-btn-default">취소</a>
+		<a href="javascript:;" class="step-btn step-btn-primary icon-next step-btn-disabled">다음</a>
+		<div class="m-t-40 m-b-40 text-muted fs-12">
+			본인인증에 문제가 발생하면 아래 고객센터로 문의해 주시기 바랍니다.<br>
+본인인증(업체명)  1234-1234
+		</div>
+	</div>
+</div>
+<!-- Modal center-scale -->
+<div class="modal fade center-scale" id="join_form" tabindex="-1">
+	<div class="modal-dialog" style="width:380px">
+		<div class="modal-content-wrapper">
+			<div class="modal-content">
+				<div class="modal-header clearfix text-left">
+					<h5>회원가입</h5>
+				</div>
+				<div class="modal-body">
+					<div class="text-center m-t-30">
+						<h4 class="text-danger">SNS계정으로 시작하기</h4>
+						<div class="sub-text m-t-5 fs-14">SNS 아이디를 이용해서 솜씨당 회원으로 가입합니다.</div>
+					</div>
+					<div class="login-btn-box m-b-30">
+						<div class="login-btn-kakao">
+							<a href="javascript:;">카카오톡으로 시작하기</a>
+						</div>
+						<div class="login-btn-naver">
+							<a href="javascript:;">네이버로 시작하기</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<script>
+	$('#join_form').modal({
+	    backdrop: 'static',
+    keyboard: false  
+	});
+</script>
+<!-- /.Modal center-scale -->
+<script src="../common/js/common.js"></script>
+<script src="../common/js/form_elements.js"></script>
+</body>
+</html>

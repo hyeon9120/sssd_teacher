@@ -1,0 +1,759 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 스타일가이드</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../common/plugins/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../common/css/common.css">
+	<link href="../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    
+	<script src="../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../common/plugins/moment/moment.min.js"></script>
+    <script src="../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+</head>
+
+<body>
+
+	<div id="wrapper-header">
+		<div class="container">
+			<h1 class="logo"><a href="javascript:;">솜씨당 ADMIN</a></h1>
+			<div class="navbar-header">
+				<ul>
+					<li class="notification notification-list">
+					<div class="dropdown">
+						<a href="javascript:;" id="notification-center" class="header-icon" data-toggle="dropdown"><i class="fa-bell-o fa"></i></a>
+						<span class="count">1</span>
+						<!-- Notification Dropdown -->
+						<div class="dropdown-menu notification-toggle" role="menu" aria-labelledby="notification-center" >
+							<div class="notification-panel">
+								<div class="notification-body scrollable">
+									<div class="notification-item unread clearfix">
+										<div class="heading open">
+											<a href="#" class="pull-left">												
+												<span class="bold">알림입니다.</span>
+												<span class="fs-12 m-l-10">서브제목</span>
+											</a>
+											<div class="pull-right">
+												<div class="thumbnail-wrapper d16 circular inline m-t-15 m-r-10 toggle-more-details">
+													<div><i class="fa fa-angle-left"></i>
+													</div>
+												</div>
+												<span class=" time">1분전</span>
+											</div>
+											<div class="more-details">
+												<div class="more-details-inner">
+													<h5 class="semi-bold fs-16">서브제목Title</h5>
+													<p class="small hint-text">
+														내용입니다.<br>
+														내용입니다.<br>
+														내용입니다.<br>
+														내용입니다.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="option" data-toggle="tooltip" data-placement="left" title="mark as read">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+									<div class="notification-item clearfix">
+										<div class="heading">
+											<a href="#" class="text-danger pull-left">
+													  <i class="fa fa-exclamation-triangle m-r-10"></i>
+													  <span class="bold">98% Server Load</span>
+													  <span class="fs-12 m-l-10">Take Action</span>
+													</a>
+											<span class="pull-right time">2 분전</span>
+										</div>
+										<div class="option">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+									<div class="notification-item clearfix">
+										<div class="heading">
+											<a href="#" class="text-warning-dark pull-left">
+													  <i class="fa fa-exclamation-triangle m-r-10"></i>
+													  <span class="bold">Warning Notification</span>
+													  <span class="fs-12 m-l-10">Buy Now</span>
+													</a>
+											<span class="pull-right time">어제</span>
+										</div>
+										<div class="option">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.Notification Dropdown -->
+                	
+                	</div>
+				</li>
+					<li class="profile">
+						<span class="img" style="background-image:url(https://placeimg.com/300/300/people)"></span>
+						<span class="name"><strong>관리자</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+			<div class="search-header">
+				<form>
+					<input type="text" class="form-control" placeholder="검색어를 입력해 주세요...">
+					<button href="javascript:;"><i class="pg-search"></i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper-nav-bar">
+		<div class="container">
+			<!--<ul class="gnb clearfix">
+                <li><a href="javascript:;">통계</a></li>
+                <li><a href="javascript:;">회원관리</a></li>
+                <li><a href="javascript:;">클래스관리 <span class=" arrow"></span></a></li>
+                <li><a href="javascript:;">공방관리</a></li>
+                <li><a href="javascript:;">게시글관리</a></li>
+                <li><a href="javascript:;">추천관리</a></li>
+                <li><a href="javascript:;">관리</a></li>
+            </ul>
+            -->
+			
+			<!-- GNB  -->
+		<div class="horizontal-app-menu">
+			<div class="menu-bar">
+				<a href="#" class="btn-link toggle-sidebar hidden-lg-up pg pg-close" data-toggle="horizontal-menu"></a>
+				<ul>
+					<li>
+						<a href="javascript:_gnbMove(1)"><span class="title">통계</span></a>
+					</li>
+					<li class=" active">
+						<a href="javascript:_gnbMove(2)"><span class="title">회원관리</span></a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">클래스 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(3,1)">클래스 승인 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(3,2)">클래스 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(3,3)">클래스 카테고리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">공방 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul class="">
+							<li class="">
+								<a href="javascript:_gnbMove(4,1)">리스트</a>
+							</li>
+							<li class="">
+								<a href="javascript:_gnbMove(4,2)">공방요청</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">게시글 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(5,1)">함께하기 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(5,2)">후기 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(5,3)">공지/이벤트 관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">추천 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(6,1)">배너 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(6,2)">추천 클래스</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(7,1)">계정 관리</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<span class="title">혜택 관리</span>
+									<span class=" arrow"></span>
+								</a>
+								<ul class="sub-menu">
+									<li><a href="javascript:_gnbMove(7,2,1)">쿠폰관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(7,3)">포인트 설정</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(7,4)">포인트/추천인 관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">매출/정산 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(8,1)">입금대기(무통장)</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(8,2)">매출관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(8,3)">정산관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">스타일가이드</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(9,1)">기본</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,2)">Gallery</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,3)">Login</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,4)">Error page</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.GNB 메뉴 -->
+			
+			<div class="nav-folding">
+                <a href="javascript:;"><span class="pg-menu"></span></a>
+            </div>
+
+		</div>
+	</div>
+
+
+	<div id="wrapper-contents">
+		<div class="container">
+			<ol class="breadcrumb clearfix">
+				<li class="breadcrumb-item home"><a href="#">솜씨당관리자</a></li>
+				<li class="breadcrumb-item active">회원관리</li>
+			</ol>
+			<div class="h2-container">
+				<h2>회원관리</h2>
+			</div>
+			
+			<hr>
+			
+			<div class="row-md m-t-30">
+				<div class="col-md-6">
+					<a href="%ED%81%B4%EB%9E%98%EC%8A%A4%EC%8A%B9%EC%9D%B8%EA%B4%80%EB%A6%AC_%EB%A6%AC%EC%8A%A4%ED%8A%B8.html" class="btn btn-sm btn-danger"><i class="xi-long-arrow-left"></i> 목록으로 돌아가기</a>
+				</div>
+				<div class="col-md-6 text-right m-b-5">
+					<a href="#creater_matching" class="btn btn-sm btn-default text-danger modal-show"><i class="xi-compare-arrows"></i> 승인상태 변경</a>
+					<span id="member_edit_btn" style="display:none">
+						<a href="javascript:;" class="btn btn-sm btn-default" id="member_edit_btn_cancel"><i class="xi-close"></i> 취소</a>
+						<a href="javascript:;" class="btn btn-sm btn-danger" id="member_edit_btn_save"><i class="xi-save"></i> 저장</a>
+					</span>
+					<a href="javascript:;" class="btn btn-sm btn-default" id="member_edit_btn_edit"><i class="xi-cog"></i> 편집</a>
+				</div>
+			</div>
+			<script>
+				$('#member_edit_btn_edit').click(function(){
+					$('#member_edit_btn').show();
+					$('#member_edit_btn_edit').hide();
+					$('.member_edit_state').hide();
+					$('.member_edit_form').show();
+					
+				});
+				$('#member_edit_btn_save, #member_edit_btn_cancel').click(function() {
+					$('#member_edit_btn').hide();
+					$('#member_edit_btn_edit').show();
+					$('.member_edit_state').show();
+					$('.member_edit_form').hide();
+				});
+			</script>
+			<!-- Table -->
+			<table class="table">
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:18%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:6%">
+					<col style="width:6%">
+					<col style="width:10%">
+					<col style="width:10%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th rowspan="2">회원유형</th>
+						<th rowspan="2">닉네임</th>
+						<th rowspan="2">아이디</th>
+						<th rowspan="2">수수료율 (%)</th>
+						<th rowspan="2">보유 포인트</th>
+						<th colspan="2">클래스 현황</th>
+						<th rowspan="2">가입일자</th>
+						<th rowspan="2">최근접속일자</th>
+						<th rowspan="2">계정상태</th>						
+					</tr>
+					<tr>
+						<th>참여</th>
+						<th>개설</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="label label-info">공방운영</span></td>
+						<td>
+							<div class="member_edit_state">Aaa123</div>
+							<div class="member_edit_form" style="display:none">
+								<input type="text" class="form-control" value="Aaa123">
+							</div>
+						</td>
+						<td>
+							<div class="member_edit_state">asdfasdfasdf@naver.com</div>
+							<div class="member_edit_form" style="display:none">
+								<input type="text" class="form-control" value="asdfasdfasdf@naver.com">
+							</div>
+						</td>
+						<td>기본적용 (20%)</td>
+						<td>
+							<div class="text-complete member_edit_state">5,000p</div>
+							<div class="member_edit_form" style="display:none">
+								<input type="text" class="form-control" value="5000">
+							</div>
+						</td>
+						<td><a href="javascript:;" class="text-underline text-danger">11</a></td>
+						<td><a href="javascript:;" class="text-underline text-danger">1</a></td>
+						<td>2018-02-01</td>
+						<td>2018-02-01</td>
+						<td>일반</td>						
+					</tr>
+				</tbody>
+			</table>
+			<!-- /.Table -->
+			
+			<!-- Table -->
+			<table class="table table-1border m-t-15">
+				<colgroup>
+					<col style="width:10%">
+					<col style="width:10%">
+					<col style="width:18%">
+					<col style="width:15%">
+					<col style="width:15%">
+					<col style="width:15%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th colspan="3">가입시 추천인</th>
+						<th rowspan="2">추천인 현황</th>
+						<th rowspan="2">누적 사용 포인트</th>
+						<th rowspan="2">누적 적립 포인트</th>
+						<th rowspan="2">쿠폰 발급 현황</th>			
+					</tr>
+					<tr>
+						<th>회원유형</th>
+						<th>닉네임</th>
+						<th>아이디</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><span class="label label-default">일반회원</span></td>
+						<td>AAAA</td>
+						<td>aabbccddee@naver.com</td>
+						<td><a href="#member_accumulate" class="text-underline text-danger modal-show">11</a></td>
+						<td><span class="text-complete">51,060p</span></td>
+						<td><span class="text-complete">501,060p</span></td>
+						<td>3개</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /.Table -->
+			
+			<div class="row-md m-t-10">
+				<div class="col-md-6">
+					<h5 class="m-t-25">참여한 클래스 내역</h5>
+				</div>
+				<div class="col-md-6 text-right p-t-20">
+					<a href="javascript:;" class="btn btn-xs btn-default">모두보기</a>
+				</div>
+			</div>
+			<table class="table m-t-10">
+				<colgroup>
+					<col style="width:6%">
+					<col style="width:12%">
+					<col style="width:10%">
+					<col style="width:12%">
+					<col>
+					<col style="width:14%">
+					<col style="width:10%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>상품번호</th>
+						<th>지역</th>
+						<th>카테고리</th>
+						<th>클래스명</th>
+						<th>옵션(금액)</th>
+						<th>신청일</th>		
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>SS2123</td>
+						<td>지역1</td>
+						<td>캔들</td>
+						<td class="text-left">리스트에 보여지는 타이틀</td>
+						<td>
+							옵션1<br>
+							(59,000원)
+						</td>
+						<td>
+							2018-01-03
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>SS2123</td>
+						<td>지역1</td>
+						<td>캔들</td>
+						<td class="text-left">리스트에 보여지는 타이틀</td>
+						<td>
+							옵션1<br>
+							(59,000원)
+						</td>
+						<td>
+							2018-01-03
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div class="row-md m-t-10">
+				<div class="col-md-6">
+					<h5 class="m-t-25">개설한 클래스 내역</h5>
+				</div>
+				<div class="col-md-6 text-right p-t-20">
+					<a href="javascript:;" class="btn btn-xs btn-default">모두보기</a>
+				</div>
+			</div>
+			<table class="table m-t-10">
+				<colgroup>
+					<col style="width:6%">
+					<col style="width:12%">
+					<col style="width:10%">
+					<col style="width:12%">
+					<col>
+					<col style="width:14%">
+					<col style="width:10%">
+					<col style="width:8%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>상품번호</th>
+						<th>지역</th>
+						<th>카테고리</th>
+						<th>클래스명</th>
+						<th>금액</th>
+						<th>모집기간</th>
+						<th>승인</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>SS2123</td>
+						<td>지역1</td>
+						<td>캔들</td>
+						<td class="text-left">리스트에 보여지는 타이틀</td>
+						<td>
+							50,000 ~ 90,000
+						</td>
+						<td>
+							2018-01-03
+						</td>
+						<td><span class="text-complete">대기</span></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>SS2123</td>
+						<td>지역1</td>
+						<td>캔들</td>
+						<td class="text-left">리스트에 보여지는 타이틀</td>
+						<td>
+							50,000 ~ 90,000
+						</td>
+						<td>
+							2018-01-03
+						</td>
+						<td>완료</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>SS2123</td>
+						<td>지역1</td>
+						<td>캔들</td>
+						<td class="text-left">리스트에 보여지는 타이틀</td>
+						<td>
+							50,000 ~ 90,000
+						</td>
+						<td>
+							2018-01-03
+						</td>
+						<td><span class="text-danger">거부</span></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div class="row-md m-t-10">
+				<div class="col-md-6">
+					<h5 class="m-t-25">매출 현황</h5>
+				</div>
+			</div>
+			<table class="table m-t-10">
+				<colgroup>
+					<col style="width:27%">
+					<col style="width:27%">
+					<col style="width:27%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>누적매출</th>
+						<th>정산 예정 매출</th>
+						<th>정산 가능 매출</th>
+						<th>정산 내역</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>54,236,222</td>
+						<td>251,421</td>
+						<td>4,223.210</td>
+						<td><strong>12건</strong></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table m-t-15 table-1border">
+				<colgroup>
+					<col style="width:15%">
+					<col style="width:15%">
+					<col style="width:15%">
+					<col style="width:15%">
+					<col>
+					<col style="width:20%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>정산 상태</th>
+						<th>정산번호</th>
+						<th>정산 신청 일자</th>
+						<th>정산 완료 일자</th>
+						<th>정산금액</th>
+						<th>정산 계좌</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>정산 완료</td>
+						<td>34234324</td>
+						<td>2018-03-12</td>
+						<td>2018-04-11</td>
+						<td>2,000,000</td>
+						<td>
+							카카오뱅크<br>
+							1233439594935<br>
+							홍길동
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			
+			<!-- Pagination-->
+			<div class="pagination m-t-30 m-b-40">
+				<a class="page-link move-link disabled" href="javascript:;">처음</a>
+				<a class="page-link move-link disabled" href="javascript:;">
+					<i class="xi-angle-left"></i>
+				</a>
+				<a class="page-link active" href="javascript:;">1</a>
+				<a class="page-link" href="javascript:;">2</a>
+				<a class="page-link" href="javascript:;">3</a>
+				<a class="page-link" href="javascript:;">4</a>
+				<a class="page-link" href="javascript:;">5</a>
+				<a class="page-link" href="javascript:;">6</a>
+				<a class="page-link" href="javascript:;">7</a>
+				<a class="page-link" href="javascript:;">8</a>
+				<a class="page-link" href="javascript:;">9</a>
+				<a class="page-link" href="javascript:;">10</a>
+				<a class="page-link move-link" href="javascript:;">
+					<i class="xi-angle-right"></i>
+				</a>
+				<a class="page-link move-link" href="javascript:;">끝</a>
+			</div>
+			<!-- /.Pagination-->
+			
+		</div>
+	</div>
+	<div id="wrapper-footer">
+		<div class="container">
+			<div class="footer-info">Copyright © 솜씨당. All rights reserved.</div>
+			<div class="footer-btn"></div>
+		</div>
+	</div>
+
+<!-- Modal center-scale -->
+<div class="modal fade center-scale" id="member_accumulate" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:652px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>추천인 적립</h5>
+				</div>
+				<div class="modal-body">
+					
+					<table class="table">
+						<thead>
+							<tr>
+								<th>회원유형</th>
+								<th>닉네임</th>
+								<th>아이디</th>
+								<th>가입일자</th>
+								<th>
+									추천적립<br>
+									포인트
+								</th>
+								<th>발급 쿠폰</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>일반회원</td>
+								<td>Aaa123</td>
+								<td>email@email.com</td>
+								<td>2018-04-11</td>
+								<td><div class="text-complete">1p</div></td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>일반회원</td>
+								<td>Aaa123</td>
+								<td>email@email.com</td>
+								<td>2018-04-11</td>
+								<td><div class="text-complete">1p</div></td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>일반회원</td>
+								<td>Aaa123</td>
+								<td>email@email.com</td>
+								<td>2018-04-11</td>
+								<td><div class="text-complete">1p</div></td>
+								<td>-</td>
+							</tr>
+							<tr>
+								<td>일반회원</td>
+								<td>Aaa123</td>
+								<td>email@email.com</td>
+								<td>2018-04-11</td>
+								<td><div class="text-complete">1p</div></td>
+								<td>-</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- Pagination-->
+					<div class="pagination m-t-10 m-b-10">
+						<a class="page-link move-link disabled" href="javascript:;">처음</a>
+						<a class="page-link move-link disabled" href="javascript:;">
+							<i class="xi-angle-left"></i>
+						</a>
+						<a class="page-link active" href="javascript:;">1</a>
+						<a class="page-link" href="javascript:;">2</a>
+						<a class="page-link" href="javascript:;">3</a>
+						<a class="page-link" href="javascript:;">4</a>
+						<a class="page-link" href="javascript:;">5</a>
+						<a class="page-link move-link" href="javascript:;">
+							<i class="xi-angle-right"></i>
+						</a>
+						<a class="page-link move-link" href="javascript:;">끝</a>
+					</div>
+					<!-- /.Pagination-->
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal center-scale -->
+
+	<script src="../common/js/common.js"></script>
+	<script src="../common/js/form_elements.js"></script>
+</body>
+</html>

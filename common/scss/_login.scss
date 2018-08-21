@@ -1,0 +1,175 @@
+.body-login {
+	background-image:url(../image/bg_login.png);
+	background-size:cover;
+	&:before {
+		content:"";
+		background-color:#fff;
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:60%;
+	}
+}
+.login-block01 {
+	position:absolute;
+	width:300px;
+	top:40%;
+	left:50%;
+	margin:-180px 0 0 -150px;
+	.login-logo {
+		height:100px;
+		width:300px;
+		h1.login {
+			margin:0 auto 0;
+			text-indent:-3000em;
+			overflow:hidden;
+			display:block;
+			width:165px;
+			height:100px;
+			background-image:url(../image/sssd_logo.svg);
+			background-size:165px 100px;
+		}
+	}
+	.login-logo-txt {
+		margin-top:20px;
+		font-size:20px;
+		font-weight:bold;
+		color:#5d5d5d;
+		text-align:center;
+	}
+}
+.login-block02 {
+	position:absolute;
+	width:300px;
+	top:42%;
+	left:50%;
+	margin:0 0 0 -150px;
+	
+	.login-app-download {
+		overflow:hidden;
+		margin-top:74px;
+		.btn-android {
+			float:left;
+			a {
+				display:block;
+				text-indent:-3000em;
+				background-image:url(../image/login_download_google.png);
+				width:142px;
+				height:46px;
+				background-size:142px 46px;
+			}
+		}
+		.btn-apple {
+			float:right;
+			a {
+				display:block;
+				text-indent:-3000em;
+				background-image:url(../image/login_download_apple.png);
+				width:142px;
+				height:46px;
+				background-size:142px 46px;
+			}
+		}
+	}
+	.login-joinbtn {
+		text-align:center;
+		padding-top:20px;
+		margin-top:20px;
+		border-top:1px solid rgba(255,255,255,0.2);
+		color:rgba(255,255,255,0.7);
+		a {
+			color:rgba(255,255,255,1);
+			&:hover,
+			&:focus {
+				color:#e07061;
+			}
+		}
+	}
+	.download-txt {
+		font-size:13px;
+		text-align:center;
+		padding:20px 0;
+		color:rgba(255,255,255,0.7);
+	}
+}
+.login-btn-box {
+	padding-top:32px;
+	.login-btn-kakao {
+		position:relative;
+		&:before {
+			position:absolute;
+			top:14px;
+			left:22px;
+			width:24px;
+			height:21px;
+			background-image:url(../image/login_kakaotalk.svg);
+			background-size:24px 21px;
+			content:"";
+		}
+		a {
+			display:block;
+			border-radius:5px;
+			background-color:#ffeb00;
+			line-height:48px;
+			height:48px;
+			text-align:center;
+			padding-left:50px;
+			font-size:16px;
+			font-weight:bold;
+			color:#3c1e1e;
+			transition:.3s all;
+			&:hover {
+				background-color:#f2cd00;
+			}
+		}
+	}
+	.login-btn-naver {
+		margin-top:12px;
+		position:relative;
+		&:before {
+			position:absolute;
+			top:16px;
+			left:23px;
+			width:20px;
+			height:17px;
+			background-image:url(../image/login_naver.svg);
+			background-size:20px 17px;
+			content:"";
+		}
+		a {
+			display:block;
+			border-radius:5px;
+			background-color:#2db400;
+			line-height:48px;
+			height:48px;
+			text-align:center;
+			padding-left:50px;
+			font-size:16px;
+			font-weight:bold;
+			color:#fff;
+			transition:.3s all;
+			&:hover {
+				background-color:#29a400;
+				color:#fff;
+			}
+		}
+	}
+}
+.login-block03 {
+	position:absolute;
+	top:50%;
+	left:50%;
+	width:600px;
+	margin:260px 0 20px -300px;
+	text-align:center;
+	color:rgba(255,255,255,0.5);
+	font-size:10px;
+	font-weight:normal;	
+}
+.login-footer {
+	padding:20px 0 0;
+	text-align:center;
+	color:#f0c0bb;
+	font-size:13px;
+}

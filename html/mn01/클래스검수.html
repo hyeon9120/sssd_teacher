@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 계정관리</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../../common/css/common.css">
+	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    
+	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../../common/plugins/moment/moment.min.js"></script>
+    <script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+</head>
+
+<body>
+	<div id="writer-header">
+		<div class="writer-container">
+			<h1><a href="javascript:;">솜씨당 작가페이지</a></h1>
+			<div class="writer-tnb">
+				<ul>
+					<li class="profile">						
+						<span class="name"><strong>솜씨당</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="writer-wrapper">
+		<div class="writer-container">
+			<div id="writer-nav">
+				<div class="nav-name">클래스</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(1);">클래스 등록</a></li>
+					<li class="active"><a href="javascript:_gnbMove(2);">클래스 검수</a></li>
+					<li><a href="javascript:_gnbMove(3);">클래스 관리</a></li>			
+				</ul>
+				<hr>
+				<div class="nav-name">매출/정산</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(4);">매출 현황</a></li>
+					<li><a href="javascript:_gnbMove(5);">정산 신청</a></li>
+					<li><a href="javascript:_gnbMove(6);">정산 내역</a></li>			
+				</ul>
+				<hr>
+				<a href="javascript:;" class="writer-nav-counsel"><i class="xi-forum"></i> 1:1 실시간 상담</a>
+			</div>
+		
+			<div id="writer-contents">
+				<ol class="writer-breadcrumb">
+					<li class="breadcrumb-item home"><a href="#">솜씨당 작가페이지</a></li>
+					<li class="breadcrumb-item"><a href="#">클래스</a></li>
+					<li class="breadcrumb-item active">클래스 검수</li>
+				</ol>
+				<div class="h2-container">
+					<h2>클래스 검수</h2>
+				</div>
+				
+			
+				<div class="row-md m-t-20">
+					<div class="col-md-12 m-b-5">
+						※ 클래스 등록하시면 검수를 통해서 등록됩니다. (예상시간 1시간)
+					</div>
+				</div>
+
+				<!-- Table -->
+				<table class="table">
+				<colgroup>
+					<col style="width:3%">
+					<col style="width:8%">
+					<col style="width:8%">
+					<col>
+					<col style="width:8%">
+					<col style="width:10%">
+					<col style="width:9%">
+					<col style="width:9%">
+					<col style="width:8%">
+					<col style="width:6%">
+					<col style="width:11%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>구분</th>
+						<th>상품번호</th>
+						<th>클래스명</th>
+						<th>기간 형태</th>
+						<th>금액</th>
+						<th>등록일</th>
+						<th>모집기간</th>
+						<th>
+							모집인원<br>
+							<small class="hint-text">(최소/최대)</small>
+						</th>
+						<th>승인</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>3</td>
+						<td>작가매칭</td>
+						<td><span class="text-danger">20189192</span></td>
+						<td>리스트에 보여지는 타이틀</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>2018-02-12 ~ 2018.03.31</td>
+						<td>2018-02-12 ~ 2018.03.31</td>
+						<td>2/4</td>
+						<td>대기</td>
+						<td>
+							<a href="javascript:;" class="btn btn-xs btn-default"><i class="xi-cog"></i> 수정</a>
+							<a href="javascript:;" class="btn btn-xs btn-default"><i class="xi-trash"></i> 삭제</a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>작가매칭</td>
+						<td><span class="text-danger">20189192</span></td>
+						<td>리스트에 보여지는 타이틀</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>2018-02-12 ~ 2018.03.31</td>
+						<td>2018-02-12 ~ 2018.03.31</td>
+						<td>3/4</td>
+						<td>대기</td>
+						<td>
+							<a href="javascript:;" class="btn btn-xs btn-default"><i class="xi-cog"></i> 수정</a>
+							<a href="javascript:;" class="btn btn-xs btn-default"><i class="xi-trash"></i> 삭제</a>
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>작가매칭</td>
+						<td><span class="text-danger">20189192</span></td>
+						<td>리스트에 보여지는 타이틀</td>
+						<td>원데이</td>
+						<td>50,000 ~ 90,000</td>
+						<td>2018-02-12 ~ 2018.03.31</td>
+						<td>2018-02-12 ~ 2018.03.31</td>
+						<td>1/4</td>
+						<td><span class="text-danger">거부</span></td>
+						<td>
+							<a href="javascript:;" class="btn btn-xs btn-default"><i class="xi-cog"></i> 수정</a>
+							<a href="javascript:;" class="btn btn-xs btn-default"><i class="xi-trash"></i> 삭제</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+				<!-- /.Table -->
+			
+				<!-- Pagination-->
+				<div class="pagination m-t-30 m-b-40">
+					<a class="page-link move-link disabled" href="javascript:;">처음</a>
+					<a class="page-link move-link disabled" href="javascript:;">
+						<i class="xi-angle-left"></i>
+					</a>
+					<a class="page-link active" href="javascript:;">1</a>
+					<a class="page-link" href="javascript:;">2</a>
+					<a class="page-link" href="javascript:;">3</a>
+					<a class="page-link" href="javascript:;">4</a>
+					<a class="page-link" href="javascript:;">5</a>
+					<a class="page-link" href="javascript:;">6</a>
+					<a class="page-link" href="javascript:;">7</a>
+					<a class="page-link" href="javascript:;">8</a>
+					<a class="page-link" href="javascript:;">9</a>
+					<a class="page-link" href="javascript:;">10</a>
+					<a class="page-link move-link" href="javascript:;">
+						<i class="xi-angle-right"></i>
+					</a>
+					<a class="page-link move-link" href="javascript:;">끝</a>
+				</div>
+				<!-- /.Pagination-->
+			</div>
+		</div>
+	</div>
+	<div id="writer-footer">
+		<div class="writer-container">
+			<div class="row-md">
+				<div class="col-md-6">
+					<div class="footer-info">
+						상호 : (주)솜씨당 컴퍼니  ㅣ  대표 : 정명원  ㅣ 사업자등록번호 :  588-87-00966<br>
+						주소 : 서울특별시 마포구 양화로 161 케이스퀘어 8층 805호<br>
+						통신판매업 신고번호 : (미정)<br>
+						고객센터 : (미정)   ㅣ 서비스 제 / 이용문의 :  help@sssdc.co.kr<br>
+						<br>
+					</div>
+				</div>
+				<div class="col-md-6 footer-copy">
+					Copyright 2018. SSSDC. All rights reserved.
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/form_elements.js"></script>
+</body>
+</html>

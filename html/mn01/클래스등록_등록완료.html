@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 클래스 등록 (미리보기)</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../../common/css/common.css">
+	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
+	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/switchery/css/switchery.css">
+    <link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css">
+    
+	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../../common/plugins/modernizr.custom.js" type="text/javascript"></script>
+	<script src="../../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../../common/plugins/moment/moment.min.js"></script>
+    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+    <script src="../../common/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
+    <script src="../../common/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../../common/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+    <script src="../../common/plugins/codrops-dialogFx/dialogFx.js" type="text/javascript"></script>
+    <script src="../../common/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<div id="writer-header">
+		<div class="writer-container">
+			<h1><a href="javascript:;">솜씨당 작가페이지</a></h1>
+			<div class="writer-tnb">
+				<ul>
+					<li class="profile">						
+						<span class="name"><strong>솜씨당</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="writer-wrapper">
+		<div class="writer-container">
+			<div id="writer-nav">
+				<div class="nav-name">클래스</div>
+				<ul>
+					<li class="active"><a href="javascript:_gnbMove(1);">클래스 등록</a></li>
+					<li><a href="javascript:_gnbMove(2);">클래스 검수</a></li>
+					<li><a href="javascript:_gnbMove(3);">클래스 관리</a></li>			
+				</ul>
+				<hr>
+				<div class="nav-name">매출/정산</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(4);">매출 현황</a></li>
+					<li><a href="javascript:_gnbMove(5);">정산 신청</a></li>
+					<li><a href="javascript:_gnbMove(6);">정산 내역</a></li>			
+				</ul>
+				<hr>
+				<a href="javascript:;" class="writer-nav-counsel"><i class="xi-forum"></i> 1:1 실시간 상담</a>
+			</div>
+		
+			<div id="writer-contents">
+				<ol class="writer-breadcrumb">
+					<li class="breadcrumb-item home"><a href="#">솜씨당 작가페이지</a></li>
+					<li class="breadcrumb-item"><a href="#">클래스</a></li>
+					<li class="breadcrumb-item active">클래스 등록</li>
+				</ol>
+				<div class="h2-container">
+					<h2>클래스 등록</h2>
+				</div>
+				
+				<ul class="nav nav-tabs nav-tabs-step m-t-20" role="tablist" data-init-reponsive-tabs="dropdownfx">
+					<li>
+						<span>클래스 등록하기</span>
+					</li>
+					<li>
+						<span>기본정보</span>
+					</li>
+					<li>
+						<span>스케쥴 및 부가정보</span>
+					</li>
+					<li>
+						<span>커리큘럼</span>
+					</li>
+					<li>
+						<span>미리보기</span>
+					</li>
+					<li class="active">
+						<span>등록완료</span>
+					</li>
+				</ul>
+				
+				<div class="m-t-150 m-b-150">
+					<div class="complete-icon"></div>
+					<div class="text-center fs-24 text-danger bold m-t-30">
+						정상적으로 "등록신청" 되었습니다.
+					</div>
+					<div class="text-center fs-24 text-danger bold">
+						(예상 소유 시간 1시간)
+					</div>
+					<div class="text-center fs-16 m-t-10">
+						등록 승인은 "클래스 검수" 에서 확인 가능합니다
+					</div>
+					<hr class="w-400 m-t-40">
+					<div class="m-t-40 text-center">
+						<a href="%ED%81%B4%EB%9E%98%EC%8A%A4%EA%B2%80%EC%88%98.html" class="step-btn step-btn-primary">확인</a>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="writer-footer">
+		<div class="writer-container">
+			<div class="row-md">
+				<div class="col-md-6">
+					<div class="footer-info">
+						상호 : (주)솜씨당 컴퍼니  ㅣ  대표 : 정명원  ㅣ 사업자등록번호 :  588-87-00966<br>
+						주소 : 서울특별시 마포구 양화로 161 케이스퀘어 8층 805호<br>
+						통신판매업 신고번호 : (미정)<br>
+						고객센터 : (미정)   ㅣ 서비스 제 / 이용문의 :  help@sssdc.co.kr<br>
+						<br>
+					</div>
+				</div>
+				<div class="col-md-6 footer-copy">
+					Copyright 2018. SSSDC. All rights reserved.
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/gallery.js"></script>
+<script src="../../common/js/form_elements.js"></script>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 계정관리</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../../common/css/common.css">
+	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    
+	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../../common/plugins/moment/moment.min.js"></script>
+    <script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+</head>
+
+<body>
+	<div id="writer-header">
+		<div class="writer-container">
+			<h1><a href="javascript:;">솜씨당 작가페이지</a></h1>
+			<div class="writer-tnb">
+				<ul>
+					<li class="profile">						
+						<span class="name"><strong>솜씨당</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="writer-wrapper">
+		<div class="writer-container">
+			<div id="writer-nav">
+				<div class="nav-name">클래스</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(1);">클래스 등록</a></li>
+					<li><a href="javascript:_gnbMove(2);">클래스 검수</a></li>
+					<li class="active"><a href="javascript:_gnbMove(3);">클래스 관리</a></li>			
+				</ul>
+				<hr>
+				<div class="nav-name">매출/정산</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(4);">매출 현황</a></li>
+					<li><a href="javascript:_gnbMove(5);">정산 신청</a></li>
+					<li><a href="javascript:_gnbMove(6);">정산 내역</a></li>			
+				</ul>
+				<hr>
+				<a href="javascript:;" class="writer-nav-counsel"><i class="xi-forum"></i> 1:1 실시간 상담</a>
+			</div>
+		
+			<div id="writer-contents">
+				<ol class="writer-breadcrumb">
+					<li class="breadcrumb-item home"><a href="#">솜씨당 작가페이지</a></li>
+					<li class="breadcrumb-item"><a href="#">클래스</a></li>
+					<li class="breadcrumb-item active">클래스 관리</li>
+				</ol>
+				<div class="h2-container">
+					<h2>클래스 관리</h2>
+				</div>
+				
+			
+				<div class="row-md m-t-20">
+					<div class="col-md-12">
+						※ 검수 후 진행 된 클래스를 확인할 수 있습니다.
+					</div>
+				</div>
+				<div class="card card-dashboard m-b-10 m-t-10">
+					<div class="card-block">
+						<div class="row-sm m-b-15">
+							<div class="col-sm-4">
+								<label for="calendar_start">모집기간검색</label>
+								<div class="input-daterange input-group" id="datepicker-range">
+									<input type="text" class="input-sm form-control" id="calendar_start" name="start" placeholder="yyyy-mm-dd">
+									<div class="input-group-addon">-</div>
+									<input type="text" class="input-sm form-control" id="calendar_end" name="end" placeholder="yyyy-mm-dd">
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<label>&nbsp;</label>
+								<div class="form-group">
+									<a href="javascript:;" class="btn btn-sm btn-primary">전체</a>
+									<a href="javascript:;" class="btn btn-sm btn-primary">오늘</a>
+									<a href="javascript:;" class="btn btn-sm btn-primary">1주일</a>
+									<a href="javascript:;" class="btn btn-sm btn-primary">1개월</a>
+									<a href="javascript:;" class="btn btn-sm btn-primary">3개월</a>
+								</div>
+							</div>
+						</div>
+						<div class="row-sm m-b-15">
+							<div class="col-sm-2">
+								<label for="select01">기간형태</label>
+								<div class="select-wrapper">
+									<select class="form-control input-sm" id="select06">
+										<option value="00">전체</option>
+										<option value="01">원데이</option>
+										<option value="02">장기</option>
+										<option value="03">상시</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-sm-2">
+								<label for="select01">진행상태</label>
+								<div class="select-wrapper">
+									<select class="form-control input-sm" id="select06">
+										<option value="00">승인상태 선택</option>
+										<option value="01">모집중</option>
+										<option value="02">마감</option>
+										<option value="03">미달</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<hr>
+						<div class="text-center">
+							<a href="javascript:;" class="btn btn-info btn-sm"><i class="xi-refresh"></i> 초기화</a>
+							<a href="javascript:;" class="btn btn-danger btn-sm"><i class="xi-search"></i> 검색</a>
+						</div>
+					</div>
+				</div>
+				<!-- Table -->
+				<table class="table">
+					<colgroup>
+						<col style="width:3%">
+						<col style="width:7%">
+						<col style="width:7%">
+						<col>
+						<col style="width:7%">
+						<col style="width:10%">
+						<col style="width:8%">
+						<col style="width:9%">
+						<col style="width:9%">
+						<col style="width:8%">
+						<col style="width:6%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>구분</th>
+							<th>상품번호</th>
+							<th>클래스명</th>
+							<th>기간 형태</th>
+							<th>금액</th>
+							<th>등록일</th>
+							<th>모집기간</th>
+							<th>진행기간</th>
+							<th>
+								모집인원<br>
+								<small class="hint-text">(최소/최대)</small>
+							</th>
+							<th>신청 인원</th>
+							<th>진행상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>3</td>
+							<td>작가매칭</td>
+							<td><a href="#class_management_detail" class="text-danger text-underline modal-show">20189192</span></td>
+							<td>리스트에 보여지는 타이틀</td>
+							<td>원데이</td>
+							<td>50,000 ~ 90,000</td>
+							<td>2018-0301</td>
+							<td>2018-02-12 ~ 2018-03-31</td>
+							<td>2018-02-12 ~ 2018-03-31</td>
+							<td>2/4</td>
+							<td><strong>5</strong></td>
+							<td>모집중</td>
+						</tr>
+
+					</tbody>
+				</table>
+				<!-- /.Table -->
+			
+				<!-- Pagination-->
+				<div class="pagination m-t-30 m-b-40">
+					<a class="page-link move-link disabled" href="javascript:;">처음</a>
+					<a class="page-link move-link disabled" href="javascript:;">
+						<i class="xi-angle-left"></i>
+					</a>
+					<a class="page-link active" href="javascript:;">1</a>
+					<a class="page-link" href="javascript:;">2</a>
+					<a class="page-link" href="javascript:;">3</a>
+					<a class="page-link" href="javascript:;">4</a>
+					<a class="page-link" href="javascript:;">5</a>
+					<a class="page-link" href="javascript:;">6</a>
+					<a class="page-link" href="javascript:;">7</a>
+					<a class="page-link" href="javascript:;">8</a>
+					<a class="page-link" href="javascript:;">9</a>
+					<a class="page-link" href="javascript:;">10</a>
+					<a class="page-link move-link" href="javascript:;">
+						<i class="xi-angle-right"></i>
+					</a>
+					<a class="page-link move-link" href="javascript:;">끝</a>
+				</div>
+				<!-- /.Pagination-->
+			</div>
+		</div>
+	</div>
+	<div id="writer-footer">
+		<div class="writer-container">
+			<div class="row-md">
+				<div class="col-md-6">
+					<div class="footer-info">
+						상호 : (주)솜씨당 컴퍼니  ㅣ  대표 : 정명원  ㅣ 사업자등록번호 :  588-87-00966<br>
+						주소 : 서울특별시 마포구 양화로 161 케이스퀘어 8층 805호<br>
+						통신판매업 신고번호 : (미정)<br>
+						고객센터 : (미정)   ㅣ 서비스 제 / 이용문의 :  help@sssdc.co.kr<br>
+						<br>
+					</div>
+				</div>
+				<div class="col-md-6 footer-copy">
+					Copyright 2018. SSSDC. All rights reserved.
+				</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+<!-- Modal 정산 상세목록 -->
+<div class="modal fade center-scale" id="class_management_detail" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:720px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>클래스 관리 상세</h5>
+				</div>
+				<div class="modal-body">
+					
+					<table class="table">
+						<colgroup>
+							<col style="width:15%">
+							<col style="width:14%">
+							<col>
+							<col style="width:24%">
+							<col style="width:20%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>구분</th>
+								<th>상품번호</th>
+								<th>클래스명</th>
+								<th>모집기간</th>
+								<th>
+									모집인원
+									<small class="hint-text">(최소/최대)</small>
+								</th>
+							</tr>
+						</thead>
+						<tr>
+							<td>작가매칭</td>
+							<td><span class="text-danger">SS2123</span></td>
+							<td>리스트에 보여지는 타이틀</td>
+							<td>2018.03.01 ~ 2018.03.31</td>
+							<td>2/4</td>
+						</tr>
+					</table>
+					
+					<h5 class="m-t-20">날짜별 상세</h5>
+					<div class="fs-12 m-b-10 m-t-5">※ 남은 인원을 0으로 변경하시면 "모집 마감" 변경 가능하며, 원하시는 인원으로 변경시 "모집 인원" 자동 변경 가능합니다.</div>
+					
+					<table class="table">
+						<colgroup>
+							<col style="width:18%">
+							<col style="width:18%">
+							<col>
+							<col style="width:20%">
+							<col style="width:14%">
+							<col style="width:15.5%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th rowspan="2">모집 날짜</th>
+								<th rowspan="2">타임</th>
+								<th rowspan="2">모집상태</th>
+								<th colspan="3">인원</th>
+							</tr>
+							<tr>
+								<th>
+									모집인원
+									<small class="hint-text">(최소/최대)</small>
+								</th>
+								<th>신청 인원</th>
+								<th>남은 인원</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td rowspan="3">03.01(월)</td>
+								<td>10:00 - 12:00</td>
+								<td><strong>모집중</strong></td>
+								<td>2/5</td>
+								<td>3</td>
+								<td>
+									<div class="form-group form-inline">
+										<a href="javscript:;" class="btn-xs btn btn-primary num-minus"><i class="xi-angle-left"></i></a>
+										<input type="text" class="form-control input-xs m-l-5 m-r-5 w-30 text-center" value="3">
+										<a href="javscript:;" class="btn-xs btn btn-primary num-plus"><i class="xi-angle-right"></i></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>14:00 - 16:00</td>
+								<td><span class="text-danger">마감</span></td>
+								<td>2/5</td>
+								<td>3</td>
+								<td>
+									<div class="form-group form-inline">
+										<a href="javscript:;" class="btn-xs btn btn-primary num-minus"><i class="xi-angle-left"></i></a>
+										<input type="text" class="form-control input-xs m-l-5 m-r-5 w-30 text-center" value="3">
+										<a href="javscript:;" class="btn-xs btn btn-primary num-plus"><i class="xi-angle-right"></i></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>18:00 - 20:00</td>
+								<td><strong>모집중</strong></td>
+								<td>2/5</td>
+								<td>3</td>
+								<td>
+									<div class="form-group form-inline">
+										<a href="javscript:;" class="btn-xs btn btn-primary num-minus"><i class="xi-angle-left"></i></a>
+										<input type="text" class="form-control input-xs m-l-5 m-r-5 w-30 text-center" value="3">
+										<a href="javscript:;" class="btn-xs btn btn-primary num-plus"><i class="xi-angle-right"></i></a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 정산 상세목록 -->
+<script>
+$('.num-minus').click(function(e){
+	e.preventDefault();
+	var currentVal = parseInt($(this).next().val());	
+	if (!isNaN(currentVal)) {
+		if(currentVal>0)
+		{
+			$(this).next().val(currentVal - 1);		
+		}
+	}
+});	
+$('.num-plus').click(function(e){
+	e.preventDefault();
+	var currentVal = parseInt($(this).prev().val());	
+	if (!isNaN(currentVal)) {
+		$(this).prev().val(currentVal + 1);	
+	}
+});	
+</script>
+
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/form_elements.js"></script>
+</body>
+</html>

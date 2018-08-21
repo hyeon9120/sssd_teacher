@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+	<title>솜씨당 - 로그인</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../common/css/common.css">
+	<link rel="stylesheet" href="../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../common/plugins/font-awesome/css/font-awesome.css">
+	<link href="../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../common/plugins/switchery/css/switchery.css">
+    <link href="../common/plugins/jquery-scrollbar/jquery.scrollbar.css">
+    
+	<script src="../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../common/plugins/modernizr.custom.js" type="text/javascript"></script>
+	<script src="../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../common/plugins/moment/moment.min.js"></script>
+    <script src="../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+    <script src="../common/plugins/jquery-metrojs/MetroJs.min.js" type="text/javascript"></script>
+    <script src="../common/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="../common/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
+    <script src="../common/plugins/codrops-dialogFx/dialogFx.js" type="text/javascript"></script>
+    <script src="../common/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="artist-sw-notice">
+	<div class="switch-content">
+		<div class="notice-txt01">작가 전환 시 유의사항</div>
+		<div class="notice-txt02">
+			- 작가 전환 시 클래스 등록과 정산관련 확인을 위해 본인인증 및 추가정보 입력이 필요합니다.<br>
+			- 클래스 등록 등과 같은 작가 활동은 작가 전환 완료 시점부터 바로 이용 가능합니다.
+		</div>
+	</div>	
+</div>
+<div class="artist-sw-step">
+	<div class="switch-content">
+		<ul>
+			<li>01. 본인인증</li>
+			<li class="active">02. 정보입력&amp;약관동의</li>
+			<li>03. 작가 전환 완료</li>
+		</ul>		
+	</div>
+</div>
+<div class="artist-step02-01">
+	<div class="switch-content">
+		<h3 class="m-t-30 m-b-5">정보입력</h3>
+		<div class="f13 text-muted">클래스 등록 및 정산 등 원활한 작가 활동을 위해 추가 정보를 입력해주세요.</div>
+		
+	</div>
+</div>
+
+<div class="artist-step02-02">
+	<div class="switch-content">
+		<hr>
+		<h5 class="m-t-30">
+			닉네임 <span class="text-danger">*</span>
+		</h5>
+		<div class="m-b-10">
+			<div class="form-group form-btnbox m-t-10">
+				<div class="form-box">
+					<input type="text" class="form-control" placeholder="닉네임을 입력해 주세요.">
+				</div>
+				<div class="form-btn">
+					<a href="javscript:;" class="btn btn-primary"><i class="xi-search"></i>중복확인</a>
+				</div>
+			</div>
+			<div class="fs-13 m-t-5 text-danger">사용 가능한 닉네임입니다.</div>
+		</div>
+		<h5 class="m-t-30">
+			이름 <span class="text-danger">*</span>
+		</h5>
+		<div class="form-group m-t-10 m-b-10">
+			<input type="text" class="form-control" placeholder="이름을 입력해 주세요.">
+		</div>
+		<h5 class="m-t-30">
+			휴대폰 <span class="text-danger">*</span>
+		</h5>
+		<div class="form-group form-btnbox m-t-10 m-b-10">
+			<div class="form-btn p-l-0 p-r-5">
+				<div class="select-wrapper">
+					<select name="" id="" class="form-control w-100">
+						<option value="010">010</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-box">
+				<input type="text" class="form-control" placeholder="">
+			</div>
+		</div>
+		<h5 class="m-t-30">
+			이메일 <span class="text-danger">*</span>
+		</h5>
+		<div class="form-group m-t-10 m-b-10">
+			<input type="text" class="form-control" placeholder="연락가능한 이메일 주소를 입력해 주세요.">
+		</div>
+		<h5 class="m-t-30">
+			성별 <span class="text-danger">*</span>
+		</h5>
+		<div class="form-group m-t-10 m-b-10">
+			<div class="radio radio-inline">
+				<input type="radio" id="select_gender01" name="select_gender" checked>
+				<label for="select_gender01">여성</label>
+			</div>
+			<div class="radio radio-inline">
+				<input type="radio" id="select_gender02" name="select_gender">
+				<label for="select_gender02">남성</label>
+			</div>
+		</div>
+		<h5 class="m-t-30">
+			추천인
+		</h5>
+		<div class="form-group m-t-10 m-b-10">
+			<input type="text" class="form-control" placeholder="추천인의 추천 코드를 입력해 주세요.">
+		</div>
+		<h5 class="m-t-30">
+			약관동의
+		</h5>
+		<div class="row-md m-t-10">
+			<div class="col-md-12 text-right">
+				<span class="bold"><label for="step02_agree01">모두 동의합니다.</label></span>
+				<div class="checkbox checkbox-inline m-r-0">
+					<input type="checkbox" id="step02_agree01">
+					<label for=""></label>
+				</div>
+			</div>
+		</div>
+		<hr class="m-t-10 m-b-10">
+		<div class="row-md m-t-5">
+			<div class="col-md-6">[필수] <a href="javascript:;" class="modal-show bold text-underline">솜씨당 서비스 이용약관 동의</a></div>
+			<div class="col-md-6 text-right">
+				<div class="checkbox checkbox-inline m-r-0">
+					<input type="checkbox" id="step02_agree02">
+					<label for="step02_agree02"></label>
+				</div>
+			</div>
+		</div>
+		<div class="row-md m-t-5">
+			<div class="col-md-6">[필수] <a href="javascript:;" class="modal-show bold text-underline">개인정보 수집 및 이용에 대한 동의</a></div>
+			<div class="col-md-6 text-right">
+				<div class="checkbox checkbox-inline m-r-0">
+					<input type="checkbox" id="step02_agree03">
+					<label for="step02_agree03"></label>
+				</div>
+			</div>
+		</div>
+		<div class="row-md m-t-5">
+			<div class="col-md-6">[필수] <a href="javascript:;" class="modal-show bold text-underline">위치기반 서비스 이용 동의</a></div>
+			<div class="col-md-6 text-right">
+				<div class="checkbox checkbox-inline m-r-0">
+					<input type="checkbox" id="step02_agree04">
+					<label for="step02_agree04"></label>
+				</div>
+			</div>
+		</div>
+		<div class="row-md m-t-5 ">
+			<div class="col-md-6">[필수] <a href="javascript:;" class="modal-show bold text-underline">클래스 등록 서비스 이용약관 동의</a></div>
+			<div class="col-md-6 text-right">
+				<div class="checkbox checkbox-inline m-r-0">
+					<input type="checkbox" id="step02_agree05">
+					<label for="step02_agree05"></label>
+				</div>
+			</div>
+		</div>
+		<div class="row-md m-t-5 ">
+			<div class="col-md-6">[필수] <a href="javascript:;" class="modal-show bold text-underline">클래스 관리 규정에 대한 동의</a></div>
+			<div class="col-md-6 text-right">
+				<div class="checkbox checkbox-inline m-r-0">
+					<input type="checkbox" id="step02_agree06">
+					<label for="step02_agree06"></label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="artist-step-btn">
+	<div class="switch-content">
+		<a href="javascript:;" class="step-btn step-btn-default">취소</a>
+		<a href="javascript:;" class="step-btn step-btn-primary"><i class="xi-check"></i> 회원가입</a>
+	</div>
+</div>
+
+<script src="../common/js/common.js"></script>
+<script src="../common/js/form_elements.js"></script>
+</body>
+</html>

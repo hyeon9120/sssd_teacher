@@ -1,0 +1,43 @@
+.add_step01_logo {	
+	width:159px;
+	height:96px;
+	background-image:url(../image/sssd_logo.svg);
+	background-size:159px 96px;
+	margin:0 auto 20px;	
+}
+.help-tit {
+	font-size:14px;
+	font-weight:bold;
+}
+.help-list-01 {
+	li {
+		margin-bottom:4px;
+		li {
+			padding-left:14px;
+			text-indent:-10px;
+			line-height:15px;
+			&:before {
+				content:" -";
+				margin-right:6px;
+			}
+		}
+	}
+}
+.help-list-02 {
+	li {
+		padding-left:14px;
+		text-indent:-10px;
+		line-height:15px;
+		margin-bottom:4px;
+		&:before {
+			content:" -";
+			margin-right:6px;
+		}
+	}
+}
+.complete-icon {
+	background-image:url(../image/icon_class_complete.png);
+	width:81px;
+	height:73px;
+	margin:0 auto;
+}

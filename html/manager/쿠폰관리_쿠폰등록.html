@@ -1,0 +1,766 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 계정관리</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../../common/css/common.css">
+	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    
+	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../../common/plugins/moment/moment.min.js"></script>
+    <script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+</head>
+
+<body>
+
+	<div id="wrapper-header">
+		<div class="container">
+			<h1 class="logo"><a href="javascript:;">솜씨당 ADMIN</a></h1>
+			<div class="navbar-header">
+				<ul>
+					<li class="notification notification-list">
+					<div class="dropdown">
+						<a href="javascript:;" id="notification-center" class="header-icon" data-toggle="dropdown"><i class="fa-bell-o fa"></i></a>
+						<span class="count">1</span>
+						<!-- Notification Dropdown -->
+						<div class="dropdown-menu notification-toggle" role="menu" aria-labelledby="notification-center" >
+							<div class="notification-panel">
+								<div class="notification-body scrollable">
+									<div class="notification-item unread clearfix">
+										<div class="heading open">
+											<a href="#" class="pull-left">												
+												<span class="bold">알림입니다.</span>
+												<span class="fs-12 m-l-10">서브제목</span>
+											</a>
+											<div class="pull-right">
+												<div class="thumbnail-wrapper d16 circular inline m-t-15 m-r-10 toggle-more-details">
+													<div><i class="fa fa-angle-left"></i>
+													</div>
+												</div>
+												<span class=" time">1분전</span>
+											</div>
+											<div class="more-details">
+												<div class="more-details-inner">
+													<h5 class="semi-bold fs-16">서브제목Title</h5>
+													<p class="small hint-text">
+														내용입니다.<br>
+														내용입니다.<br>
+														내용입니다.<br>
+														내용입니다.
+													</p>
+												</div>
+											</div>
+										</div>
+										<div class="option" data-toggle="tooltip" data-placement="left" title="mark as read">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+									<div class="notification-item clearfix">
+										<div class="heading">
+											<a href="#" class="text-danger pull-left">
+													  <i class="fa fa-exclamation-triangle m-r-10"></i>
+													  <span class="bold">98% Server Load</span>
+													  <span class="fs-12 m-l-10">Take Action</span>
+													</a>
+											<span class="pull-right time">2 분전</span>
+										</div>
+										<div class="option">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+									<div class="notification-item clearfix">
+										<div class="heading">
+											<a href="#" class="text-warning-dark pull-left">
+													  <i class="fa fa-exclamation-triangle m-r-10"></i>
+													  <span class="bold">Warning Notification</span>
+													  <span class="fs-12 m-l-10">Buy Now</span>
+													</a>
+											<span class="pull-right time">어제</span>
+										</div>
+										<div class="option">
+											<a href="#" class="mark"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- /.Notification Dropdown -->
+                	
+                	</div>
+				</li>
+					<li class="profile">
+						<span class="img" style="background-image:url(https://placeimg.com/300/300/people)"></span>
+						<span class="name"><strong>관리자</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+			<div class="search-header">
+				<form>
+					<input type="text" class="form-control" placeholder="검색어를 입력해 주세요...">
+					<button href="javascript:;"><i class="pg-search"></i></button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper-nav-bar">
+		<div class="container">
+		
+		<div class="horizontal-app-menu">
+			<div class="menu-bar">
+				<a href="#" class="btn-link toggle-sidebar hidden-lg-up pg pg-close" data-toggle="horizontal-menu"></a>
+				<ul>
+					<li>
+						<a href="javascript:_gnbMove(1)"><span class="title">통계</span></a>
+					</li>
+					<li>
+						<a href="javascript:_gnbMove(2)"><span class="title">회원관리</span></a>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">클래스 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(3,1)">클래스 승인 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(3,2)">클래스 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(3,3)">클래스 카테고리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">공방 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul class="">
+							<li class="">
+								<a href="javascript:_gnbMove(4,1)">리스트</a>
+							</li>
+							<li class="">
+								<a href="javascript:_gnbMove(4,2)">공방요청</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">게시글 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(5,1)">함께하기 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(5,2)">후기 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(5,3)">공지/이벤트 관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">추천 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(6,1)">배너 관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(6,2)">추천 클래스</a>
+							</li>
+						</ul>
+					</li>
+					<li class="active">
+						<a href="javascript:;">
+							<span class="title">관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(7,1)">계정 관리</a>
+							</li>
+							<li class="active">
+								<a href="javascript:;">
+									<span class="title">혜택 관리</span>
+									<span class=" arrow"></span>
+								</a>
+								<ul class="sub-menu">
+									<li class="active"><a href="javascript:_gnbMove(7,2,1)">쿠폰관리</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(7,3)">포인트 설정</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(7,4)">포인트/추천인 관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">매출/정산 관리</span>
+							<span class=" arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(8,1)">입금대기(무통장)</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(8,2)">매출관리</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(8,3)">정산관리</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="javascript:;">
+							<span class="title">스타일가이드</span>
+							<span class="arrow"></span>
+						</a>
+						<ul>
+							<li>
+								<a href="javascript:_gnbMove(9,1)">기본</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,2)">Gallery</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,3)">Login</a>
+							</li>
+							<li>
+								<a href="javascript:_gnbMove(9,4)">Error page</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.GNB 메뉴 -->
+			
+			<div class="nav-folding">
+                <a href="javascript:;"><span class="pg-menu"></span></a>
+            </div>
+
+		</div>
+	</div>
+
+
+	<div id="wrapper-contents">
+		<div class="container">
+			<ol class="breadcrumb clearfix">
+				<li class="breadcrumb-item home"><a href="#">솜씨당관리자</a></li>
+				<li class="breadcrumb-item"><a href="#">관리</a></li>
+				<li class="breadcrumb-item"><a href="#">혜택관리</a></li>
+				<li class="breadcrumb-item active">쿠폰관리</li>
+			</ol>
+			<div class="h2-container">
+				<h2>쿠폰만들기</h2>
+			</div>
+			<hr>
+			<h4 class="m-t-30 m-b-10">카테고리 등록</h4>
+			<div class="form-inline">
+				<div class="select-wrapper">
+					<select name="" id="" class="form-control w-300">
+						<option value="01">본사발행</option>
+					</select>
+				</div>
+			</div>
+			<h4 class="m-t-30 m-b-10">쿠폰정보</h4>
+			<h5 class="m-t-20 m-b-10">쿠폰유형 선택</h5>
+			<div class="btn-group" data-toggle="buttons">
+				<label class="btn btn-default active" for="schedule_01">
+					<input type="radio" name="schedule_type" id="schedule_01" value="01" checked> 비율할인
+				</label>
+				<label class="btn btn-default" for="schedule_02">
+					<input type="radio" name="schedule_type" id="schedule_02" value="02"> 정액할인
+				</label>
+			</div>
+			<h5 class="m-t-20 m-b-10">쿠폰유형 선택</h5>
+			<div class="form-group">
+				<input type="text" placeholder="쿠폰명을 입력해 주세요." class="form-control w-600">
+			</div>
+			<h5 class="m-t-20 m-b-10">쿠폰내용</h5>
+			<div class="row-md">
+				<div class="col-md-4">
+					<div class="card card-dashboard h-120">
+						<div class="form-group card-block">
+							<div class="select-wrapper w-150">
+								<select name="" id="" class="form-control input-sm w-150">
+									<option value="01">이미지 선택</option>
+								</select>
+							</div>
+							<div class="hint-text m-t-10 fs-12">등록가능 이미지 기준 노출</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<input type="text" class="form-control input-sm" placeholder="쿠폰 사용기준을 선택/입력해 주세요.(최대25자)" maxlength="25">
+					</div>
+					<div class="form-group m-t-10">
+						<input type="text" class="form-control input-sm">
+					</div>
+					<div class="row-sm">
+						<div class="col-sm-7">
+							<div class="input-daterange input-group m-t-10" id="datepicker-range">
+								<input type="text" class="input-sm form-control" id="calendar_start" name="start" placeholder="yyyy-mm-dd">
+								<div class="input-group-addon">-</div>
+								<input type="text" class="input-sm form-control" id="calendar_end" name="end" placeholder="yyyy-mm-dd">
+							</div>
+						</div>
+						<div class="col-sm-5">
+							<div class="checkbox m-t-15">
+								<input type="checkbox" id="attach_checkbox">
+								<label for="attach_checkbox">기간 내 사용가능</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-sm">
+				<div class="col-sm-3">
+					<div class="select-wrapper">
+						<select name="" id="" class="form-control">
+							<option value="01">1인당 1회 사용가능</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="select-wrapper">
+						<select name="" id="" class="form-control">
+							<option value="01">타 쿠폰 중복할인 불가능</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row-sm m-t-10">
+				<div class="col-sm-3">
+					<div class="select-wrapper">
+						<select name="" id="" class="form-control">
+							<option value="01">쿠폰당 1인 기준으로 혜택 적용</option>
+						</select>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="select-wrapper">
+						<select name="" id="" class="form-control">
+							<option value="01">클래스 이용취소/환불 시 재발급 불가</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row-sm m-t-10">
+				<div class="col-sm-8">
+					<input type="text" class="form-control" placeholder="쿠폰에 대한 부가설명을 입력해주세요.(최대50자)" maxlength="50">
+				</div>
+			</div>
+			
+			<h4 class="m-t-30 m-b-10">노출정보</h4>
+			<h5 class="m-t-20 m-b-10">노출기간 설정</h5>
+			<div class="form-group w-300">
+				<div class="input-daterange input-group" id="datepicker-range">
+					<input type="text" class="input-sm form-control" id="calendar_start" name="start" placeholder="yyyy-mm-dd">
+					<div class="input-group-addon">-</div>
+					<input type="text" class="input-sm form-control" id="calendar_end" name="end" placeholder="yyyy-mm-dd">
+				</div>
+			</div>
+			<h5 class="m-t-20 m-b-10">발급수 제한</h5>
+			<div class="form-group form-inline">
+				<div class="radio radio-inline">
+					<input type="radio" name="coupon_count" id="coupon_count01">
+					<label for="coupon_count01">제한없음</label>
+				</div>
+				<div class="radio radio-inline m-r-10">
+					<input type="radio" name="coupon_count" id="coupon_count02">
+					<label for="coupon_count02">전체쿠폰수</label>					
+				</div>
+				<div class="inline-block m-r-20">
+					<input type="text" class="form-control input-sm w-40">
+					장
+				</div>
+				<div class="radio radio-inline m-r-10">
+					<input type="radio" name="coupon_count" id="coupon_count03">
+					<label for="coupon_count03">1일 받기 제한</label>
+				</div>
+				<div class="inline-block m-r-20">
+					<input type="text" class="form-control input-sm w-40">
+					장
+				</div>
+			</div>
+			<h5 class="m-t-20 m-b-10">노출 조건 설정</h5>
+			<div class="form-group form-inline">
+				<div class="radio radio-inline">
+					<input type="radio" name="coupon_ex" id="coupon_ex01">
+					<label for="coupon_ex01">코드발행</label>
+				</div>
+				<div class="radio radio-inline">
+					<input type="radio" name="coupon_ex" id="coupon_ex02">
+					<label for="coupon_ex02">카테고리</label>
+				</div>
+				<div class="radio radio-inline">
+					<input type="radio" name="coupon_ex" id="coupon_ex03">
+					<label for="coupon_ex03">지역기준</label>
+				</div>
+				<div class="radio radio-inline">
+					<input type="radio" name="coupon_ex" id="coupon_ex04">
+					<label for="coupon_ex04">클래스</label>
+				</div>
+				<div class="radio radio-inline">
+					<input type="radio" name="coupon_ex" id="coupon_ex05">
+					<label for="coupon_ex05">회원</label>
+				</div>
+			</div>
+			<div class="card card-dashboard m-t-10" id="coupon_ex01_box" style="display:none">
+				<div class="card-block">
+					<div class="row-sm">
+						<div class="col-sm-2">
+							<label for="select01">카테고리(대분류)</label>
+							<div class="select-wrapper">
+								<select class="form-control input-sm" id="select01">
+									<option value="00">대분류 선택</option>
+									<option value="01">대분류1</option>
+									<option value="02">대분류2</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<label for="select01">카테고리(소분류)</label>
+							<div class="select-wrapper">
+								<select class="form-control input-sm" id="select01">
+									<option value="00">소분류 선택</option>
+									<option value="01">소분류1</option>
+									<option value="02">소분류2</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="m-t-20">
+								<a href="javascript:;" class="btn btn-sm btn-primary">조건추가</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card card-dashboard m-t-10" id="coupon_ex02_box" style="display:none">
+				<div class="card-block">
+					<div class="row-sm">
+						<div class="col-sm-2">
+							<label for="select01">모집지역</label>
+							<div class="select-wrapper">
+								<select class="form-control input-sm" id="select04">
+									<option value="00">시/도 선택</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-2">							
+							<div class="select-wrapper m-t-20">
+								<select class="form-control input-sm" id="select05">
+									<option value="00">시/구/군 선택</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-2">							
+							<div class="select-wrapper m-t-20">
+								<select class="form-control input-sm" id="select06">
+									<option value="00">동/면/읍 선택</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div class="m-t-20">
+								<a href="javascript:;" class="btn btn-sm btn-primary"><i class="xi-search"></i> 검색</a>
+							</div>
+						</div>
+					</div>
+					<div class="row-sm m-t-5">
+						<div class="col-sm-6">							
+							<input type="text" class="form-control input-sm" placeholder="아이디, 제목을 입력해 주세요.">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card card-dashboard m-t-10" id="coupon_ex03_box" style="display:none">
+				<div class="card-block p-t-30 p-b-30 text-center">
+					<a href="javscript:;" class="btn btn-sm btn-primary">전체클래스 적용</a>
+					<a href="#add_class" class="btn btn-sm btn-primary modal-show">개별클래스 추가</a>
+				</div>
+			</div>
+			<div class="card card-dashboard m-t-10" id="coupon_ex04_box" style="display:none">
+				<div class="card-block">
+					<div class="row-sm m-b-15">
+						<div class="col-sm-4">
+							<label for="calendar_start">모집기간 검색</label>
+							<div class="input-daterange input-group" id="datepicker-range">
+								<input type="text" class="input-sm form-control" id="calendar_start" name="start" placeholder="yyyy-mm-dd">
+								<div class="input-group-addon">-</div>
+								<input type="text" class="input-sm form-control" id="calendar_end" name="end" placeholder="yyyy-mm-dd">
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<label for="calendar_start">클래스 참여횟수</label>
+							<div class="select-wrapper">
+								<select class="form-control input-sm">
+									<option value="00">0</option>
+									<option value="00">1~3</option>
+									<option value="00">4~6</option>
+									<option value="00">7~10</option>
+									<option value="00">11~</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-2">
+							<div class="m-t-20">
+								<a href="javascript:;" class="btn btn-sm btn-primary">조건추가</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+			$('input[name=coupon_ex]').click(function(){
+				if($(this).prop('id') == 'coupon_ex02') {
+					$('#coupon_ex01_box').show();
+					$('#coupon_ex02_box').hide();
+					$('#coupon_ex03_box').hide();
+					$('#coupon_ex04_box').hide();
+				} else if($(this).prop('id') == 'coupon_ex03') {
+					$('#coupon_ex01_box').hide();
+					$('#coupon_ex02_box').show();
+					$('#coupon_ex03_box').hide();
+					$('#coupon_ex04_box').hide();
+				} else if($(this).prop('id') == 'coupon_ex04') {
+					$('#coupon_ex01_box').hide();
+					$('#coupon_ex02_box').hide();
+					$('#coupon_ex03_box').show();
+					$('#coupon_ex04_box').hide();
+				} else if($(this).prop('id') == 'coupon_ex05') {
+					$('#coupon_ex01_box').hide();
+					$('#coupon_ex02_box').hide();
+					$('#coupon_ex03_box').hide();
+					$('#coupon_ex04_box').show();
+				}
+			});
+			</script>
+			<h5 class="m-t-20 m-b-10">클래스 참여 선착순</h5>
+			<div class="form-group form-inline">
+				<div class="checkbox checkbox-inline">
+					<input type="checkbox" name="coupon_first" id="coupon_first">
+					<label for="coupon_first">코드발행</label>
+				</div>
+			</div>
+			<hr>
+			<div class="text-center m-t-20 m-b-40">
+				<a href="javascript:;" class="btn btn-lg btn-primary"> 취소</a>
+				<a href="javascript:;" class="btn btn-lg btn-primary"> 미리보기</a>
+				<a href="javascript:;" class="btn btn-lg btn-danger"> 쿠폰발급</a>
+				<a href="javascript:;" class="btn btn-lg btn-danger"> 코드발급</a>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper-footer">
+		<div class="container">
+			<div class="footer-info">Copyright © 솜씨당. All rights reserved.</div>
+			<div class="footer-btn"></div>
+		</div>
+	</div>
+
+<!-- Modal center-scale -->
+<div class="modal fade center-scale" id="add_class" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:680px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>클래스 추가</h5>
+				</div>
+				<div class="modal-body">
+				
+					<div class="card card-dashboard m-b-10">
+						<div class="card-block">
+							<div class="row-sm m-b-15">
+								<div class="col-sm-4">
+									<label for="select01">카테고리 <small class="hint-text">/ 대분류</small></label>
+									<div class="select-wrapper">
+										<select class="form-control input-sm" id="select01">
+											<option value="00">카테고리 선택</option>
+											<option value="01">전체</option>
+											<option value="02">일반</option>
+											<option value="03">휴면</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<label for="select01">카테고리 <small class="hint-text">/ 소분류</small></label>
+									<div class="select-wrapper">
+										<select class="form-control input-sm" id="select02">
+											<option value="00">카테고리 선택</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-4">
+									<label for="select01">참여인원 정보</label>
+									<div class="form-group">
+										<input type="text" class="form-control input-sm" placeholder="~to">
+									</div>
+								</div>
+							</div>
+							<div class="row-sm m-b-15">
+								<div class="col-sm-4">
+									<label for="select01">지역</label>
+									<div class="select-wrapper">
+										<select class="form-control input-sm" id="select04">
+											<option value="00">시/도 선택</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-4">							
+									<div class="select-wrapper m-t-20">
+										<select class="form-control input-sm" id="select05">
+											<option value="00">시/구/군 선택</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-4">							
+									<div class="select-wrapper m-t-20">
+										<select class="form-control input-sm" id="select06">
+											<option value="00">동/면/읍 선택</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="row-sm">
+								<div class="col-sm-12">							
+									<input type="text" class="form-control input-sm" placeholder="클래스명/강사 ID 제목 입력">
+								</div>
+							</div>
+							<hr>
+							<div class="text-center">
+								<a href="javascript:;" class="btn btn-danger btn-sm"><i class="xi-search"></i> 검색</a>
+							</div>
+						</div>
+					</div>
+					
+					<h5 class="m-t-10 m-b-5">검색결과</h5>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>
+									<div class="checkbox">
+										<input type="checkbox">
+										<label></label>
+									</div>
+								</th>
+								<th>카테고리<br>(대분류)</th>
+								<th>카테고리<br>(소분류)</th>
+								<th>클래스명</th>
+								<th>지역</th>
+								<th>참여인원</th>
+								<th>아이디</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<div class="checkbox">
+										<input type="checkbox">
+										<label></label>
+									</div>
+								</td>
+								<td>요리</td>
+								<td>카테고리2</td>
+								<td>클래스 타이틀</td>
+								<td>서울특별시 &gt; 구로구 &gt; 구로동</td>
+								<td>50</td>
+								<td>email@email.com</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="checkbox">
+										<input type="checkbox">
+										<label></label>
+									</div>
+								</td>
+								<td>요리</td>
+								<td>카테고리2</td>
+								<td>클래스 타이틀</td>
+								<td>서울특별시 &gt; 구로구 &gt; 구로동</td>
+								<td>50</td>
+								<td>email@email.com</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- Pagination-->
+					<div class="pagination m-t-30 m-b-40">
+						<a class="page-link move-link disabled" href="javascript:;">처음</a>
+						<a class="page-link move-link disabled" href="javascript:;">
+							<i class="xi-angle-left"></i>
+						</a>
+						<a class="page-link active" href="javascript:;">1</a>
+						<a class="page-link" href="javascript:;">2</a>
+						<a class="page-link" href="javascript:;">3</a>
+						<a class="page-link" href="javascript:;">4</a>
+						<a class="page-link" href="javascript:;">5</a>
+						<a class="page-link" href="javascript:;">6</a>
+						<a class="page-link" href="javascript:;">7</a>
+						<a class="page-link" href="javascript:;">8</a>
+						<a class="page-link" href="javascript:;">9</a>
+						<a class="page-link" href="javascript:;">10</a>
+						<a class="page-link move-link" href="javascript:;">
+							<i class="xi-angle-right"></i>
+						</a>
+						<a class="page-link move-link" href="javascript:;">끝</a>
+					</div>
+					<!-- /.Pagination-->
+					
+					<div class="text-center m-t-15">
+						<button type="button" class="btn btn-primary" data-dismiss="modal">취소</button>
+						<button type="button" class="btn btn-danger"><i class="xi-plus"></i> 추가</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal center-scale -->
+
+	<script src="../../common/js/common.js"></script>
+	<script src="../../common/js/form_elements.js"></script>
+</body>
+</html>

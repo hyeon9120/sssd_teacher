@@ -1,0 +1,641 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 계정관리</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../../common/css/common.css">
+	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    
+	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../../common/plugins/moment/moment.min.js"></script>
+    <script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+</head>
+
+<body>
+	<div id="writer-header">
+		<div class="writer-container">
+			<h1><a href="javascript:;">솜씨당 작가페이지</a></h1>
+			<div class="writer-tnb">
+				<ul>
+					<li class="profile">						
+						<span class="name"><strong>솜씨당</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="writer-wrapper">
+		<div class="writer-container">
+			<div id="writer-nav">
+				<div class="nav-name">클래스</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(1);">클래스 등록</a></li>
+					<li><a href="javascript:_gnbMove(2);">클래스 검수</a></li>
+					<li><a href="javascript:_gnbMove(3);">클래스 관리</a></li>			
+				</ul>
+				<hr>
+				<div class="nav-name">매출/정산</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(4);">매출 현황</a></li>
+					<li class="active"><a href="javascript:_gnbMove(5);">정산 신청</a></li>
+					<li><a href="javascript:_gnbMove(6);">정산 내역</a></li>			
+				</ul>
+				<hr>
+				<a href="javascript:;" class="writer-nav-counsel"><i class="xi-forum"> 1:1실시간 상담</i></a>
+			</div>
+		
+			<div id="writer-contents">
+				<ol class="writer-breadcrumb">
+					<li class="breadcrumb-item home"><a href="#">솜씨당 작가페이지</a></li>
+					<li class="breadcrumb-item"><a href="#">매출/정산</a></li>
+					<li class="breadcrumb-item active">정산 신청</li>
+				</ol>
+				<div class="h2-container">
+					<h2>정산 신청</h2>
+				</div>
+				
+				<div class="row-md m-t-30">	
+					<div class="col-md-6">
+						<h4>정산 가능 금액</h4>
+						<div class="card card-default m-t-10">							
+							<div class="card-block">
+								<div class="row-sm">
+									<div class="col-sm-7">
+										<a href="javascript:;" class="text-underline bold"><span class="fs-24">1,532,000원 </span><i class="xi-angle-right"></i></a>
+										<div class="m-t-10 fs-12 hint-text" style="display:none">
+											카카오뱅크 333333-333-333 가나다
+											<a href="javascript:;" class="btn btn-xs btn-default"><i class="xi-cog"></i></a>
+										</div>
+										<div class="m-t-10 fs-12 hint-text">
+											장산 계좌를 등록해주세요.<br>
+											계좌 등록시 회원가입 이름과 동일해야 가능합니다.<br>
+											<a href="#account_add" class="btn btn-xs btn-primary modal-show"><i class="xi-plus"></i> 계좌등록</a>
+										</div>
+									</div>
+									<div class="col-sm-5 text-right">
+										<a href="javascript:;" class="btn btn-sm btn-default"><i class="xi-help"></i> 정산FAQ</a>
+										<a href="#account_request" class="btn btn-sm btn-danger modal-show"><i class="xi-won"></i> 정산 신청</a>
+									</div>
+								</div>
+								
+
+								
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h4>정산 기준 안내</h4>
+						<div class="card card-dashboard m-t-10">							
+							<div class="card-block fs-13">
+								<ol>
+									<li>1. 클래스 수업 종료 5일 이후 정산가능 금액으로 변경되며, 정산 신청이 가능합니다.</li>
+									<li>2. 정산 신청후 3~5일 이내 입금 처리됩니다.</li>
+									<li>3. 정산 계좌 등록되어 있어야 정산 신청이 가능합니다.</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="row-md m-t-10">
+					<div class="col-md-12 m-b-5 text-right">
+						<a href="#class_add" class="btn btn-sm btn-default modal-show"><i class="fa fa-file-excel-o"></i> 엑셀 다운로드</a>
+					</div>
+				</div>
+
+				<!-- Table -->
+				<table class="table">
+				<colgroup>
+					<col style="width:3%">
+					<col style="width:7%">
+					<col style="width:6%">
+					<col style="width:7.5%">
+					<col style="width:7.5%">
+					<col style="width:5%">
+					<col style="width:8%">
+					<col style="width:8%">
+					<col style="width:8%">
+					<col style="width:8%">
+					<col style="width:8%">
+					<col style="width:7%">
+					<col style="width:7%">
+				</colgroup>
+				<thead>
+					<tr>
+						<th rowspan="2">#</th>
+						<th rowspan="2">정산번호</th>
+						<th rowspan="2">정산상태</th>
+						<th rowspan="2">정산 신청일</th>						
+						<th rowspan="2">에상 지급일</th>
+						<th rowspan="2">결제<br>건수</th>
+						<th rowspan="2" colspan="2">정산기간</th>
+						<th rowspan="2">정산금액</th>
+						<th colspan="4">상세내역</th>
+						<th rowspan="2">정산계좌</th>
+					</tr>
+					<tr>
+						<th>클래스<br> 수익금액 (A)</th>
+						<th>솜씨당<br> 지원금액</th>
+						<th>수수료</th>
+						<th>기타<br>(D)</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>3</td>
+						<td><a href="#account_detail_list" class="modal-show text-danger text-underline">20189192</a></td>
+						<td>정산 신청</td>
+						<td>2018-03-27</td>
+						<td>2018-04-05</td>
+						<td><a href="#account_detail_list" class="modal-show text-danger text-underline">20</a></td>
+						<td>2018-02-12</td>
+						<td>2018-03-03</td>
+						<td class="bold text-danger">338,320</td>
+						<td>422,900</td>
+						<td>84,580</td>
+						<td>-30,000</td>
+						<td>0</td>
+						<td>
+							카카오뱅크<br>
+							12332222333<br>
+							홍길동
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td><a href="#account_detail_list" class="modal-show text-danger text-underline">20189192</a></td>
+						<td>정산 신청</td>
+						<td>2018-03-27</td>
+						<td>2018-04-05</td>
+						<td><a href="#account_detail_list" class="modal-show text-danger text-underline">20</a></td>
+						<td>2018-02-12</td>
+						<td>2018-03-03</td>
+						<td class="bold text-danger">338,320</td>
+						<td>422,900</td>
+						<td>84,580</td>
+						<td>-30,000</td>
+						<td>0</td>
+						<td>
+							카카오뱅크<br>
+							12332222333<br>
+							홍길동
+						</td>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td><a href="#account_detail_list" class="modal-show text-danger text-underline">20189192</a></td>
+						<td>정산 신청</td>
+						<td>2018-03-27</td>
+						<td>2018-04-05</td>
+						<td><a href="#account_detail_list" class="modal-show text-danger text-underline">20</a></td>
+						<td>2018-02-12</td>
+						<td>2018-03-03</td>
+						<td class="bold text-danger">338,320</td>
+						<td>422,900</td>
+						<td>84,580</td>
+						<td>-30,000</td>
+						<td>0</td>
+						<td>
+							카카오뱅크<br>
+							12332222333<br>
+							홍길동
+						</td>
+					</tr>
+				</tbody>
+			</table>
+				<!-- /.Table -->
+			
+				<!-- Pagination-->
+				<div class="pagination m-t-30 m-b-40">
+					<a class="page-link move-link disabled" href="javascript:;">처음</a>
+					<a class="page-link move-link disabled" href="javascript:;">
+						<i class="xi-angle-left"></i>
+					</a>
+					<a class="page-link active" href="javascript:;">1</a>
+					<a class="page-link" href="javascript:;">2</a>
+					<a class="page-link" href="javascript:;">3</a>
+					<a class="page-link" href="javascript:;">4</a>
+					<a class="page-link" href="javascript:;">5</a>
+					<a class="page-link" href="javascript:;">6</a>
+					<a class="page-link" href="javascript:;">7</a>
+					<a class="page-link" href="javascript:;">8</a>
+					<a class="page-link" href="javascript:;">9</a>
+					<a class="page-link" href="javascript:;">10</a>
+					<a class="page-link move-link" href="javascript:;">
+						<i class="xi-angle-right"></i>
+					</a>
+					<a class="page-link move-link" href="javascript:;">끝</a>
+				</div>
+				<!-- /.Pagination-->
+			</div>
+		</div>
+	</div>
+	<div id="writer-footer">
+		<div class="writer-container">
+			<div class="footer-info">Copyright © 솜씨당. All rights reserved.</div>
+			<div class="footer-btn"></div>
+		</div>
+	</div>
+
+<!-- Modal 계좌등록 -->
+<div class="modal fade center-scale" id="account_add" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>계좌정보 입력</h5>
+				</div>
+				<div class="modal-body">
+					<div class="form-group form-btnbox m-t-10 m-b-10">
+						<div class="form-btn p-l-0 p-r-5">
+							<div class="select-wrapper">
+								<select name="" id="" class="form-control w-100">
+									<option value="0">은행선택</option>
+									<option value="1">농협</option>
+									<option value="2">신한은행</option>
+									<option value="3">우리은행</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-box">
+							<input type="text" class="form-control" placeholder="계좌번호를 입력해 주세요.">
+						</div>
+					</div>
+					<div class="form-group m-t-10 m-b-10">
+						<input type="text" class="form-control" placeholder="예금주를 입력해 주세요.">
+					</div>
+					<div class="fs-12 text-primary text-center">
+						일반(간이)사업자의 예금주는 대표자명 또는 사업자등록증의 상호명과 동일해야하며<br> 법인사업자의 예금주는 사업자등록증의 법인명의와 동일해야 합니다.<br>
+					</div>
+					<div class="fs-12 m-t-10 text-center text-danger">
+						※ 정산계좌에 문제가 있을 경우에는 정산이 불가능합니다.
+					</div>
+					<div class="text-center m-t-20">						
+						<button type="button" class="btn btn-danger btn-sm"><i class="xi-plus"></i> 정산 계좌 등록</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 계좌등록 -->
+	
+<!-- Modal 정산신청 -->
+<div class="modal fade center-scale" id="account_request" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:1000px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>정산신청</h5>
+				</div>
+				<div class="card card-dashboard">
+					<div class="card-block">
+						<div class="row-md">
+							<div class="col-md-4 text-muted fs-13 p-t-20">정산가능금액</div>
+							<div class="col-md-8 text-right fs-28 bold">1,532,000원</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-body">
+					<div class="row-md">
+						<div class="col-md-6">
+							<h5 class="m-b-10">계좌정보</h5>
+							<table class="table table-row">
+								<colgroup>
+									<col style="width:20%">
+								</colgroup>						
+								<tr>
+									<th>예금주</th>
+									<td>홍길동</td>
+								</tr>
+								<tr>
+									<th>은행</th>
+									<td>카카오뱅크</td>
+								</tr>
+								<tr>
+									<th>계좌번호</th>
+									<td>999999999999</td>
+								</tr>
+							</table>
+							<div class="card card-dashboard m-t-10">
+								<div class="card-block">
+									<div class="form-group fs-12">
+										<div class="radio radio-inline">
+											<input type="radio" id="account_type01" name="account_type" value="01" checked>
+											<label for="account_type01">개인사업자(법인)</label>
+										</div>
+										<div class="radio radio-inline">
+											<input type="radio" id="account_type02" name="account_type" value="02">
+											<label for="account_type02">개인</label>
+										</div>
+									</div>
+									<script>
+										$('input[name=account_type]').click(function(){
+											if($(this).val() == '01') {
+												$('#account_type_company').show();
+												$('#account_type_personal').hide();
+											} else if($(this).val() == '02') {
+												$('#account_type_company').hide();
+												$('#account_type_personal').show();
+											}
+										})
+									</script>
+									<div id="account_type_company">
+										<div class="row-sm m-t-10">
+											<div class="col-sm-3 p-t-5 p-r-0 fs-13">사업자등록번호</div>
+											<div class="col-sm-9">
+												<div class="form-group form-inline">
+													<input type="text" class="form-control input-sm w-100 m-r-5">
+													<input type="text" class="form-control input-sm w-50 m-r-5">
+													<input type="text" class="form-control input-sm w-140">
+												</div>
+											</div>
+										</div>
+										<div class="row-sm m-t-5">
+											<div class="col-sm-3 p-t-5 fs-13">상호</div>
+											<div class="col-sm-9">
+												<div class="form-group form-inline">
+													<input type="text" class="form-control input-sm w-300 m-r-5">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="account_type_personal" style="display:none">
+										<div class="row-sm m-t-5">
+											<div class="col-sm-3 p-t-5 fs-13">이름</div>
+											<div class="col-sm-9">
+												<div class="form-group form-inline">
+													<input type="text" class="form-control input-sm w-300 m-r-5">
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+							<div class="fs-12 hint-text">
+								※ 최소 1회 정산시 증빙서류 제출이 필요하며, 확인시 정산이 정상적으로 진행됩니다.
+								<p class="fs-12 p-l-15 m-b-0">(회계 이메일 <span class="text-complete">ooooo@sssdc.co.kr</span>)  </p>
+							</div>
+							<div class="fs-12 p-l-15 hint-text">
+								- 사업자 : 사업자 등록증 사본, 사업자 통장 사본<br>
+								- 개   인 : 주민등록등 사본, 본인 명의 통장 사본
+							</div>
+						</div>
+						<div class="col-md-6">
+							
+							
+							<h5 class=" m-b-10">정산 가이드</h5>
+							<div class="row-md">
+								<div class="col-md-6">
+									<div class="fs-14">1. 환급 조건을 확인 하였습니까?</div>
+								</div>
+								<div class="col-md-6 text-right fs-12">
+									<div class="checkbox checkbox-inline m-r-0">
+										<input type="checkbox" id="account_agree01">
+										<label for="account_agree01">확인하였습니다.</label>
+									</div>
+								</div>
+							</div>
+							<div class="fs-12 p-l-15 m-t-10">
+								1) 가입 정보와 일치한 증빙 서류 제출 (ooooo@sssdc.co.kr)<br>
+								   - 사업자 : 사업자 등록증 사본, 사업자 통장 사본<br>
+								   - 개   인 : 주민등록등 사본, 본인 명의 통장 사본 (비용 처리에 필요한 정보)<br>
+								2) 정산신청 금액과 일치하는 공급가액으로 발행 된 '세금계산서’ <br>
+								   - 개   인 : 매출 금액에서 사업소득 (3.3%) 신고 및 제외 금액으로 입금<Br>
+								3) 환급신청 금액을 입금받으실 정확한 '계좌번호’
+							</div>
+							<div class="row-md m-t-20">
+								<div class="col-md-9">
+									<div class="fs-14">2. 세금계산서 발행에 필요한 정보를 모두 확인하였습니까? </div>
+								</div>
+								<div class="col-md-3 text-right fs-12 p-l-0">
+									<div class="checkbox checkbox-inline m-r-0">
+										<input type="checkbox" id="account_agree02">
+										<label for="account_agree02">확인하였습니다.</label>
+									</div>
+								</div>
+							</div>
+							<div class="fs-12 p-l-15 m-t-10">
+								1) 솜씨당컴퍼니 회계 메일로 발행 (ooooo@sssdc.co.kr)<br>
+								2) 공급가액은 신청금액으로 발행 (금액이 일치해야 함)<br>
+								3) 솜씨당컴퍼니 정보는 정산 FAQ 또는 고객센터 통해서 확인 가능합니다. 
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="text-center m-t-20">						
+						<button type="button" class="btn btn-danger btn-sm"><i class="xi-won"></i> 정산 신청하기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 정산신청 -->
+
+<!-- Modal 정산 상세목록 -->
+<div class="modal fade center-scale" id="account_detail_list" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:1000px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>정산 상세목록</h5>
+				</div>
+				<div class="modal-body">
+					
+					<div class="card card-dashboard m-b-10 m-t-20">
+						<div class="card-block">
+							<div class="row-sm">
+								<div class="col-sm-1 p-t-5 text-right">
+									<label for="select01">기간선택</label>
+								</div>
+								<div class="col-sm-2">
+									<div class="select-wrapper">
+										<select class="form-control input-sm" id="select06">
+											<option value="00">기간선택</option>
+											<option value="02">1일</option>
+											<option value="03">1주일</option>
+											<option value="04">30일</option>
+											<option value="04">90일</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-1 p-t-5 text-right">
+									<label for="select01">기간검색</label>
+								</div>
+								<div class="col-sm-5">
+									<div class="input-daterange input-group" id="datepicker-range">
+										<input type="text" class="input-sm form-control" id="calendar_start" name="start" placeholder="yyyy-mm-dd">
+										<div class="input-group-addon">-</div>
+										<input type="text" class="input-sm form-control" id="calendar_end" name="end" placeholder="yyyy-mm-dd">
+									</div>
+								</div>
+								<div class="col-sm-3">
+									<a href="javascript:;" class="btn btn-danger btn-sm"><i class="xi-search"></i> 검색</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row-md">
+						<div class="col-md-12 m-b-5 text-right">
+							<a href="#class_add" class="btn btn-sm btn-default modal-show"><i class="fa fa-file-excel-o"></i> 엑셀 다운로드</a>
+						</div>
+					</div>
+			
+					<table class="table table-row">
+						<colgroup>
+							<col style="width:10%">
+							<col style="width:30%">
+							<col style="width:10%">
+							<col style="width:20%">
+							<col style="width:10%">
+						</colgroup>
+						<tr>
+							<th>정산기간</th>
+							<td>2018-03-27~ 2018-03-31</td>
+							<th>정산번호</th>
+							<td>20181116</td>
+							<th>정산건수</th>
+							<td>10</td>
+						</tr>
+					</table>
+					<!-- Table -->
+					<table class="table m-t-10 table-1border">
+						<colgroup>
+							<col style="width:5%">
+							<col style="width:8.5%">
+							<col style="width:8.5%">
+							<col style="width:8%">
+							<col style="width:8%">
+							<col>
+							<col style="width:8%">
+							<col style="width:8%">
+							<col style="width:8%">
+							<col style="width:9%">
+							<col style="width:8%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>주문일자</th>
+								<th>매출일자</th>
+								<th>상품번호</th>						
+								<th>결제수단</th>
+								<th>상품명</th>
+								<th>구매자</th>
+								<th>사용자<br>결제금액</th>
+								<th>솜씨당<br>지원금액</th>
+								<th>수수료</th>
+								<th>작가<br>정산매출</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>10</td>
+								<td>2018-04-26</td>
+								<td>2018-04-27</td>
+								<td>SSSD4321</td>
+								<td>신용카드</td>
+								<td>앙큼플라워</td>
+								<td>유희경</td>
+								<td>60,000</td>
+								<td>10,000</td>
+								<td>-2,000</td>
+								<td class="text-danger">48,000</td>
+							</tr>
+							<tr>
+								<td>9</td>
+								<td>2018-04-26</td>
+								<td>2018-04-27</td>
+								<td>SSSD4321</td>
+								<td>신용카드</td>
+								<td>앙큼플라워</td>
+								<td>유희경</td>
+								<td>60,000</td>
+								<td>10,000</td>
+								<td>-2,000</td>
+								<td class="text-danger">48,000</td>
+							</tr>
+							<tr>
+								<td>8</td>
+								<td>2018-04-26</td>
+								<td>2018-04-27</td>
+								<td>SSSD4321</td>
+								<td>신용카드</td>
+								<td>앙큼플라워</td>
+								<td>유희경</td>
+								<td>60,000</td>
+								<td>10,000</td>
+								<td>-2,000</td>
+								<td class="text-danger">48,000</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>합계</td>
+								<td>10,060,000</td>
+								<td>10,000,000</td>
+								<td>100,000,000</td>
+							</tr>
+						</tfoot>
+					</table>
+					<!-- /.Table -->
+					
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 정산 상세목록 -->
+
+<script src="../../common/js/common.js"></script>
+<script src="../../common/js/form_elements.js"></script>
+</body>
+</html>
