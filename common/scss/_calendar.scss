@@ -1,0 +1,40 @@
+.calendar-text {
+	
+}
+.calendar-type-recruit {
+	position:relative;
+	background-color:#e6f1ff;
+	display:block;
+	&:before {
+		position:absolute;
+		left:0;
+		top:0;
+		bottom:0;
+		width:3px;
+		background-color:#78b1ff;
+		content:"";
+	}
+}
+.calendar-type-complete {
+	position:relative;	
+	background-color:#ffe8e9;
+	&:before {
+		position:absolute;
+		left:0;
+		top:0;
+		bottom:0;
+		width:3px;
+		background-color:#ff5862;
+	}
+}
+.calendar-type-cancel {
+	background-color:#e8e8e8;
+	&:before {
+		position:absolute;
+		left:0;
+		top:0;
+		bottom:0;
+		width:3px;
+		background-color:#808080;
+	}
+}

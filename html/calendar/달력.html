@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>솜씨당 - 계정관리</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../common/css/bootstrap.css">
+	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="../../common/css/common.css">
+	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
+    <link href='../../common/plugins/fullcalendar/fullcalendar.css' rel='stylesheet'>
+	<link href='../../common/plugins/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print'>
+
+	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
+	<script src="../../common/plugins/tether/js/tether.min.js"></script>
+	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
+	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+    <script src="../../common/plugins/moment/moment.min.js"></script>
+    <script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+    <script src='../../common/plugins/fullcalendar/moment.min.js'></script>
+	<script src='../../common/plugins/fullcalendar/fullcalendar.js'></script>
+</head>
+
+<body>
+	<div id="writer-header">
+		<div class="writer-container">
+			<h1><a href="javascript:;">솜씨당 작가페이지</a></h1>
+			<div class="writer-tnb">
+				<ul>
+					<li class="profile">						
+						<span class="name"><strong>솜씨당</strong>님</span>
+					</li>
+					<li class="logout"><a href="javascript:;">로그아웃</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="writer-wrapper">
+		<div class="writer-container">
+			<div id="writer-nav">
+				<div class="nav-name">클래스</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(1);">클래스 등록</a></li>
+					<li><a href="javascript:_gnbMove(2);">클래스 검수</a></li>
+					<li><a href="javascript:_gnbMove(3);">클래스 관리</a></li>
+					<li class="active"><a href="javascript:_gnbMove(3);">스케쥴 등록 및 관리</a></li>	
+				</ul>
+				<hr>
+				<div class="nav-name">매출/정산</div>
+				<ul>
+					<li><a href="javascript:_gnbMove(4);">매출 현황</a></li>
+					<li><a href="javascript:_gnbMove(5);">정산 신청</a></li>
+					<li><a href="javascript:_gnbMove(6);">정산 내역</a></li>			
+				</ul>
+				<hr>
+				<a href="javascript:;" class="writer-nav-counsel"><i class="xi-forum"> 1:1실시간 상담</i></a>
+			</div>
+		
+			<div id="writer-contents">
+				<ol class="writer-breadcrumb">
+					<li class="breadcrumb-item home"><a href="#">솜씨당 작가페이지</a></li>
+					<li class="breadcrumb-item"><a href="#">클래스</a></li>
+					<li class="breadcrumb-item active">클래스 스케쥴 등록 및 관리</li>
+				</ol>
+				<div class="h2-container">
+					<h2>스케쥴 등록 및 관리</h2>
+				</div>
+				
+				<div id="calendar" style="width:1100px;"></div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="writer-footer">
+		<div class="writer-container">
+			<div class="footer-info">Copyright © 솜씨당. All rights reserved.</div>
+			<div class="footer-btn"></div>
+		</div>
+	</div>
+
+
+	<script src="../../common/js/common.js"></script>
+	<script src="../../common/js/form_elements.js"></script>
+	<script>
+	$('#calendar').fullCalendar({
+      defaultDate: '2018-03-12',
+      editable: true,
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2018-03-01'
+        },
+        {
+          title: 'Long Event111',
+          start: '2018-03-07',
+          end: '2018-03-07',
+		  className:"calendar-text"
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-03-09T16:00:00',
+		  className:"calendar-text"
+        },
+        {
+          id: 999,
+          title: 'Repeating Event',
+          start: '2018-03-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2018-03-10',
+          end: '2018-03-13',
+		  className: "calendar-type-recruit"
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T10:30:00',
+          end: '2018-03-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2018-03-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2018-03-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2018-03-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2018-03-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2018-03-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2018-03-28'
+        }
+      ]
+    });
+	</script>
+</body>
+</html>
