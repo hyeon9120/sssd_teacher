@@ -15,8 +15,6 @@
 		transition: all .2s !important;
 	}
     .modal-content{
-    	border: 1px solid #f2f6f7;
-    	border-radius:3px;
     	box-shadow:none;
     }
 	.modal-header {
@@ -210,7 +208,7 @@
 	// 	opacity: 0.30;
 	// }
 	&.show{
-		opacity: 0.30;
+		opacity: 0.65;
 	}
 }
 

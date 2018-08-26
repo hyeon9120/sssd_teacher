@@ -1,40 +1,70 @@
-.calendar-text {
-	
-}
-.calendar-type-recruit {
+.modal-header {
 	position:relative;
-	background-color:#e6f1ff;
-	display:block;
-	&:before {
+	padding-bottom:10px !important;
+	margin-bottom:15px;
+	&:after {
 		position:absolute;
-		left:0;
-		top:0;
 		bottom:0;
-		width:3px;
-		background-color:#78b1ff;
+		width:26px;
+		height:2px;
+		background:#000;
 		content:"";
+		
 	}
 }
-.calendar-type-complete {
-	position:relative;	
-	background-color:#ffe8e9;
-	&:before {
-		position:absolute;
-		left:0;
-		top:0;
-		bottom:0;
-		width:3px;
-		background-color:#ff5862;
-	}
+h5.modal-title {
+	font-size:20px;
+	font-weight:normal;
 }
-.calendar-type-cancel {
-	background-color:#e8e8e8;
-	&:before {
-		position:absolute;
-		left:0;
-		top:0;
-		bottom:0;
-		width:3px;
-		background-color:#808080;
+.sub-title {
+	font-weight:300;
+	font-size:12px;
+	padding:6px 0;	
+}
+.calendar-pop-title {
+	font-weight:600;
+	font-size:12px;
+	padding:5px 0;
+}
+.input-calendar {
+	background-color:#f3f3f3;
+	border:2px solid #f3f3f3;
+}
+.input-calendar:focus {
+	background-color:#fff;
+	border:2px solid #a0a0a0;
+}
+.calendar-date {
+	background-image:url(../image/input-calendar.gif);
+	background-repeat:no-repeat;
+	background-position:right center;
+}
+.mytable {
+	padding-bottom:25px;
+	border-bottom:1px dashed #dad9d8;
+}
+.mytable + .mytable {
+	padding-top:25px;
+}
+.btn-black {
+	background-color:#000;
+	color:#fff;
+	border:1px solid #000 !important;
+	&:hover,&:focus {
+		color:#fff;
+		background:#333;
 	}
+	&:active {
+		color:#ccc !important;
+	}	
+}
+.btn-calendar-cancel {
+	width:22px;
+	height:22px;
+	display:block;
+	background-image:url(../image/calendar_cancel.png);
+	vertical-align:middle;
+	overflow:hidden;
+	text-indent:-3000em;
+	margin-top:6px;
 }

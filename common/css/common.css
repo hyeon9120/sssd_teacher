@@ -2858,9 +2858,7 @@ div.cs-skin-slide .cs-options ul li span:hover, div.cs-skin-slide .cs-options ul
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
+  /*@include border-radius(3px);*/
   background-image: none !important;
   color: #626262;
   background-color: #fff;
@@ -5254,8 +5252,6 @@ tr.gray01 th, tr.gray01 td {
   transition: all .2s !important;
 }
 .modal .modal-content {
-  border: 1px solid #f2f6f7;
-  border-radius: 3px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -5429,7 +5425,7 @@ tr.gray01 th, tr.gray01 td {
   transition: opacity 0.2s linear;
 }
 .modal-backdrop.show {
-  opacity: 0.30;
+  opacity: 0.65;
 }
 
 /* Responsive Handlers: Modals
@@ -9214,44 +9210,84 @@ body > .pgn-wrapper {
   border-bottom: 1px solid #eae9e8;
 }
 
-.calendar-type-recruit {
+.modal-header {
   position: relative;
-  background-color: #e6f1ff;
-  display: block;
+  padding-bottom: 10px !important;
+  margin-bottom: 15px;
 }
-.calendar-type-recruit:before {
+.modal-header:after {
   position: absolute;
-  left: 0;
-  top: 0;
   bottom: 0;
-  width: 3px;
-  background-color: #78b1ff;
+  width: 26px;
+  height: 2px;
+  background: #000;
   content: "";
 }
 
-.calendar-type-complete {
-  position: relative;
-  background-color: #ffe8e9;
-}
-.calendar-type-complete:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: #ff5862;
+h5.modal-title {
+  font-size: 20px;
+  font-weight: normal;
 }
 
-.calendar-type-cancel {
-  background-color: #e8e8e8;
+.sub-title {
+  font-weight: 300;
+  font-size: 12px;
+  padding: 6px 0;
 }
-.calendar-type-cancel:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  background-color: #808080;
+
+.calendar-pop-title {
+  font-weight: 600;
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.input-calendar {
+  background-color: #f3f3f3;
+  border: 2px solid #f3f3f3;
+}
+
+.input-calendar:focus {
+  background-color: #fff;
+  border: 2px solid #a0a0a0;
+}
+
+.calendar-date {
+  background-image: url(../image/input-calendar.gif);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.mytable {
+  padding-bottom: 25px;
+  border-bottom: 1px dashed #dad9d8;
+}
+
+.mytable + .mytable {
+  padding-top: 25px;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000 !important;
+}
+.btn-black:hover, .btn-black:focus {
+  color: #fff;
+  background: #333;
+}
+.btn-black:active {
+  color: #ccc !important;
+}
+
+.btn-calendar-cancel {
+  width: 22px;
+  height: 22px;
+  display: block;
+  background-image: url(../image/calendar_cancel.png);
+  vertical-align: middle;
+  overflow: hidden;
+  text-indent: -3000em;
+  margin-top: 6px;
 }
 
 html {

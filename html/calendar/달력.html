@@ -10,12 +10,12 @@
 	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="../../common/css/common.css">
 	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
-    <link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
-    <link href="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" type="text/css" media="screen">
-    <link href='../../common/plugins/fullcalendar/fullcalendar.css' rel='stylesheet'>
+	<link href="../../common/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href="../../common/plugins/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../common/plugins/summernote/css/summernote.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../common/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" media="screen">
+	<link href="../../common/plugins/jquery-timepicker/jquery.timepicker.css" rel="stylesheet" type="text/css" media="screen">
+	<link href='../../common/plugins/fullcalendar/fullcalendar.css' rel='stylesheet'>
 	<link href='../../common/plugins/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print'>
 
 	<script src="../../common/plugins/jquery/jquery-1.11.1.min.js"></script>
@@ -23,20 +23,23 @@
 	<script src="../../common/plugins/bootstrap/js/bootstrap.min.js"></script>
 	<script src="../../common/plugins/select2/js/select2.full.min.js"></script>
 	<script src="../../common/plugins/jquery-validation/js/jquery.validate.min.js"></script>
-    <script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-    <script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
-    <script src="../../common/plugins/summernote/js/summernote.min.js"></script>
-    <script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
-    <script src="../../common/plugins/moment/moment.min.js"></script>
-    <script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="../../common/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-    <script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
-    <script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
-    <script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
-    <script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
-    <script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
-    <script src='../../common/plugins/fullcalendar/moment.min.js'></script>
+	<script src="../../common/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+	<script src="../../common/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.kr.js"></script>
+	<script src="../../common/plugins/summernote/js/summernote.min.js"></script>
+	<script src="../../common/plugins/summernote/js/summernote-ko-KR.js"></script>
+	<script src="../../common/plugins/moment/moment.min.js"></script>
+	<script src="../../common/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<script src="../../common/plugins/jquery-timepicker/jquery.timepicker.js"></script>
+	<script src="../../common/plugins/jquery-autonumeric/autoNumeric.js"></script>
+	<script src="../../common/plugins/bootstrap-typehead/typeahead.bundle.min.js"></script>
+	<script src="../../common/plugins/bootstrap-typehead/typeahead.jquery.min.js"></script>
+	<script src="../../common/plugins/handlebars/handlebars-v4.0.5.js"></script>
+	<script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
+	<script src='../../common/plugins/fullcalendar/moment.min.js'></script>
 	<script src='../../common/plugins/fullcalendar/fullcalendar.js'></script>
+	
+	<script src="../../common/plugins//spectrum/spectrum.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../common/plugins/spectrum/spectrum.css">
 </head>
 
 <body>
@@ -45,7 +48,7 @@
 			<h1><a href="javascript:;">솜씨당 작가페이지</a></h1>
 			<div class="writer-tnb">
 				<ul>
-					<li class="profile">						
+					<li class="profile">
 						<span class="name"><strong>솜씨당</strong>님</span>
 					</li>
 					<li class="logout"><a href="javascript:;">로그아웃</a></li>
@@ -61,19 +64,19 @@
 					<li><a href="javascript:_gnbMove(1);">클래스 등록</a></li>
 					<li><a href="javascript:_gnbMove(2);">클래스 검수</a></li>
 					<li><a href="javascript:_gnbMove(3);">클래스 관리</a></li>
-					<li class="active"><a href="javascript:_gnbMove(3);">스케쥴 등록 및 관리</a></li>	
+					<li class="active"><a href="javascript:_gnbMove(3);">스케쥴 등록 및 관리</a></li>
 				</ul>
 				<hr>
 				<div class="nav-name">매출/정산</div>
 				<ul>
 					<li><a href="javascript:_gnbMove(4);">매출 현황</a></li>
 					<li><a href="javascript:_gnbMove(5);">정산 신청</a></li>
-					<li><a href="javascript:_gnbMove(6);">정산 내역</a></li>			
+					<li><a href="javascript:_gnbMove(6);">정산 내역</a></li>
 				</ul>
 				<hr>
 				<a href="javascript:;" class="writer-nav-counsel"><i class="xi-forum"> 1:1실시간 상담</i></a>
 			</div>
-		
+
 			<div id="writer-contents">
 				<ol class="writer-breadcrumb">
 					<li class="breadcrumb-item home"><a href="#">솜씨당 작가페이지</a></li>
@@ -83,9 +86,20 @@
 				<div class="h2-container">
 					<h2>스케쥴 등록 및 관리</h2>
 				</div>
-				
-				<div id="calendar" style="width:1100px;"></div>
-				
+
+				<div class="calendar-left">
+					<div id="calendar"></div>
+				</div>
+				<div class="calendar-right">
+					<div class="calendar-status">
+						<div class="txt01">2018년 6월 현황</div>
+						<ul>
+							<li><div class="txt-people">68명</div></li>
+							<li><div class="txt-sales">4,500,000원</div></li>
+						</ul>
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -97,73 +111,478 @@
 	</div>
 
 
+
+
+
+	<!--클래스 스케즁 등록 및  관리  팝업-->
+	<div id="menuModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+					<h5 class="modal-title" id="myModalLabel">원하는 항목을 선택해주세요</h5>
+				</div>
+				<!-- 컨텐츠 설정[버튼] -->
+				<div class="modal-body" id='classBtnDiv'>
+					<button type="button" class="btn btn-primary" id='classSch' onclick='classSchClick();'>클래스일정</button>
+					<button type="button" class="btn btn-primary" id='userSch'>개인일정</button>
+				</div>
+				<!-- 컨텐츠 설정 끝-->
+			</div>
+		</div>
+	</div>
+	<!-- 클래스 스케즁 등록 및  관리  팝업 끝-->
+
+
+	<!--클래스 일정  팝업-->
+	<div id="myModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" style="width:800px;">
+			<div class="modal-content">
+				<!-- 헤드설정 -->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<h5 class="modal-title" id="myModalLabel">스케쥴 등록/편집</h5>
+				<div class="sub-title">1일 단위로 강의 시간을 설정할 수 있습니다.</div>
+				</div>
+				<!-- 헤드설정 끝 -->
+				<!-- 컨텐츠 설정 -->
+				<div class="modal-body">
+					<form id='classMaster' onSubmit='return false;'>
+						<div class="mytable" id="mytable">
+							<div class="row-sm">
+								<div class="col-sm-4">
+									<div class="calendar-pop-title">강의명</div>
+									<input type="text" class="form-control input-calendar" id="className" name="className" placeholder="강의명을 입력하세요">
+								</div>
+								<div class="col-sm-3">
+									<div class="calendar-pop-title">강의날짜</div>
+									<input type="text" class="form-control input-calendar calendar-date" id="sDate" name="sDate" placeholder="yyyy-mm-dd">
+								</div>
+								<div class="col-sm-2">
+									<div class="calendar-pop-title">강의시간</div>
+									<input type="text" class="form-control input-calendar calendar-time" placeholder="오전 11:00">
+								</div>
+								<div class="col-sm-3">
+									<div class="calendar-pop-title">금액</div>
+									<input type="text" class="form-control input-calendar" id="price" name="price" placeholder="금액">
+								</div>							
+							</div>
+							<div class="row-sm m-t-5">
+								<div class="col-sm-4">
+									<div class="calendar-pop-title">참여가능인원</div>
+									<div class="input-group">
+										<input type="text" class="form-control input-calendar" id="minP" name="minP" placeholder="최소" size="1">
+										<div class="input-group-addon">-</div>
+										<input type="text" class="form-control input-calendar" id="maxP" name="maxP" placeholder="최대">
+									</div>
+								</div>
+								<div class="col-sm-8 text-right" style="padding-top:28px">
+									<a href="#none" class="btn btn-danger"><i class="xi-plus"></i> 추가</a>
+								</div>
+							</div>
+						</div>
+						<div class="mytable" id="mytable">
+							<div class="row-sm">
+								<div class="col-sm-4">
+									<div class="calendar-pop-title">강의명</div>
+									<input type="text" class="form-control input-calendar" id="className" name="className" placeholder="강의명을 입력하세요">
+								</div>
+								<div class="col-sm-3">
+									<div class="calendar-pop-title">강의날짜</div>
+									<input type="text" class="form-control input-calendar calendar-date" id="sDate" name="sDate" placeholder="yyyy-mm-dd">
+								</div>
+								<div class="col-sm-2">
+									<div class="calendar-pop-title">강의시간</div>
+									<input type="text" class="form-control input-calendar calendar-time" placeholder="오전 11:00">
+								</div>
+								<div class="col-sm-3">
+									<div class="calendar-pop-title">금액</div>
+									<input type="text" class="form-control input-calendar" id="price" name="price" placeholder="금액">
+								</div>							
+							</div>
+							<div class="row-sm m-t-5">
+								<div class="col-sm-4">
+									<div class="calendar-pop-title">참여가능인원</div>
+									<div class="input-group">
+										<input type="text" class="form-control input-calendar" id="minP" name="minP" placeholder="최소" size="1">
+										<div class="input-group-addon">-</div>
+										<input type="text" class="form-control input-calendar" id="maxP" name="maxP" placeholder="최대">
+									</div>
+								</div>
+								<div class="col-sm-8" style="padding-top:28px">
+									<a href="#none" class="btn-calendar-cancel">취소</a>
+								</div>
+							</div>
+						</div>
+					</form>					
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="master_save" class="btn btn-primary"><i class="xi-close"></i> 취소</button>
+					<button type="button" id="master_save" class="btn btn-black"><i class="xi-check"></i> 등록</button>
+				</div>
+				<!-- 컨텐츠 설정 끝-->
+			</div>
+		</div>
+	</div>
+	<!--클래스 일정  팝업 끝-->
+
+	<form id="dayForm">
+
+		<div class="modal fade" id="myDayModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">개인일정등록</h4>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<input type="text" class="form-control" id="dayTitle" name="dayTitle" placeholder="내용을 입력하세요">
+						</div>
+						<!--  색상표 -->
+						<div class="form-inline form-group">
+							<div class="form-group">
+								<input type="text" id="colorpicker" name="showPaletteOnly">
+								<!-- <input type='text' id='colorpicker' name='showPaletteOnly'> -->
+							</div>
+							<!-- 색상표 끝 -->
+
+							<div class="form-group">
+								<div class='input-group date' id='datetimepicker6'>
+									<input type='text' class="form-control" name='sDayDate' />
+									<span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class='input-group date' id='datetimepicker7'>
+									<input type='text' class="form-control" name='eDayDate' />
+									<span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+									</span>
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<label>
+      <input type="checkbox" id="blankCheckbox" name='blankCheckbox'  value='1' >
+  		종일</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" rows="4" id='dayComent' name='dayComent' placeholder="설명을 입력해주세요"></textarea>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal"> 닫기</button>
+						<button type="button" class="btn btn-primary" id='daySave'>저장</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<!-- 관리 끝-->
+	</form>
+
+	<!-- 개인일정 조회 -->
+
+	<div class="modal fade" id="myDayDtlModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id='dayName'>내용</h4>
+				</div>
+
+				<div class="modal-header">
+					<h5 class="modal-title" id='dayDate'>일시</h5>
+				</div>
+
+				<div class="modal-header">
+					<h5 class="modal-title" id='dayComentText'>설명</h5>
+				</div>
+
+				<div class="modal-footer">
+					<input type="hidden" id='dayId' name='dayId'>
+					<button type="button" class="btn btn-primary" id='dayDelete'>삭제</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 현황 -->
+	<div id="myDtlModal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<!-- 헤드설정 -->
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">클래스 스케쥴관리</h4>
+				</div>
+				<div class="modal-header" onSubmit="return false;">
+					<form class="form-inline" id='classMasinForm'>
+						<div class="form-group">
+							<label for="className">강의명</label>
+							<input type="text" class="form-control" id="classDtName" name="classDtName" placeholder="XXX강의">
+						</div>
+						<div class="form-group">
+							<label for="classTime">시간</label>
+
+
+							<div class='input-group date' id='datetimepicker4'>
+								<input type='text' class="form-control" id='classTime' name='classTime' />
+								<span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+
+						</div>
+						<div class="form-group">
+							<label for="classTct">모집인원</label>
+							<input type="text" class="form-control" id="classTct" name='classTct' placeholder="4/5">
+							<input type="hidden" class="form-control" id="classStat">
+							<input type="hidden" class="form-control" id="classId2" name='classId2'>
+						</div>
+						<div class="form-group">
+							<button id='classUpdate' class="btn btn-warning">클래스수정</button>
+						</div>
+					</form>
+				</div>
+				<!-- 헤드설정 끝 -->
+
+
+				<!-- 컨텐츠 설정 -->
+				<div class="modal-body">
+					<form id="classMember" onSubmit="return false;">
+						<table class="table" id="myMtable">
+							<thead>
+								<tr>
+									<th>이름</th>
+									<th>연락처</th>
+									<th>금액</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody id="myTbody">
+								<tr>
+									<td><input type="text" class="form-control" id="mebName" name="mebName" placeholder="이름"></td>
+									<td><input type="text" class="form-control" id="mebHp" name="mebHp"></td>
+									<td><input type="text" class="form-control" id="price" name="price" placeholder="금액"><input type="hidden" id="classId" name="classId"></td>
+									<td><button id="addMBtn" name="addMBtn" class="btn btn-info">추가</button></td>
+								</tr>
+							</tbody>
+						</table>
+					</form>
+					<div class="modal-footer">
+						<button type="button" id="returnClass" class="btn btn-info" onclick="updateStat('M')">모집전환</button>
+						<button type="button" id="canClass" class="btn btn-warning" onclick="updateStat('D')">모집취소</button>
+						<button type="button" id='endClass' class="btn btn-success" onclick="updateStat('Y')">모집마감</button>
+						<button type="button" id='saveClass' class="btn btn-primary">저장</button>
+					</div>
+				</div>
+				<!-- 컨텐츠 설정 끝-->
+			</div>
+		</div>
+	</div>
+	<!-- 현황 끝-->
+
+
+
+
+
+
 	<script src="../../common/js/common.js"></script>
 	<script src="../../common/js/form_elements.js"></script>
 	<script>
-	$('#calendar').fullCalendar({
-      defaultDate: '2018-03-12',
-      editable: true,
-      eventLimit: true, // allow "more" link when too many events
-      events: [
-        {
-          title: 'All Day Event',
-          start: '2018-03-01'
-        },
-        {
-          title: 'Long Event111',
-          start: '2018-03-07',
-          end: '2018-03-07',
-		  className:"calendar-text"
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: '2018-03-09T16:00:00',
-		  className:"calendar-text"
-        },
-        {
-          id: 999,
-          title: 'Repeating Event',
-          start: '2018-03-16T16:00:00'
-        },
-        {
-          title: 'Conference',
-          start: '2018-03-10',
-          end: '2018-03-13',
-		  className: "calendar-type-recruit"
-        },
-        {
-          title: 'Meeting',
-          start: '2018-03-12T10:30:00',
-          end: '2018-03-12T12:30:00'
-        },
-        {
-          title: 'Lunch',
-          start: '2018-03-12T12:00:00'
-        },
-        {
-          title: 'Meeting',
-          start: '2018-03-12T14:30:00'
-        },
-        {
-          title: 'Happy Hour',
-          start: '2018-03-12T17:30:00'
-        },
-        {
-          title: 'Dinner',
-          start: '2018-03-12T20:00:00'
-        },
-        {
-          title: 'Birthday Party',
-          start: '2018-03-13T07:00:00'
-        },
-        {
-          title: 'Click for Google',
-          url: 'http://google.com/',
-          start: '2018-03-28'
-        }
-      ]
-    });
+		var color = '#f8c115'; 
+		function classSchClick() {
+			trCount = 0;
+			$('#myModal').on('shown.bs.modal', function(event) {}).modal('show');
+			$('.calendar-date').datepicker({
+				format: 'yyyy-mm-dd',
+				language:'kr',
+			});
+			$('.calendar-time').timepicker();
+		}
+		
+		$('#userSch').click(function(){
+        	$('#myDayModal').on('show.bs.modal', function (event) {
+        	 }).modal('show');
+        	 $('#menuModal').modal('hide');
+			//컬러피커 설정 설정
+			$("#colorpicker").spectrum(
+							{
+								preferredFormat : "hex",
+								showPaletteOnly : true,
+
+								color : color,
+								palette : [
+										[ '#f8c115', '#f84515', '#93db3e', '#35ace3',
+												'#254dd1' ],
+										[ '#6025c2', '#c22598', '#da1919', '#999999',
+												'#000000' ] ]
+							});
+			//컬러피커 설정 설정끝
+
+        });
+		function myDtlModalClick(){
+			$('#myDtlModal').on('shown.bs.modal', function (event) {
+			}).modal('show');
+		}
+		
+		$('#calendar').fullCalendar({
+			defaultDate: '2018-03-12',
+			timeFormat: 'HH:mm',
+			editable: true,
+			height: 'auto',
+			eventLimitText: '개 일정보기 >',
+			eventLimit: 6, // allow "more" link when too many events
+			customButtons: {
+				myCustomButton: {
+					text: '클래스 스케쥴 등록 및 관리',
+					click: function() {
+						clickDay = '';
+						$('#menuModal').modal('show'); //스케쥴등록 팝업 호출
+					}
+				}
+			},
+			header: {
+				left: 'title today prev,next ',
+				center: '',
+				right: 'myCustomButton'
+			},
+			viewRender: function() {
+				if ($('.fc-today-view').length == 0) {
+					$('.fc-today-button').before('<div class="fc-today-view"><div class="fc-today-01">' + moment().locale("fr").format("DD") + '</div><div class="fc-today-02"><div class="fc-today-th"></div>' + moment().locale("fr").format("dddd") + '</div></div>');
+					if ($('.fc-today-01') == '01') $('.fc-today-th').html('st');
+					else if ($('.fc-today-01') == '02') $('.fc-today-th').html('nd');
+					else if ($('.fc-today-01') == '03') $('.fc-today-th').html('rd');
+					else $('.fc-today-th').html('th');
+				}
+			},
+
+			events: [{
+					title: '1/5명',
+					start: '2018-03-01T16:00:00',
+					className: "calendar-type calendar-type-recruit"
+				},
+				{
+					title: '5/5명',
+					start: '2018-03-01T18:00:00',
+					className: "calendar-type calendar-type-complete"
+				},
+				{
+					title: '5/5명',
+					start: '2018-03-01T18:00:00',
+					className: "calendar-type calendar-type-cancel"
+				},
+				{
+					title: '5/5명',
+					start: '2018-03-01T18:00:00',
+					className: "calendar-type calendar-type-cancel"
+				},
+				{
+					title: '5/5명',
+					start: '2018-03-01T18:00:00',
+					className: "calendar-type calendar-type-cancel"
+				},
+				{
+					title: '5/5명',
+					start: '2018-03-01T18:00:00',
+					className: "calendar-type calendar-type-cancel"
+				},
+				{
+					title: '5/5명',
+					start: '2018-03-01T18:00:00',
+					className: "calendar-type calendar-type-cancel"
+				},
+				{
+					title: '5/5명',
+					start: '2018-03-01T18:00:00',
+					className: "calendar-type calendar-type-cancel"
+				},
+				{
+					title: 'Long Event111',
+					start: '2018-03-07',
+					end: '2018-03-07',
+					className: "calendar-text"
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2018-03-09T16:00:00',
+					className: "calendar-text"
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: '2018-03-16T16:00:00'
+				},
+				{
+					start: '2018-03-10',
+					end: '2018-03-13',
+					className: "calendar-type calendar-type-recruit"
+				},
+				{
+					title: 'Meeting',
+					start: '2018-03-12T14:30:00'
+				},
+				{
+					title: 'Happy Hour',
+					start: '2018-03-12T17:30:00'
+				},
+				{
+					title: 'Dinner',
+					start: '2018-03-12T20:00:00'
+				},
+				{
+					title: 'Birthday Party',
+					start: '2018-03-13T07:00:00'
+				},
+				{
+					title: 'Click for Google',
+					url: 'http://google.com/',
+					start: '2018-03-28'
+				},
+				{
+					title: '44명',
+					start: '2018-03-15',
+					className: "calendar-info calendar-people"
+				},
+				{
+					title: '500,000원',
+					start: '2018-03-15',
+					className: "calendar-info calendar-sales"
+				},
+			],
+			resources: [{
+					title: '44명',
+					start: '2018-03-11',
+					className: "calendar-info calendar-people"
+				},
+				{
+					title: '500,000원',
+					start: '2018-03-11',
+					className: "calendar-info calendar-sales"
+				},
+			],
+			
+			eventOrder: "description",
+		     eventClick:function(calEvent, jsEvent, view) {
+		    	    myDtlModalClick();
+		      },
+		});
+
 	</script>
 </body>
+
 </html>
