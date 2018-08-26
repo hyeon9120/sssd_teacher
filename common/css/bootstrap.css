@@ -3270,7 +3270,7 @@ tbody.collapse.show {
   -webkit-flex: 1 1 auto;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  width: 1%;
+  /*width: 1%;*/
   margin-bottom: 0;
 }
 

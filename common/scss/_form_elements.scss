@@ -2196,3 +2196,23 @@ div.cs-skin-slide{
 		padding-left:5px;
 	}
 }
+.checkbox-right {
+	padding-right:20px;
+	text-align:right;
+	input {
+		right:0;
+		left:auto !important;;
+	}
+	label {
+		line-height:18px;
+	}
+	label:before {
+		right:0;
+		left:auto;
+	}
+	label:after {
+		right:0;
+		left:auto;
+	}
+	
+}
