@@ -236,6 +236,8 @@ function _gnbMove($_depth1) {
 		location.href="../mn02/정산신청.html";
 	} else if($_depth1 == 6) {
 		location.href="../mn02/정산내역.html";
+	} else if($_depth1 == 7) {
+		location.href="../calendar/달력.html";
 	} else {
 		return;
 	}

@@ -5252,7 +5252,8 @@ tr.gray01 th, tr.gray01 td {
   position: absolute;
   right: 25px;
   top: 20px;
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: 200;
 }
 .modal .close:focus {
   outline: 0;
@@ -9276,11 +9277,109 @@ h5.modal-title {
   overflow: hidden;
   text-indent: -3000em;
   margin-top: 6px;
+  border: 0 none;
+}
+
+.btn-calendar-add {
+  width: 22px;
+  height: 22px;
+  display: block;
+  background-image: url(../image/calendar_add.png);
+  vertical-align: middle;
+  overflow: hidden;
+  text-indent: -3000em;
+  margin-top: 6px;
+  border: 0 none;
+}
+
+.schedule-add-btn a, .schedule-add-btn button {
+  margin-top: 0px;
+  margin-left: 10px;
+}
+
+.schedule-t-info {
+  padding: 6px 0 0 10px;
+}
+
+.schedule-price-input {
+  width: 144px !important;
 }
 
 .calendar-time {
   background-image: none !important;
   text-align: center;
+}
+
+.schedule-box {
+  padding: 0 0 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e9e8e7;
+}
+
+.schedule-people {
+  width: 50px;
+}
+.schedule-people:after {
+  left: 50% !important;
+  margin-left: -12px;
+  margin-top: -11px !important;
+}
+
+.sssd_mark {
+  position: relative;
+}
+.sssd_mark:before {
+  width: 11px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 55px;
+  z-index: 10;
+  content: "";
+  background-image: url(../image/sssd_mark.png);
+}
+.sssd_mark #mebName {
+  border: 1px solid #ff6a55;
+}
+
+.calender-type-color1:before {
+  background-color: #f8c115 !important;
+}
+
+.calender-type-color2:before {
+  background-color: #f84515 !important;
+}
+
+.calender-type-color3:before {
+  background-color: #93db3e !important;
+}
+
+.calender-type-color4:before {
+  background-color: #35ace3 !important;
+}
+
+.calender-type-color5:before {
+  background-color: #254dd1 !important;
+}
+
+.calender-type-color6:before {
+  background-color: #6025c2 !important;
+}
+
+.calender-type-color7:before {
+  background-color: #c22598 !important;
+}
+
+.calender-type-color8:before {
+  background-color: #da1919 !important;
+}
+
+.calender-type-color9:before {
+  background-color: #999999 !important;
+}
+
+.calender-type-color10:before {
+  background-color: #000000 !important;
 }
 
 html {
