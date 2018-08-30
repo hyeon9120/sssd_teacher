@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMinYMin none">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/search/host_following_check_20</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icon/search/host_following_check_20" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Combined-Shape" fill="#EFF2F5" points="9.88599397 1.93032504 16.885994 5.97177692 16.885994 14.0546807 9.88599397 18.0961326 2.88599397 14.0546807 2.88599397 5.97177692"></polygon>
+        <path d="M6.6447081,9.92118135 C6.47114174,9.74761499 6.18973509,9.74761499 6.01616873,9.92118135 C5.84260238,10.0947477 5.84260238,10.3761544 6.01616873,10.5497207 L8.23839096,12.7719429 C8.41195731,12.9455093 8.69336397,12.9455093 8.86693032,12.7719429 L13.7558192,7.88305404 C13.9293856,7.70948769 13.9293856,7.42808103 13.7558192,7.25451468 C13.5822529,7.08094833 13.3008462,7.08094833 13.1272798,7.25451468 L8.55266064,11.8291339 L6.6447081,9.92118135 Z" id="Shape" fill="#949FAE"></path>
+    </g>
+</svg>

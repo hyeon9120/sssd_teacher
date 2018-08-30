@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/page_bookmark_blk</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M19.5,20.6442458 L19.5,9.39978846 C19.5,8.9579996 19.1642136,8.59985897 18.75,8.59985897 L11.25,8.59985897 C10.8357864,8.59985897 10.5,8.9579996 10.5,9.39978846 L10.5,20.6442458 L14.5640714,17.5480834 C14.8248445,17.3494166 15.1751555,17.3494166 15.4359286,17.5480834 L19.5,20.6442458 Z M15,19.182049 L10.1859286,22.8495896 C9.68952729,23.2277668 9,22.8493009 9,22.1986602 L9,9.39978846 C9,8.07442189 10.0073593,7 11.25,7 L18.75,7 C19.9926407,7 21,8.07442189 21,9.39978846 L21,22.1986602 C21,22.8493009 20.3104727,23.2277668 19.8140714,22.8495896 L15,19.182049 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/page_bookmark_blk" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Shape" fill-rule="nonzero"></g>
+            <rect id="color" fill="#212121" mask="url(#mask-2)" x="0" y="0" width="30" height="30"></rect>
+        </g>
+    </g>
+</svg>

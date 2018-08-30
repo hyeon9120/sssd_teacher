@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="34px" viewBox="0 0 28 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/location_map_50</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M14.638872,32.3188462 C14.1747149,32.6927033 13.7371859,33.0315582 13.3333333,33.3333333 C12.9294808,33.0315582 12.4919518,32.6927033 12.0277946,32.3188462 C10.3272967,30.949174 8.6262535,29.4006295 7.04325447,27.7104703 C2.62099738,22.9888514 0,18.1284306 0,13.4866653 C1.09729121e-07,6.03818569 5.96953675,-3.74330164e-16 13.3333333,0 C20.6971299,0 26.6666666,6.03818569 26.6666667,13.4866653 C26.6666667,18.1284306 24.0456693,22.9888514 19.6234122,27.7104703 C18.0404132,29.4006295 16.33937,30.949174 14.638872,32.3188462 Z M13.3333333,18.3333333 C16.0947571,18.3333333 18.3333333,16.0947571 18.3333333,13.3333333 C18.3333333,10.5719096 16.0947571,8.33333333 13.3333333,8.33333333 C10.5719096,8.33333333 8.33333333,10.5719096 8.33333333,13.3333333 C8.33333333,16.0947571 10.5719096,18.3333333 13.3333333,18.3333333 Z" id="path-1"></path>
+    </defs>
+    <g id="-🎯Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@Detail/tab/class-info" transform="translate(-174.000000, -1572.000000)">
+            <g id="--장소" transform="translate(0.000000, 1449.000000)">
+                <g id="icon/location_map_50" transform="translate(163.000000, 115.000000)">
+                    <g id="icon">
+                        <g transform="translate(11.666667, 8.333333)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#039F8F" xlink:href="#path-1"></use>
+                            <rect id="color" fill="#FF5862" mask="url(#mask-2)" x="-11.6666667" y="-8.33333333" width="50" height="50"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/main_menu_noti_on</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M18.8674342,23.1354406 L11.0017197,23.1354406 C10.1540441,23.1354406 9.6909765,22.1019393 10.2336452,21.421207 L20.2317344,8.87944454 C20.8708652,8.07770869 22.1157278,8.6425986 21.9918972,9.67816578 L21.1325658,16.8645594 L28.9982803,16.8645594 C29.8459559,16.8645594 30.3090235,17.8980607 29.7663548,18.578793 L19.7682656,31.1205555 C19.1291348,31.9222913 17.8842722,31.3574014 18.0081028,30.3218342 L18.8674342,23.1354406 Z M13.1363534,21.0451469 L20,21.0451469 C20.6013831,21.0451469 21.0666807,21.5961291 20.9920883,22.2199283 L20.41526,27.0438121 L26.8636466,18.9548531 L20,18.9548531 C19.3986169,18.9548531 18.9333193,18.4038709 19.0079117,17.7800717 L19.58474,12.9561879 L13.1363534,21.0451469 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/main_menu_noti_on" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(0.000000, 0.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Shape" fill="#212121" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

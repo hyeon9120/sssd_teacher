@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/more_12_red</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.19088062,5.99875015 L4.16731526,9.02231552 C3.94422825,9.24540253 3.94422825,9.60709803 4.16731526,9.83018504 C4.39040227,10.0532721 4.75209778,10.0532721 4.97518479,9.83018504 L8.40268491,6.40268491 C8.62577192,6.1795979 8.62577192,5.8179024 8.40268491,5.59481539 L4.97518479,2.16731526 C4.75209778,1.94422825 4.39040227,1.94422825 4.16731526,2.16731526 C3.94422825,2.39040227 3.94422825,2.75209778 4.16731526,2.97518479 L7.19088062,5.99875015 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/more_12_red" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#FF5252" fill-rule="nonzero" xlink:href="#path-1"></use>
+    </g>
+</svg>

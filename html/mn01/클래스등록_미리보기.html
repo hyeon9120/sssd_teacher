@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../../common/css/bootstrap.css">
 	<link rel="stylesheet" href="../../common/css/common.css">
+	<link rel="stylesheet" href="../../common/css/mobile.css">
+	<link rel="stylesheet" href="../../common/css/swiper.css">
 	<link rel="stylesheet" href="../../common/fonts/XEIcon-2.2.0/xeicon.css" rel="stylesheet">
 	<link rel="stylesheet" href="../../common/plugins/font-awesome/css/font-awesome.css">
 	<link href="../../common/plugins/jquery-scrollbar/jquery.scrollbar.css" rel="stylesheet" type="text/css" media="screen" />
@@ -39,6 +41,8 @@
     <script src="../../common/plugins/jquery-isotope/isotope.pkgd.min.js" type="text/javascript"></script>
     <script src="../../common/plugins/codrops-dialogFx/dialogFx.js" type="text/javascript"></script>
     <script src="../../common/plugins/owl-carousel/owl.carousel.min.js" type="text/javascript"></script>
+    
+    <script src="../../common/js/swiper.min.js"></script>
 </head>
 
 <body>
@@ -119,7 +123,7 @@
 									등록완료 시 솜씨당 운영진에게 승인요청이 진행되며,<br> 승인 시 거부가 될 수 있습니다.
 								</div>
 								<div class="text-center m-t-20 m-b-50">
-									<a href="javascript:;" class="btn btn-primary w-150" id="schedule_modal_show"><i class="xi-search"></i> 미리보기</a>
+									<a href="javascript:preview_show();" class="btn btn-primary w-150" id="schedule_modal_show"><i class="xi-search"></i> 미리보기</a>
 								</div>
 							</div>
 							<!-- /.card-block -->
@@ -187,6 +191,563 @@
 		</div>
 	</div>
 
+
+
+<!-- Modal 미리보기 -->
+<div class="modal fade center-scale" id="modal_mobile" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:475px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>클래스등록 - 미리보기</h5>
+				</div>
+				<div class="modal-mobile-preview">
+					
+					<!-- 모바일 미리보기-->
+					<div class="mobile-container">
+						<div class="detail-title">
+							<div id="title_image">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="img" style="background-image:url(../../common/image/mobile/detail_sample.jpg);"></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></div>
+									</div>
+								</div>
+							</div>
+							<div class="title-text">
+								<div class="title-type">앙금플라워</div>
+								<div class="title-subject">8가지 말랑설기 장미, 애플블라썸, 국화, 스카비오사, 안개꽃, 수선화 원데이</div>
+							</div>		
+							<div class="title-footer">
+								<span class="badge badge-white">10%</span>
+							</div>
+							<div class="title-pagination"></div>
+						</div>
+
+						<div class="detail_info01">
+							<div class="info_text info_location">서울 마포구 동교로</div>
+							<div class="info_text info_time">총 3시간</div>
+							<div class="info_text info_guest">1-3명 <small class="text-primary">(최소인원 1명)</small></div>
+							<div class="info_text info_hash">
+								<span class="hashtag">앙큼플라워</span>
+								<span class="hashtag">꽃</span>
+								<span class="hashtag">플라워</span>
+								<span class="hashtag">떡케이크</span>
+							</div>
+							<div class="detail_more_btn">
+								<a href="javascript:;" class="btn_map">위치</a>
+								<!--<a href="javascript:;" class="btn_bookmark">즐겨찾기</a>  선택시 class "btn_bookmark_filled"
+								<a href="javascript:;" class="btn_share">공유</a> -->
+							</div>
+						</div>
+						<div class="detail_teacher_info">
+							<div class="teacher_img"><div class="img" style="background-image:url(../../common/image/mobile/detail_sample02.png)"></div></div>
+							<div class="teacher_txt">
+								<div class="teacher_txt01">달코망</div>
+								<div class="teacher_txt02">홍대에 위치한 앙금플라워 원데이클래스입니다. 궁금한 점 있으시면 언제든 물어봐주세요.</div>
+								<div class="teacher_txt03"><a href="javascript:;">프로필</a></div>
+							</div>
+						</div>
+						<div class="coupon_img_wrap">
+							<div class="coupon_img">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="javascript:;"><img src="image/coupon_sample@3x.png" alt=""></a>
+									</div>
+									<div class="swiper-slide">
+										<a href="javascript:;"><img src="image/coupon_sample@3x.png" alt=""></a>
+									</div>
+								</div>
+							</div>
+							<div class="coupon-pagination"></div>
+						</div>
+						<div class="detail_schedule">
+							<h3>클래스 일정</h3>
+						</div>
+						<div class="schedule_calendar">
+							<h3>7월</h3>
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="javascript:;" class="active">
+										<div class="date">오늘</div>
+										<div class="date_day">7</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">토</div>
+										<div class="date_day">9</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;" class="sunday">
+										<div class="date">일</div>
+										<div class="date_day">10</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">화</div>
+										<div class="date_day">12</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">수</div>
+										<div class="date_day">13</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">목</div>
+										<div class="date_day">14</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">토</div>
+										<div class="date_day">16</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;" class="sunday">
+										<div class="date">일</div>
+										<div class="date_day">17</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">화</div>
+										<div class="date_day">19</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">수</div>
+										<div class="date_day">18</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">목</div>
+										<div class="date_day">19</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="date">토</div>
+										<div class="date_day">21</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="schedule_info">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide active">
+									<a href="javascript:;">
+										<div class="txt01">선택됨</div>
+										<div class="txt02">9:00-11:00</div>
+										<div class="txt03">1/5명</div>
+										<div class="txt04">(최소2명)</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="txt01">모집중</div>
+										<div class="txt02">12:00-14:00</div>
+										<div class="txt03">1/5명</div>
+										<div class="txt04">(최소2명)</div>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript:;">
+										<div class="txt01">모집중</div>
+										<div class="txt02">14:30-16:30</div>
+										<div class="txt03">4/5명</div>
+										<div class="txt04">(최소2명)</div>
+									</a>
+								</div>
+								<div class="swiper-slide disabled">
+									<div>
+										<div class="txt01">마감됨</div>
+										<div class="txt02">18:00-21:00</div>
+										<div class="txt03">4/4명</div>
+										<div class="txt04">(최소2명)</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="withyou-matching">
+							<div class="matching-photo" style="background-image:url(../../common/image/mobile/icon/avatar_host.svg)"></div>
+							<div class="matching-info">
+								<div class="sub-txt">스케쥴 협의 클래스입니다.</div>
+								<div class="txt">신청 후 강사님과 스케쥴 협의가 필요해요!</div>
+							</div>
+						</div>
+						<div class="class_conven">
+							<h4>이용가능 기간</h4>
+							<div class="info_text info_period">2018-07-20 (금) ~ 2018-08-20 (월)</div>
+						</div>
+						<hr class="main">
+						<div class="tab">
+							<ul>
+								<li class='active'><a href="javascript:;" rel="class_info">상세정보</a></li>
+								<li><a href="javascript:;" rel="class_cancel">변경 및 취소</a></li>
+							</ul>
+						</div>
+						<div class="tab_wrap">
+							<!-- tab01 -->
+							<div id="class_info" class="tab_content">
+								<div class="class_info">
+									<h3>클래스소개</h3>
+									<p>달달한 앙금을 이용하여 손끝으로 꽃을 피워보는 시간입니다.건강한 식재료인 앙금을 이용한 앙금플라워 클래스입니다.</p>
+									<p>기본적인 도구 및 사용방법을 이해하고 인공색소가 아닌 천연가루를 사용하여, 앙금플라워의 화려한 색감을 연출합니다.</p>
+									<p>앙금플라워의 기본이자 정수인 파이핑법으로 국화, 라넌큘러스, 장미, 안개꽃, 열매, 잎사귀 등 다양하게 만들어 볼 수 있습니다. 생화보다 더 생화 같은 꽃, 앙금플라워를 만들어보세요. 내가 직접 만들어 보다 특별한 의미의 선물이 될 것입니다.</p>
+									<h4>#이런점이 좋아요.</h4>
+									<ol>
+										<li>바쁘고 지친 일상 속에서 나에게 집중하는 시간이 됩니다.</li>
+										<li>꽃을 손으로 빚는 작업해서 힐링하는 시간을 가질 수 있습니다.</li>
+										<li>색감과 촉감을 통한 새로운 나의 취향을 발견할 수 있습니다.</li>
+									</ol>
+									<h4>#이런분들께 추천해요.</h4>
+									<ol>
+										<li>어버이날이나 가족의 기념일을 앞두고 세상에 하나뿐인 특별한 선물을 준비하고 싶으신 분</li>
+										<li>손으로 만드는 핸드메이드가 좋으신 분</li>
+										<li>차분하고 힐링되는 시간을 보내고 싶으신 분</li>
+									</ol>
+									<h4>#클래스 완성작</h4>
+									<div class="list-type-3">
+										<ul>
+											<li>
+												<div class="list-photo">
+													<a href="javascript:;" class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></a>
+												</div>
+												<div class="text">A. 컵케이크 타입</div>
+											</li>
+											<li>
+												<div class="list-photo">
+													<a href="javascript:;" class="img" style="background-image:url(../../common/image/mobile/detail_sample02.png);"></a>
+												</div>
+												<div class="text">B. 홀케이크 타입</div>
+											</li>
+											<li></li>
+										</ul>
+									</div>
+									<p>컵케이크 타입의 경우 만드시는 속도에 따라 3~4개의 결과물이 나옵니다. 여러명에게 선물도 가능합니다.</p>
+									<p>홀케이크 타입의 경우 1개의 결과물이 나와 특별한 1분께 선물하기에 적합합니다.</p>
+									<p>A. B. 결과물 선택은 현장에 오셔서 선택하시면 됩니다. ^^</p>
+								</div>
+								<div class="class_curriculum">
+									<h3>커리큘럼</h3>
+									<div class="list-curriculum">
+										<ul>
+											<li>1단계 : 기본 도구 및 사용방법 설명</li>
+											<li>
+												2단계 : 컬러조색
+												<span>- 천연가루를 사용한 컬러조색</span>
+											</li>						
+											<li>
+												3단계 : 파이핑
+												<span>- 장미, 애플블러썸, 국화, 안개꽃 등 다양한 파이핑법 익히기</span>
+											</li>
+											<li>
+												4단계 : 어레인지
+												<span>- 파이핑한 꽃들을 어레인지</span>
+											</li>
+											<li>
+												5단계 : 포장
+												<span>- 예쁘게 포장하여 더욱 특별한 선물 만들기</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="class_conven">
+									<h3>편의사항</h3>
+									<div class="info_text info_wifi">와이파이 이용 가능</div>
+									<div class="info_text info_tea">커피 또는 차와 함께하는 티타임</div>
+									<div class="info_text info_charge">기기 충전 가능</div>
+									<div class="info_text info_park">주차 가능</div>
+								</div>
+								<div id="map" style="width:100%;height:300px;"></div>
+								<script src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=1d89060b6491282b335a11458733bcf1&libraries=services,clusterer,drawing"></script>
+
+								<div class="detail_gallery">
+									<h3>작품갤러리</h3>
+									<div class="list-gallery">
+										<ul>
+											<li>
+												<div class="list-photo">
+													<a href="gallery.html" class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></a>
+												</div>
+											</li>
+											<li>
+												<div class="list-photo">
+													<a href="gallery.html" class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></a>
+												</div>
+											</li>
+											<li>
+												<div class="list-photo">
+													<a href="gallery.html" class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></a>
+												</div>
+											</li>
+											<li>
+												<div class="list-photo">
+													<a href="gallery.html" class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></a>
+												</div>
+											</li>
+											<li>
+												<div class="list-photo">
+													<a href="gallery.html" class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></a>
+												</div>
+											</li>
+											<li>
+												<div class="list-photo">
+													<a href="javascript:;" class="img" style="background-image:url(../../common/image/mobile/detail_sample01.png);"></a>
+													<div class="list-moreview" onclick="location.href='gallery.html';">+9</div> <!-- 6개 이상일경우에만 표시 -->
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- /.Tab01 -->
+
+							<!-- Tab04 -->
+							<div id="class_cancel" class="tab_content" style="display:none">
+								<div class="cancel_info">				
+									<h3>원데이 클래스 환불 정책</h3>
+									<ol class="cancel-text-list">
+										<li>
+											<div class="num">1</div>
+											<div class="txt">클래스 수업일 6일 이전 통보시</div>
+											<div class="sub">100% 환급 (포인트, 쿠폰)</div>
+										</li>
+										<li>
+											<div class="num">2</div>
+											<div class="txt">클래스 수업일 5일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 5% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">3</div>
+											<div class="txt">클래스 수업일 4일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 10% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">4</div>
+											<div class="txt">클래스 수업일 3일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 20% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">5</div>
+											<div class="txt">클래스 수업일 2일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 30% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">6</div>
+											<div class="txt">클래스 당일 및 불참시</div>
+											<div class="sub">환불 불가 (포인트, 쿠폰 환불 소멸)</div>
+										</li>
+										<li>
+											<div class="num">7</div>
+											<div class="txt">클래스 마감 이전 당일 결제 및 당일 취소 신청시</div>
+											<div class="sub">100% 환급 (포인트, 쿠폰)</div>
+										</li>
+									</ol>
+								</div>
+								<div class="cancel_info">				
+									<h3>정규모집(장기) 클래스 환불 정책</h3>
+									<ol class="cancel-text-list">
+										<li>
+											<div class="num">1</div>
+											<div class="txt">클래스 수업일 6일 이전 통보시</div>
+											<div class="sub">100% 환급 (포인트, 쿠폰)</div>
+										</li>
+										<li>
+											<div class="num">2</div>
+											<div class="txt">클래스 수업일 5일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 5% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">3</div>
+											<div class="txt">클래스 수업일 4일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 10% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">4</div>
+											<div class="txt">클래스 수업일 3일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 20% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">5</div>
+											<div class="txt">클래스 수업일 2일 이전 통보시</div>
+											<div class="sub">실 결제 금액의 30% 배상 후 환불  (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">6</div>
+											<div class="txt">클래스 취소시</div>
+											<div class="sub">1일 수강료 및 남은 수강료의 20% 취소 수수료를 제외한 금액 환불 (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">7</div>
+											<div class="txt">클래스 취소일 기준으로 남은 강의 일수가 50% 이상 일 경우</div>
+											<div class="sub">수강료 일할계산 + 남은 수강료의 20% 취소 수수료를 제외한 금액 환불 (포인트, 쿠폰 소멸)</div>
+										</li>
+										<li>
+											<div class="num">8</div>
+											<div class="txt">클래스 취소일 기준으로 남은 강의 일수가 50% 미만 일 경우</div>
+											<div class="sub">환불 불가</div>
+										</li>
+									</ol>
+								</div>
+								<div class="cancel_info">				
+									<h3>상시 클래스 환불 정책</h3>
+									<ol class="cancel-text-list">
+										<li>
+											<div class="num">1</div>
+											<div class="txt">상시 쿠폰 구매 후 7일 이내</div>
+											<div class="sub">환불 가능 (포인트, 쿠폰 포함)</div>
+										</li>
+										<li>
+											<div class="num">2</div>
+											<div class="txt">상시 쿠폰 구매 후 7일 이후</div>
+											<div class="sub">환불 불가</div>
+										</li>
+										<li>
+											<div class="num">3</div>
+											<div class="txt">상시 쿠폰 유효기간 만료시</div>
+											<div class="sub">환불 불가</div>
+										</li>
+									</ol>
+								</div>
+							</div>
+							<!-- /.Tab04 -->
+
+						</div>
+					</div>
+					<!-- /.모바일미리보기 종료 -->
+					
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 미리보기 -->
+
+
+<script>
+//대표이미지 Swiper
+var detail_swiper01 = new Swiper('#title_image', {
+    slidesPerView: 'auto',
+	zoom: true,
+    spaceBetween: 0,
+    pagination: {
+    	el: '.title-pagination',
+    	clickable: true,
+    },
+});
+
+// 스케쥴 Swiper
+var detail_calendar1 = new Swiper('.schedule_calendar', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+});
+var detail_calendar2 = new Swiper('.schedule_info', {
+    slidesPerView: 'auto',
+    spaceBetween: 0,
+});
+var coupon_imgswiper = new Swiper('.coupon_img', {    
+	slidesPerView: 'auto',
+    spaceBetween: 5,
+	pagination: {
+    	el: '.coupon-pagination',
+    	clickable: true,
+    },
+});
+$('.schedule_info a').click(function() {
+	$(this).parent().addClass('active').siblings().removeClass('active');
+	$(this).parent().parent().find('a > .txt01').html('모집중');
+	$(this).find('.txt01').html('선택됨');
+})
+
+// 갤러리 갯수에 따라 배치 변경
+var gallery_index = $('.detail_gallery .list-gallery ul li').length;
+if (gallery_index > 5) gallery_index = 6;
+$('.detail_gallery .list-gallery').addClass('gallery-' + gallery_index); // 갯수에 따라 'gallery-1' 부터 'gallery-6' 까지 추가
+// Tab간 컨텐츠 이동
+$('.tab').each(function() {
+	tab_scl = $('.tab').offset().top;
+	$(".tab ul li a").click(function () {
+		$(".tab li").removeClass("active");
+		$(this).parent().addClass("active");
+		$(".tab_content").hide()
+		var activeTab = $(this).attr("rel");
+		$('#'+activeTab).fadeIn()
+	});
+});
+function preview_show() {
+	$('#modal_mobile').modal('show');
+	$('#modal_mobile').on('shown.bs.modal', function (e) {
+		
+	  open_daum_map();
+	});
+}
+function open_daum_map() {
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+		mapOption = { 
+			center: new daum.maps.LatLng(37.554047, 126.908717), // 지도의 중심좌표
+			level: 3 // 지도의 확대 레벨
+		};
+
+	// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+	var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+	var imageSrc = '../../common/image/mobile/icon/location_map_50@3x.png', // 마커이미지의 주소입니다    
+		imageSize = new daum.maps.Size(28, 34), // 마커이미지의 크기입니다
+		imageOption = {offset: new daum.maps.Point(14, 32)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+
+	// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+	var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize, imageOption),
+		markerPosition = new daum.maps.LatLng(37.553547, 126.908717); // 마커가 표시될 위치입니다
+
+	// 마커를 생성합니다
+	var marker = new daum.maps.Marker({
+		position: markerPosition, 
+		image: markerImage // 마커이미지 설정 
+	});
+
+	// 마커가 지도 위에 표시되도록 설정합니다
+	marker.setMap(map);  
+
+	// 커스텀 오버레이
+	var content = '<div class="map_overlay">' +
+	'    <div class="overlay_title">서울 마포구 동교로 57-4 201호 그린나무공방</div>' +
+	'    <div class="overlay_sub">지번 : 망원동 384-19</div>' +
+	'</div>';
+
+	// 커스텀 오버레이가 표시될 위치입니다 
+	var position = new daum.maps.LatLng(37.553547, 126.908717);  
+
+	// 커스텀 오버레이를 생성합니다
+	var customOverlay = new daum.maps.CustomOverlay({
+		map: map,
+		position: position,
+		content: content,
+		yAnchor:0.34
+	});
+}
+</script>
 
 <script src="../../common/js/common.js"></script>
 <script src="../../common/js/gallery.js"></script>

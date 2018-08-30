@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 68 68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #d9dfe7;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #b2bcc8;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <circle id="Mask" class="cls-1" cx="34" cy="34" r="34"/>
+    </clipPath>
+  </defs>
+  <g id="noimg_class" class="cls-2">
+    <g id="자산_1" data-name="자산 1" transform="translate(19 20.111)">
+      <path id="Shape" class="cls-3" d="M30,16.6H0V14.817H1.6V.761a4.408,4.408,0,0,0,2.8,1.01A4.459,4.459,0,0,0,4.93,1.74a4.421,4.421,0,0,0,3-1.74A4.448,4.448,0,0,0,9.744,1.422V14.817h1.761V1.772A4.424,4.424,0,0,0,14.989,0a4.418,4.418,0,0,0,3.528,1.77A4.419,4.419,0,0,0,22.045,0a4.416,4.416,0,0,0,3,1.74,4.459,4.459,0,0,0,.526.032,4.405,4.405,0,0,0,2.8-1.01V14.817H30V16.6Zm-15.628-5.9v1.783H25.6l.05-.022V10.695H23.817A4.964,4.964,0,0,0,25,7.484V5.072H15.028V7.484a4.958,4.958,0,0,0,1.183,3.211ZM6.622,7.2V9.7H8.378V7.2Z" transform="translate(0 11.178)"/>
+      <path id="Shape-2" data-name="Shape" class="cls-3" d="M22.889,0H3.833L0,6.856H26.7L22.889,0Z" transform="translate(1.65)"/>
+      <path id="Shape-3" data-name="Shape" class="cls-3" d="M0,0A2.65,2.65,0,0,0,2.647,2.529,2.65,2.65,0,0,0,5.294,0Z" transform="translate(22.928 8.611)"/>
+      <path id="Shape-4" data-name="Shape" class="cls-3" d="M0,0A2.65,2.65,0,0,0,2.647,2.529,2.65,2.65,0,0,0,5.294,0Z" transform="translate(15.872 8.611)"/>
+      <path id="Shape-5" data-name="Shape" class="cls-3" d="M0,0A2.65,2.65,0,0,0,2.647,2.529,2.65,2.65,0,0,0,5.294,0Z" transform="translate(1.761 8.611)"/>
+      <path id="Shape-6" data-name="Shape" class="cls-3" d="M0,0A2.65,2.65,0,0,0,2.647,2.529,2.65,2.65,0,0,0,5.294,0Z" transform="translate(8.817 8.611)"/>
+      <path id="Shape-7" data-name="Shape" class="cls-3" d="M0,0V.656a3.211,3.211,0,0,0,6.422,0V0Z" transform="translate(16.789 18.006)"/>
+    </g>
+  </g>
+</svg>

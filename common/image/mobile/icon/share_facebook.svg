@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #485a96;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="그룹_5" data-name="그룹 5" transform="translate(0 0)">
+    <circle id="Oval_2" data-name="Oval 2" class="cls-1" cx="31" cy="31" r="31"/>
+    <path id="Shape" class="cls-2" d="M9.744,28.849V15.7h4.417l.663-5.13H9.744V7.278c0-1.485.411-2.494,2.543-2.494H15V.2A36.719,36.719,0,0,0,11.043,0C7.13,0,4.467,2.4,4.467,6.779v3.782H0V15.7H4.428V28.849Z" transform="translate(23.5 16.575)"/>
+  </g>
+</svg>

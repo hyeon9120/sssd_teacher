@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/page_back_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.869442,16.1428571 L15.734721,21.0490208 C16.1773152,21.4953343 16.1773152,22.2189514 15.734721,22.6652649 C15.2921268,23.1115784 14.5745398,23.1115784 14.1319456,22.6652649 L7.33194565,15.808122 C6.88935145,15.3618086 6.88935145,14.6381914 7.33194565,14.191878 L14.1319456,7.33473511 C14.5745398,6.88842163 15.2921268,6.88842163 15.734721,7.33473511 C16.1773152,7.78104858 16.1773152,8.5046657 15.734721,8.95097918 L10.869442,13.8571429 L22.8666667,13.8571429 C23.2818027,13.8571429 23.6448071,14.082221 23.8422189,14.4179631 C23.9424554,14.5884373 24,14.787442 24,15 C24,15.6311826 23.4925894,16.1428571 22.8666667,16.1428571 L10.869442,16.1428571 Z" id="path-1"></path>
+        <filter x="-1.5%" y="-1.6%" width="105.9%" height="106.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0.5" dy="0.5" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0.0823529412   0 0 0 0 0.125490196   0 0 0 0 0.180392157  0 0 0 0.2 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="icon/page_back_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_page_back">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Combined-Shape" fill-rule="nonzero">
+                <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                <use fill="#000000" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <rect id="color" fill="#FFFFFF" mask="url(#mask-2)" x="-2" y="1" width="36" height="33"></rect>
+        </g>
+    </g>
+</svg>

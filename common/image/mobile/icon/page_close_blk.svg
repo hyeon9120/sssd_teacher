@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#212121;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{fill:#FFFFFF;}
+	.st3{mask:url(#mask-2_1_);fill:#212121;}
+</style>
+<title>icon/page_close_gray</title>
+<desc>Created with Sketch.</desc>
+<g id="icon_x2F_page_x5F_close_x5F_gray">
+	<g id="ic_page_back">
+		<g id="Combined-Shape">
+			<path id="path-1_1_" class="st0" d="M16.4,15l5.3,5.3c0.4,0.4,0.4,1,0,1.4c-0.4,0.4-1,0.4-1.4,0L15,16.4l-5.3,5.3
+				c-0.4,0.4-1,0.4-1.4,0c-0.4-0.4-0.4-1,0-1.4l5.3-5.3L8.3,9.7c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5.3,5.3l5.3-5.3
+				c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L16.4,15z"/>
+		</g>
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">
+				<feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30" id="mask-2_1_">
+			<g class="st1">
+				<path id="path-1_2_" class="st2" d="M16.4,15l5.3,5.3c0.4,0.4,0.4,1,0,1.4c-0.4,0.4-1,0.4-1.4,0L15,16.4l-5.3,5.3
+					c-0.4,0.4-1,0.4-1.4,0c-0.4-0.4-0.4-1,0-1.4l5.3-5.3L8.3,9.7c-0.4-0.4-0.4-1,0-1.4c0.4-0.4,1-0.4,1.4,0l5.3,5.3l5.3-5.3
+					c0.4-0.4,1-0.4,1.4,0c0.4,0.4,0.4,1,0,1.4L16.4,15z"/>
+			</g>
+		</mask>
+		<rect id="color" class="st3" width="30" height="30"/>
+	</g>
+</g>
+</svg>

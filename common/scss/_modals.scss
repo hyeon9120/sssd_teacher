@@ -29,6 +29,9 @@
 	    p {
 	        color: #8b91a0;
 	    }
+		&.notext:after {
+			display:none;
+		}
 	}
 	.modal-body {
 	    box-shadow: none;

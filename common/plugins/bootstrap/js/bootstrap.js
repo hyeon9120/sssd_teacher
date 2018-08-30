@@ -2054,12 +2054,12 @@ var Modal = function ($) {
       this._originalBodyPadding = document.body.style.paddingRight || '';
 
       if (this._isBodyOverflowing) {
-        document.body.style.paddingRight = bodyPadding + this._scrollbarWidth + 'px';
+       // document.body.style.paddingRight = bodyPadding + this._scrollbarWidth + 'px';
       }
     };
 
     Modal.prototype._resetScrollbar = function _resetScrollbar() {
-      document.body.style.paddingRight = this._originalBodyPadding;
+      //document.body.style.paddingRight = this._originalBodyPadding;
     };
 
     Modal.prototype._getScrollbarWidth = function _getScrollbarWidth() {

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/page_close_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M16.4142136,15 L21.7071068,20.2928932 C22.0976311,20.6834175 22.0976311,21.3165825 21.7071068,21.7071068 C21.3165825,22.0976311 20.6834175,22.0976311 20.2928932,21.7071068 L15,16.4142136 L9.70710678,21.7071068 C9.31658249,22.0976311 8.68341751,22.0976311 8.29289322,21.7071068 C7.90236893,21.3165825 7.90236893,20.6834175 8.29289322,20.2928932 L13.5857864,15 L8.29289322,9.70710678 C7.90236893,9.31658249 7.90236893,8.68341751 8.29289322,8.29289322 C8.68341751,7.90236893 9.31658249,7.90236893 9.70710678,8.29289322 L15,13.5857864 L20.2928932,8.29289322 C20.6834175,7.90236893 21.3165825,7.90236893 21.7071068,8.29289322 C22.0976311,8.68341751 22.0976311,9.31658249 21.7071068,9.70710678 L16.4142136,15 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/page_close_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic_page_back">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+            <rect id="color" fill="#FFFFFF" mask="url(#mask-2)" x="-2" y="1" width="36" height="33"></rect>
+        </g>
+    </g>
+</svg>

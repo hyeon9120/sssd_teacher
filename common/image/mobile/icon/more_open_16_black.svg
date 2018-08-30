@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/more_open_16_black</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8.90588054,8 L5.88231517,11.0235654 C5.65922816,11.2466524 5.65922816,11.6083479 5.88231517,11.8314349 C6.10540218,12.0545219 6.46709769,12.0545219 6.6901847,11.8314349 L10.1176848,8.40393476 C10.3407718,8.18084775 10.3407718,7.81915225 10.1176848,7.59606524 L6.6901847,4.16856511 C6.46709769,3.9454781 6.10540218,3.9454781 5.88231517,4.16856511 C5.65922816,4.39165212 5.65922816,4.75334763 5.88231517,4.97643464 L8.90588054,8 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/more_open_16_black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Shape" fill="#15202E" fill-rule="nonzero" transform="translate(8.000000, 8.000000) rotate(90.000000) translate(-8.000000, -8.000000) " xlink:href="#path-1"></use>
+    </g>
+</svg>

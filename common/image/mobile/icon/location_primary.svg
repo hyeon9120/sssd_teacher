@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="9px" height="12px" viewBox="0 0 9 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/location_primary</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.94061931,10.9076106 C4.78396627,11.0337874 4.63630024,11.1481509 4.5,11.25 C4.36369976,11.1481509 4.21603373,11.0337874 4.05938069,10.9076106 C3.48546264,10.4453462 2.91136056,9.92271244 2.37709838,9.35228374 C0.884586615,7.75873735 0,6.11834533 0,4.55174953 C3.70335783e-08,2.03788767 2.01471865,-1.2633643e-16 4.5,0 C6.98528135,0 8.99999996,2.03788767 9,4.55174953 C9,6.11834533 8.11541338,7.75873735 6.62290162,9.35228374 C6.08863944,9.92271244 5.51453736,10.4453462 4.94061931,10.9076106 Z M4.5,6.1875 C5.43198052,6.1875 6.1875,5.43198052 6.1875,4.5 C6.1875,3.56801948 5.43198052,2.8125 4.5,2.8125 C3.56801948,2.8125 2.8125,3.56801948 2.8125,4.5 C2.8125,5.43198052 3.56801948,6.1875 4.5,6.1875 Z" id="path-1"></path>
+    </defs>
+    <g id="-🎯Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="@Home/Section_TitleLocation" transform="translate(-2.000000, -2.000000)">
+            <g id="지역" transform="translate(2.000000, 1.000000)">
+                <g id="icon/location_primary" transform="translate(0.000000, 1.500000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#FF5862" xlink:href="#path-1"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

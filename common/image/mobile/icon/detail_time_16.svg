@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/detail_time_16</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5.5,11 C2.46243388,11 0,8.53756612 0,5.5 C0,2.46243388 2.46243388,0 5.5,0 C8.53756612,0 11,2.46243388 11,5.5 C11,8.53756612 8.53756612,11 5.5,11 Z M5.5,10 C7.98528137,10 10,7.98528137 10,5.5 C10,3.01471863 7.98528137,1 5.5,1 C3.01471863,1 1,3.01471863 1,5.5 C1,7.98528137 3.01471863,10 5.5,10 Z M5.8,2.45454545 L5.8,4.99353929 L6.88284271,6.22404237 C7.03905243,6.40155341 7.03905243,6.68935568 6.88284271,6.86686672 C6.726633,7.04437776 6.473367,7.04437776 6.31715729,6.86686672 L5.11715729,5.50323036 C5.04214274,5.41798655 5,5.30237113 5,5.18181818 L5,2.45454545 C5,2.20350693 5.1790861,2 5.4,2 C5.6209139,2 5.8,2.20350693 5.8,2.45454545 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/detail_time_16" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(2.500000, 2.500000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Combined-Shape" fill="#212121" fill-rule="nonzero" xlink:href="#path-1"></use>
+        </g>
+    </g>
+</svg>

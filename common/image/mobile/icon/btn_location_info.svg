@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="28px" viewBox="0 0 24 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/btn_location_info</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M8.78332322,19.3913077 C9.80362198,18.5695044 10.8242479,17.6403777 11.7740473,16.6262822 C14.4274016,13.7933109 16,10.8770584 16,8.09199916 C15.9999999,3.62291141 12.418278,0 8,0 C3.58172205,-2.24598098e-16 6.58374726e-08,3.62291141 0,8.09199916 C0,10.8770584 1.57259843,13.7933109 4.22595268,16.6262822 C5.1757521,17.6403777 6.19637802,18.5695044 7.21667678,19.3913077 C7.49517108,19.615622 7.75768846,19.8189349 8,20 C8.24231154,19.8189349 8.50482892,19.615622 8.78332322,19.3913077 Z" id="path-1"></path>
+        <filter x="-40.6%" y="-22.5%" width="193.8%" height="175.0%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="1" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.831372549   0 0 0 0 0.850980392   0 0 0 0 0.878431373  0 0 0 0.4 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="💈웹-모바일-375" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="홈---동네기반---[P]-필터링" transform="translate(-141.000000, -326.000000)">
+            <g id="↑-필터링---상세-조건" transform="translate(0.000000, 70.000000)">
+                <g id="&gt;-거리" transform="translate(0.000000, 229.000000)">
+                    <g id="--옵션" transform="translate(10.000000, 28.000000)">
+                        <g id="내용" transform="translate(10.000000, 0.000000)">
+                            <g id="icon/btn_location_info" transform="translate(124.000000, 0.000000)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <g id="Mask">
+                                    <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-1"></use>
+                                    <path stroke-opacity="0.3" stroke="#949FAE" stroke-width="0.1" d="M8.75195915,19.3523681 C9.81722126,18.4943489 10.8261662,17.5651863 11.737554,16.5921027 C14.4873092,13.6562047 15.95,10.7677946 15.95,8.09199916 C15.9499999,3.65039848 12.3905349,0.05 8,0.05 C3.60946507,0.05 0.0500000654,3.65039848 0.05,8.09199916 C0.05,10.7677946 1.51269084,13.6562047 4.26244597,16.5921027 C5.17383381,17.5651863 6.18277874,18.4943489 7.24804085,19.3523681 C7.51730025,19.5692441 7.77937963,19.7727262 7.97007078,19.959947 C8.22062037,19.7727262 8.48269975,19.5692441 8.75195915,19.3523681 Z" stroke-linejoin="square" fill="#FFFFFF" fill-rule="evenodd"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="101px" height="48px" viewBox="0 0 101 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>emoticon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="0.0%" y="0.0%" width="100.0%" height="100.0%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="💈웹-모바일-375" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="통합검색---없음" transform="translate(-137.000000, -280.000000)">
+            <g id="내용" transform="translate(30.000000, 280.000000)">
+                <g id="--검색결과-없음" transform="translate(45.000000, 0.000000)">
+                    <g id="emoticon" transform="translate(62.500000, 0.000000)">
+                        <circle id="blush-left" fill-opacity="0.07" fill="#FF8473" filter="url(#filter-1)" cx="20.5882353" cy="26.4705882" r="20.5882353"></circle>
+                        <circle id="blush-right" fill-opacity="0.07" fill="#FF8473" filter="url(#filter-2)" cx="79.4117647" cy="26.4705882" r="20.5882353"></circle>
+                        <rect id="mouth" fill="#B2BCC8" x="39.5940232" y="17.6470588" width="19.2295062" height="5.88235294" rx="2.94117647"></rect>
+                        <rect id="mouth" fill="#B2BCC8" x="39.5940232" y="34.6470588" width="19.2295062" height="5.88235294" rx="2.94117647"></rect>
+                        <rect id="mouth" fill="#B2BCC8" transform="translate(45.004236, 28.822851) rotate(90.000000) translate(-45.004236, -28.822851) " x="38.3445631" y="25.881675" width="13.3193454" height="5.88235294" rx="2.94117647"></rect>
+                        <rect id="mouth" fill="#B2BCC8" transform="translate(55.882353, 29.367804) rotate(90.000000) translate(-55.882353, -29.367804) " x="45.9694642" y="26.4266274" width="19.8257775" height="5.88235294" rx="2.94117647"></rect>
+                        <rect id="eye-right" fill="#B2BCC8" x="64.7058824" y="0" width="5.88235294" height="11.7647059" rx="2.94117647"></rect>
+                        <rect id="eye-left" fill="#B2BCC8" x="29.4117647" y="0" width="5.88235294" height="11.7647059" rx="2.94117647"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

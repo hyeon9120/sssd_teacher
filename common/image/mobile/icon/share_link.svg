@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #b2bcc8;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="그룹_6" data-name="그룹 6" transform="translate(0 0)">
+    <circle id="Oval_2" data-name="Oval 2" class="cls-1" cx="31" cy="31" r="31"/>
+    <g id="copy" transform="translate(20 18.167)">
+      <path id="Shape" class="cls-2" d="M19.685,25.476H6.946a2.333,2.333,0,0,1-2.315-2.316V6.946A2.331,2.331,0,0,1,6.946,4.631H19.685A2.324,2.324,0,0,1,22,6.946V23.161A2.326,2.326,0,0,1,19.685,25.476ZM6.946,6.946V23.161H19.685V6.946ZM2.316,18.524H0V2.316A2.325,2.325,0,0,1,2.316,0H16.208V2.316H2.316V18.523Z"/>
+    </g>
+  </g>
+</svg>
