@@ -78,6 +78,18 @@
 				</ul>
 				<hr>
 				<a href="javascript:;" class="writer-nav-counsel"><i class="xi-forum"></i> 1:1 실시간 상담</a>
+				<a href="javascript:;" class="writer-nav-userguide"><i class="icon_uesrguide"></i> 이용가이드 보기</a>
+				<div class="writer-nav-movieguide">
+					<a href="javascript:;" id="write-movie-folding">
+						<i class="icon_movieguide"></i> 동영상가이드 보기	
+					</a>
+					<ul>
+						<li><a href="#modal_movieguide01" class="modal-show">1부 보러가기<span>작가회원가입 및 클래스등록</span></a></li>
+						<li><a href="#modal_movieguide02" class="modal-show">2부 보러가기<span>클래스 검수 및 관리</span></a></li>
+						<li><a href="#modal_movieguide03" class="modal-show">3부 보러가기<span>매출관리 및 정산신청</span></a></li>
+					</ul>
+				</div>
+				
 			</div>
 		
 			<div id="writer-contents">
@@ -191,7 +203,69 @@
 		</div>
 	</div>
 
-
+<!-- Modal 동영상01 -->
+<div class="modal fade center-scale" id="modal_movieguide01" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:800px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>1부 보러가기</h5>
+					<p>작가회원가입 및 클래스등록</p>
+				</div>
+				<div class="modal-youtube">
+					<iframe width="800" height="600" src="https://www.youtube.com/embed/v9tFgt05h68?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 동영상01 -->
+<!-- Modal 동영상02 -->
+<div class="modal fade center-scale" id="modal_movieguide02" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:800px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>2부 보러가기</h5>
+					<p>클래스 검수 및 관리</p>
+				</div>
+				<div class="modal-youtube">
+					<iframe width="800" height="600" src="https://www.youtube.com/embed/v9tFgt05h68?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 동영상02 -->
+<!-- Modal 동영상03 -->
+<div class="modal fade center-scale" id="modal_movieguide03" tabindex="-1" role="dialog" aria-hidden="false">
+	<div class="modal-dialog">
+		<div class="modal-content-wrapper">
+			<div class="modal-content" style="width:800px">
+				<div class="modal-header clearfix text-left">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						<i class="pg-close"></i>
+					</button>
+					<h5>3부 보러가기</h5>
+					<p>매출관리 및 정산신청</p>
+				</div>
+				<div class="modal-youtube">
+					<iframe width="800" height="600" src="https://www.youtube.com/embed/v9tFgt05h68?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+</div>
+<!-- /.Modal 동영상03 -->
 
 <!-- Modal 미리보기 -->
 <div class="modal fade center-scale" id="modal_mobile" tabindex="-1" role="dialog" aria-hidden="false">
@@ -259,7 +333,7 @@
 								<div class="teacher_txt03"><a href="javascript:;">프로필</a></div>
 							</div>
 						</div>
-						<div class="coupon_img_wrap">
+						<!--<div class="coupon_img_wrap">
 							<div class="coupon_img">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
@@ -271,7 +345,7 @@
 								</div>
 							</div>
 							<div class="coupon-pagination"></div>
-						</div>
+						</div>-->
 						<div class="detail_schedule">
 							<h3>클래스 일정</h3>
 						</div>
@@ -647,34 +721,8 @@
 
 
 <script>
-//대표이미지 Swiper
-var detail_swiper01 = new Swiper('#title_image', {
-    slidesPerView: 'auto',
-	zoom: true,
-    spaceBetween: 0,
-    pagination: {
-    	el: '.title-pagination',
-    	clickable: true,
-    },
-});
 
-// 스케쥴 Swiper
-var detail_calendar1 = new Swiper('.schedule_calendar', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-});
-var detail_calendar2 = new Swiper('.schedule_info', {
-    slidesPerView: 'auto',
-    spaceBetween: 0,
-});
-var coupon_imgswiper = new Swiper('.coupon_img', {    
-	slidesPerView: 'auto',
-    spaceBetween: 5,
-	pagination: {
-    	el: '.coupon-pagination',
-    	clickable: true,
-    },
-});
+
 $('.schedule_info a').click(function() {
 	$(this).parent().addClass('active').siblings().removeClass('active');
 	$(this).parent().parent().find('a > .txt01').html('모집중');
@@ -700,7 +748,34 @@ function preview_show() {
 	$('#modal_mobile').modal('show');
 	$('#modal_mobile').on('shown.bs.modal', function (e) {
 		
-	  open_daum_map();
+		open_daum_map();		
+		//대표이미지 Swiper
+		var detail_swiper01 = new Swiper('#title_image', {
+			slidesPerView: 'auto',
+			zoom: true,
+			spaceBetween: 0,
+			pagination: {
+				el: '.title-pagination',
+				clickable: true,
+			},
+		});
+		// 스케쥴 Swiper
+		var detail_calendar1 = new Swiper('.schedule_calendar', {
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+		});
+		var detail_calendar2 = new Swiper('.schedule_info', {
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+		});
+		/*var coupon_imgswiper = new Swiper('.coupon_img', {    
+			slidesPerView: 'auto',
+			spaceBetween: 5,
+			pagination: {
+				el: '.coupon-pagination',
+				clickable: true,
+			},
+		});*/
 	});
 }
 function open_daum_map() {
@@ -747,6 +822,12 @@ function open_daum_map() {
 		yAnchor:0.34
 	});
 }
+	$('#write-movie-folding').click(function() {
+		$(this).next().slideToggle(300);
+	});
+	$('.writer-nav-movieguide').mouseleave(function(){
+		$(this).find('ul').slideUp(300);
+	})
 </script>
 
 <script src="../../common/js/common.js"></script>
