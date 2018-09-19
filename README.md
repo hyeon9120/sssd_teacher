@@ -1,3 +1,6 @@
+#update 9.19
+- html/클래스등록_미리보기.html : 미리보기 swiper 오류 수정 (bootstrap 닫기 옵션 추가)
+
 #update 9.18
 - html/클래스등록_미리보기.html : 미리보기 swiper 오류수정(modal 로딩 이후 js로드)
 - html/클래스등록_미리보기.html : 좌측 이용가이드 보기, 동영상가이드 보기 버튼 및 modal창 추가

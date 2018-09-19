@@ -744,39 +744,46 @@ $('.tab').each(function() {
 		$('#'+activeTab).fadeIn()
 	});
 });
+var detail_swiper01,detail_calendar1,detail_calendar2;
+$('#modal_mobile').on('shown.bs.modal', function (e) {
+	open_daum_map();		
+    //대표이미지 Swiper
+    detail_swiper01 = new Swiper('#title_image', {
+        slidesPerView: 'auto',
+        zoom: false,
+        spaceBetween: 0,
+        pagination: {
+            el: '.title-pagination',
+            clickable: true,
+        },
+    });
+    // 스케쥴 Swiper
+    detail_calendar1 = new Swiper('.schedule_calendar', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+    });
+    detail_calendar2 = new Swiper('.schedule_info', {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+    });
+    /*var coupon_imgswiper = new Swiper('.coupon_img', {    
+        slidesPerView: 'auto',
+        spaceBetween: 5,
+        pagination: {
+            el: '.coupon-pagination',
+            clickable: true,
+        },
+    });*/
+});
+$('#modal_mobile').on('hide.bs.modal', function (e) {
+   detail_swiper01.destroy();
+   detail_calendar1.destroy();
+   detail_calendar2.destroy();
+   $('.title-pagination').html('');
+   $('#map').html('');
+});
 function preview_show() {
 	$('#modal_mobile').modal('show');
-	$('#modal_mobile').on('shown.bs.modal', function (e) {
-		
-		open_daum_map();		
-		//대표이미지 Swiper
-		var detail_swiper01 = new Swiper('#title_image', {
-			slidesPerView: 'auto',
-			zoom: true,
-			spaceBetween: 0,
-			pagination: {
-				el: '.title-pagination',
-				clickable: true,
-			},
-		});
-		// 스케쥴 Swiper
-		var detail_calendar1 = new Swiper('.schedule_calendar', {
-			slidesPerView: 'auto',
-			spaceBetween: 0,
-		});
-		var detail_calendar2 = new Swiper('.schedule_info', {
-			slidesPerView: 'auto',
-			spaceBetween: 0,
-		});
-		/*var coupon_imgswiper = new Swiper('.coupon_img', {    
-			slidesPerView: 'auto',
-			spaceBetween: 5,
-			pagination: {
-				el: '.coupon-pagination',
-				clickable: true,
-			},
-		});*/
-	});
 }
 function open_daum_map() {
 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
