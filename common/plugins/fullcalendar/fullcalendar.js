@@ -2674,7 +2674,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var util_1 = __webpack_require__(4);
 exports.globalDefaults = {
     titleRangeSeparator: ' \u2013 ',
-    monthYearFormat: 'MMMM YYYY',
+    monthYearFormat: 'YYYY',
     defaultTimedEventDuration: '02:00:00',
     defaultAllDayEventDuration: { days: 1 },
     forceEventDuration: false,
@@ -2688,6 +2688,7 @@ exports.globalDefaults = {
         center: '',
         right: 'today prev,next'
     },
+	titleFormat: 'YYYY',
     weekends: true,
     weekNumbers: false,
     weekNumberTitle: 'W',
@@ -2745,7 +2746,7 @@ exports.globalDefaults = {
     longPressDelay: 1000
 };
 exports.englishDefaults = {
-    dayPopoverFormat: 'dddd, MMMM D'
+    dayPopoverFormat: 'YYYY-MM-DD'
 };
 exports.rtlDefaults = {
     header: {

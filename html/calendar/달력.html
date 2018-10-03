@@ -37,6 +37,7 @@
 	<script src="../../common/plugins/bootstrap-tag/bootstrap-tagsinput.min.js"></script>
 	<script src='../../common/plugins/fullcalendar/moment.min.js'></script>
 	<script src='../../common/plugins/fullcalendar/fullcalendar.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/gcal.js'></script>
 	
 	<script src="../../common/plugins/spectrum/spectrum.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../common/plugins/spectrum/spectrum.css">
@@ -97,6 +98,9 @@
 							<li><div class="txt-people">68명</div></li>
 							<li><div class="txt-sales">4,500,000원</div></li>
 						</ul>
+					</div>
+					<div class="calendar-notice">
+						※ 상시모집 클래스는 솜씨당 클래스 정보와 연동되지 않으며, 클래스 스케쥴 등록을 통한 수기 등록만 지원합니다.
 					</div>
 				</div>
 
@@ -162,11 +166,19 @@
 									<div class="calendar-pop-title">강의날짜</div>
 									<input type="text" class="form-control input-calendar calendar-date" id="sDate" name="sDate" placeholder="yyyy-mm-dd">
 								</div>
-								<div class="col-sm-2">
-									<div class="calendar-pop-title">강의시간</div>
-									<input type="text" class="form-control input-calendar calendar-time" placeholder="오전 11:00">
-								</div>
 								<div class="col-sm-3">
+									<div class="calendar-pop-title">강의시간</div>
+									<div class="form-group form-inline">
+										<div class="select-wrapper w-75">
+											<select name="" id="" class="form-control input-calendar fs-13" style="width:100%;">
+												<option value="01">오전</option>
+												<option value="02">오전</option>
+											</select>
+										</div>
+										<input type="text" class="form-control input-calendar w-100 m-l-5" placeholder="시간 입력">
+									</div>
+								</div>
+								<div class="col-sm-2">
 									<div class="calendar-pop-title">금액</div>
 									<input type="text" class="form-control input-calendar" id="price" name="price" placeholder="금액">
 								</div>							
@@ -195,11 +207,19 @@
 									<div class="calendar-pop-title">강의날짜</div>
 									<input type="text" class="form-control input-calendar calendar-date" id="sDate" name="sDate" placeholder="yyyy-mm-dd">
 								</div>
-								<div class="col-sm-2">
-									<div class="calendar-pop-title">강의시간</div>
-									<input type="text" class="form-control input-calendar calendar-time" placeholder="오전 11:00">
-								</div>
 								<div class="col-sm-3">
+									<div class="calendar-pop-title">강의시간</div>
+									<div class="form-group form-inline">
+										<div class="select-wrapper w-75">
+											<select name="" id="" class="form-control input-calendar fs-13" style="width:100%;">
+												<option value="01">오전</option>
+												<option value="02">오전</option>
+											</select>
+										</div>
+										<input type="text" class="form-control input-calendar w-100 m-l-5" placeholder="시간 입력">
+									</div>
+								</div>
+								<div class="col-sm-2">
 									<div class="calendar-pop-title">금액</div>
 									<input type="text" class="form-control input-calendar" id="price" name="price" placeholder="금액">
 								</div>							
@@ -230,8 +250,8 @@
 	</div>
 	<!--클래스 일정  팝업 끝-->
 
+	<!-- 개인일정 등록 -->
 	<form id="dayForm">
-
 		<div class="modal fade" id="myDayModal">
 			<div class="modal-dialog" style="max-width:700px;width:700px;">
 				<div class="modal-content">
@@ -251,18 +271,23 @@
 							</div>
 							<div class="row-sm p-t-10">
 								<div class="col-sm-2">
-									<input type="text" id="colorpicker" name="showPaletteOnly">
+									<input type="text" class="colorpicker" name="showPaletteOnly">
 								</div>
-								<div class="col-sm-8">
-									<div class="input-group input-daterange" id="datepicker-range">
-										<input type='text' class="form-control input-calendar fs-13" name="start" placeholder="yyyy-mm-dd">
-										<input type="text" class="form-control input-calendar calendar-time m-l-5 w-75 fs-13" style="padding:0" placeholder="오전 11:00">
-										<div class="input-group-addon">-</div>
-										<input type='text' class="form-control input-calendar fs-13" name="end" placeholder="yyyy-mm-dd">
-										<input type="text" class="form-control input-calendar calendar-time m-l-5 w-75 fs-13" style="padding:0" placeholder="오전 11:00">
+								<div class="col-sm-3">
+									<input type='text' class="form-control input-calendar calendar-date fs-13" name="start" placeholder="yyyy-mm-dd">
+								</div>
+								<div class="col-sm-2">
+									<div class="select-wrapper">
+										<select name="" id="" class="form-control input-calendar fs-13">
+											<option value="01">오전</option>
+											<option value="01">오후</option>
+										</select>
 									</div>
 								</div>
-								<div class="col-sm-2" style="padding-top:8px">
+								<div class="col-sm-2">
+									<input type="text" class="form-control input-calendar m-l-5 fs-13 text-center" style="padding:0" placeholder="시간입력">
+								</div>
+								<div class="col-sm-3" style="padding-top:8px">
 									<div class="checkbox checkbox-right">
 										<input type="checkbox" id="blankCheckbox" name='blankCheckbox'  value='1' >
 										<label for="blankCheckbox">종일</label>
@@ -290,9 +315,76 @@
 		<!-- /.modal -->
 		<!-- 관리 끝-->
 	</form>
+	<!-- //개인일정 등록 -- >
+
+	<!-- 개인일정 편집 -->
+	<form id="dayForm">
+		<div class="modal fade" id="myDayModal_edit">
+			<div class="modal-dialog" style="max-width:700px;width:700px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">개인일정 편집</h4>
+					</div>
+					<div class="modal-body">
+					
+						
+						<div class="mytable" id="mytable">
+							<div class="row-sm">
+								<div class="col-sm-12">
+									<div class="calendar-pop-title">제목</div>
+									<input type="text" class="form-control input-calendar" id="dayTitle" name="dayTitle" placeholder="내용을 입력하세요">
+								</div>
+							</div>
+							<div class="row-sm p-t-10">
+								<div class="col-sm-2">
+									<input type="text" class="colorpicker" name="showPaletteOnly">
+								</div>
+								<div class="col-sm-3">
+									<input type='text' class="form-control input-calendar calendar-date fs-13" name="start" placeholder="yyyy-mm-dd">
+								</div>
+								<div class="col-sm-2">
+									<div class="select-wrapper">
+										<select name="" id="" class="form-control input-calendar fs-13">
+											<option value="01">오전</option>
+											<option value="01">오후</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-sm-2">
+									<input type="text" class="form-control input-calendar m-l-5 fs-13 text-center" style="padding:0" placeholder="시간입력">
+								</div>
+								<div class="col-sm-3" style="padding-top:8px">
+									<div class="checkbox checkbox-right">
+										<input type="checkbox" id="blankCheckbox" name='blankCheckbox'  value='1' >
+										<label for="blankCheckbox">종일</label>
+									</div>
+								</div>							
+							</div>
+						</div>
+						<div class="row-sm p-t-20">
+							<div class="col-sm-12">
+								<div class="calendar-pop-title">설명</div>
+								<textarea class="form-control h-100 input-calendar" rows="4" id='dayComent' name='dayComent' placeholder="설명을 입력해주세요"></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" id="master_save" class="btn btn-primary" data-dismiss="modal"><i class="xi-close"></i> 취소</button>
+						<button type="button" id="master_save" class="btn btn-black"><i class="xi-check"></i> 등록</button>
+					</div>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<!-- 관리 끝-->
+	</form>
+	<!-- //개인일정 편집 -- >
 
 	<!-- 개인일정 조회 -->
-
 	<div class="modal fade" id="myDayDtlModal">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -478,14 +570,22 @@
 			$('.calendar-time').timepicker();
 		}
 		
-		$('#userSch').click(function(){
-			$('#myDayModal').on('show.bs.modal', function (event) {
-        	 }).modal('show');
-			$('.calendar-time').datepicker('remove');
+		function openUserSch(type) {
+			if (type == "new") {
+				$('#myDayModal').on('show.bs.modal', function (event) {
+				 }).modal('show');
+			} else if (type == "edit") {
+				$('#myDayModal_edit').on('show.bs.modal', function (event) {
+				 }).modal('show');
+			}
+			$('.calendar-date').datepicker({
+				format: 'yyyy-mm-dd',
+				language:'kr',
+			});
 			$('.calendar-time').timepicker();
 			
 			//컬러피커 설정 설정
-			$("#colorpicker").spectrum({
+			$(".colorpicker").spectrum({
 				preferredFormat : "hex",
 				showPaletteOnly : true,
 				color : color,
@@ -496,7 +596,9 @@
 								'#000000' ] ]
 			});
 			//컬러피커 설정 설정끝
-
+		}
+		$('#userSch').click(function(){
+			openUserSch('new');
         });
 		function myDtlModalClick(){
 			$('#myDtlModal').on('shown.bs.modal', function (event) {
@@ -513,6 +615,7 @@
 			timeFormat: 'HH:mm',
 			editable: true,
 			height: 'auto',
+			lang:'ko',
 			eventLimitText: '개 일정보기 >',
 			eventLimit: 6, // allow "more" link when too many events
 			customButtons: {
@@ -525,24 +628,21 @@
 				}
 			},
 			header: {
-				left: 'title today prev,next ',
+				left: 'title today prev,next',
 				center: '',
 				right: 'myCustomButton'
 			},
-			viewRender: function() {
+			viewRender: function(view, element) {
 				if ($('.fc-today-view').length == 0) {
-					$('.fc-today-button').before('<div class="fc-today-view"><div class="fc-today-01">' + moment().locale("fr").format("DD") + '</div><div class="fc-today-02"><div class="fc-today-th"></div>' + moment().locale("fr").format("dddd") + '</div></div>');
-					if ($('.fc-today-01') == '01') $('.fc-today-th').html('st');
-					else if ($('.fc-today-01') == '02') $('.fc-today-th').html('nd');
-					else if ($('.fc-today-01') == '03') $('.fc-today-th').html('rd');
-					else $('.fc-today-th').html('th');
+					$('.fc-today-button').before('<div class="fc-today-view"><div class="fc-today-01">'+view.title+'</div><div class="fc-today-02">월</div></div>');
 				}
+				var moment = $('#calendar').fullCalendar('getDate');
+				$('.fc-today-01').html(moment.format("MM"));
 			},
-
 			events: [{
 					title: '1/5명',
 					start: '2018-03-01T16:00:00',
-					className: "calendar-type calendar-type-recruit"
+					className: "calendar-type calendar-type-recruit calender-type-sssd"
 				},
 				{
 					title: '5/5명',
@@ -583,7 +683,7 @@
 					title: 'Long Event',
 					start: '2018-03-07',
 					end: '2018-03-07',
-					className: "calendar-text"
+					className: "calendar-text calendar-userSch"
 				},
 				{
 					start: '2018-03-10',
@@ -593,52 +693,52 @@
 				{
 					title: 'Color 01',
 					start: '2018-03-21',
-					className:'calender-type-color1'
+					className:'calender-type-color1 calendar-userSch calender-type-sssd'
 				},
 				{
 					title: 'Color 02',
 					start: '2018-03-21',
-					className:'calender-type-color2'
+					className:'calender-type-color2 calendar-userSch'
 				},
 				{
 					title: 'Color 03',
 					start: '2018-03-21',
-					className:'calender-type-color3'
+					className:'calender-type-color3 calendar-userSch'
 				},
 				{
 					title: 'Color 04',
 					start: '2018-03-21',
-					className:'calender-type-color4'
+					className:'calender-type-color4 calendar-userSch'
 				},
 				{
 					title: 'Color 05',
 					start: '2018-03-21',
-					className:'calender-type-color5'
+					className:'calender-type-color5 calendar-userSch'
 				},
 				{
 					title: 'Color 06',
 					start: '2018-03-22',
-					className:'calender-type-color6'
+					className:'calender-type-color6 calendar-userSch'
 				},
 				{
 					title: 'Color 07',
 					start: '2018-03-22',
-					className:'calender-type-color7'
+					className:'calender-type-color7 calendar-userSch'
 				},
 				{
 					title: 'Color 08',
 					start: '2018-03-22',
-					className:'calender-type-color8'
+					className:'calender-type-color8 calendar-userSch'
 				},
 				{
 					title: 'Color 09',
 					start: '2018-03-22',
-					className:'calender-type-color9'
+					className:'calender-type-color9 calendar-userSch'
 				},
 				{
 					title: 'Color 10',
 					start: '2018-03-22',
-					className:'calender-type-color10'
+					className:'calender-type-color10 calendar-person'
 				},
 				{
 					title: '44명',
@@ -649,15 +749,19 @@
 					title: '500,000원',
 					start: '2018-03-15',
 					className: "calendar-info calendar-sales"
-				},
+				}
 			],
-			
 			eventOrder: "description",
-		     eventClick:function(calEvent, jsEvent, view) {
-		    	    myDtlModalClick();
+		    eventClick:function(calEvent, jsEvent, view) {
+				var eventtype = calEvent.className;
+				if(eventtype.indexOf('calendar-userSch') != -1) {
+					openUserSch('edit');
+				} else {
+					myDtlModalClick();
+				}
 		      },
 		});
-
+		
 	</script>
 </body>
 

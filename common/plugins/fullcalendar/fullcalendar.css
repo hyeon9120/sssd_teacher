@@ -809,11 +809,11 @@ NOTE: use percentage font sizes or else old IE chokes
 }
 .fc-today-02 {
 	float:left;
-	font-size:22px;
-	font-weight:200;
-	text-align:left;
-	line-height:24px;
+	font-size:50px;
+	font-weight:300;
+	line-height:46px;
 	margin-left:4px;
+	color:#333;
 }
 .fc-toolbar.fc-footer-toolbar {
   margin-top: 1em; }
