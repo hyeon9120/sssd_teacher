@@ -427,8 +427,8 @@
 					<form id='classMember'  onSubmit="return false;">
 					
 						<div class="mytable" id="mytable">
-							<div class="row-sm">
-								<div class="col-sm-6">
+							<div class="row-sm sssd_mark02">
+								<div class="col-sm-5">
 									<div class="calendar-pop-title">강의명</div>
 									<input type="text" class="form-control input-calendar" id="className" name="className" placeholder="강의명을 입력하세요">
 								</div>
@@ -436,10 +436,18 @@
 									<div class="calendar-pop-title">강의날짜</div>
 									<input type="text" class="form-control input-calendar calendar-date" id="sDate" name="sDate" placeholder="yyyy-mm-dd">
 								</div>
-								<div class="col-sm-3">
+								<div class="col-sm-4">
 									<div class="calendar-pop-title">강의시간</div>
-									<input type="text" class="form-control input-calendar calendar-time" placeholder="오전 11:00">
-								</div>				
+									<div class="form-group form-inline">
+										<div class="select-wrapper w-75">
+											<select name="" id="" class="form-control input-calendar fs-13" style="width:100%;">
+												<option value="01">오전</option>
+												<option value="02">오전</option>
+											</select>
+										</div>
+										<input type="text" class="form-control input-calendar m-l-5" style="width:96px" placeholder="시간 입력">
+									</div>
+								</div>
 							</div>
 							<div class="row-sm m-t-5">
 								<div class="col-sm-8">

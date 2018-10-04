@@ -124,6 +124,22 @@ h5.modal-title {
 		border:1px solid #ff6a55;
 	}
 }
+.sssd_mark02 {
+	position:relative;
+	&:before {
+		width:11px;
+		height:20px;
+		position:absolute;
+		top:28px;
+		left:5px;
+		z-index:10;
+		content:"";
+		background-image:url(../image/sssd_mark.png)
+	}
+	#className {
+		border:1px solid #ff6a55;
+	}
+}
 .calender-type-color1:before {
 	background-color:#f8c115 !important;
 }
